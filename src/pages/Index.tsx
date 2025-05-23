@@ -19,7 +19,7 @@ const Index = () => {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Building2 className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-semibold">BouwPartner</span>
+              <span className="ml-2 text-xl font-semibold">MMT Projects</span>
             </div>
             
             {/* Desktop Navigation */}
@@ -402,7 +402,7 @@ const Index = () => {
             <div>
               <div className="flex items-center">
                 <Building2 className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-semibold">BouwPartner</span>
+                <span className="ml-2 text-xl font-semibold">MMT Projects</span>
               </div>
               <p className="mt-4 text-gray-600">Uw betrouwbare partner in bouwen & verbouwen</p>
             </div>
@@ -438,7 +438,7 @@ const Index = () => {
                 </li>
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>info@uwbouwbedrijf.nl</span>
+                  <span>info@mmtprojects.nl</span>
                 </li>
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
@@ -449,7 +449,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; {new Date().getFullYear()} BouwPartner. Alle rechten voorbehouden.</p>
+            <p>&copy; {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.</p>
           </div>
         </div>
       </footer>

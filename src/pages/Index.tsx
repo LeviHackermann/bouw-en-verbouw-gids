@@ -434,15 +434,15 @@ const Index = () => {
               <ul className="space-y-4 text-gray-600">
                 <li className="flex items-start">
                   <Phone className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>+31 (0)6 12345678</span>
+                  <span>+32 484 11 77 27</span>
                 </li>
                 <li className="flex items-start">
                   <Mail className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>info@mmtprojects.nl</span>
+                  <span>info@mmtprojects.be</span>
                 </li>
                 <li className="flex items-start">
                   <MapPin className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>Bouwstraat 123, 1234 AB Amsterdam</span>
+                  <span>3500 Hasselt, België</span>
                 </li>
               </ul>
             </div>

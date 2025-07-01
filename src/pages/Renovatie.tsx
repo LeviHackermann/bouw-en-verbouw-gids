@@ -11,9 +11,9 @@ const Renovatie = () => {
   return (
     <>
       <Helmet>
-        <title>Renovatie Hasselt | MMT Projects - Professionele Renovaties Limburg</title>
-        <meta name="description" content="Renovatie specialist in Hasselt en omgeving. MMT Projects renoveert uw woning of bedrijf met 15+ jaar ervaring. Gratis offerte voor renovatie in Hasselt, Genk, Sint-Truiden en heel Limburg." />
-        <meta name="keywords" content="renovatie Hasselt, renovatie Limburg, woningrenovatie, energiezuinige renovatie, MMT Projects" />
+        <title>Renovatie Hasselt - Professionele Renovatiewerken in Limburg</title>
+        <meta name="description" content="Renovatie in Hasselt en omgeving? MMT Projects voert vakkundige renovatiewerken uit in heel Limburg. 15+ jaar ervaring. Gratis offerte!" />
+        <meta name="keywords" content="renovatie Hasselt, renovatiewerken Limburg, badkamerrenovatie, keukenrenovatie, MMT Projects" />
         <link rel="canonical" href="/renovatie-hasselt-limburg" />
       </Helmet>
 
@@ -24,11 +24,12 @@ const Renovatie = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-                  Renovatie Hasselt - Uw Betrouwbare Partner
+                  Renovatie Hasselt - Professionele Renovatiewerken in Limburg
                 </h1>
                 <p className="text-xl mb-8 text-blue-100">
-                  Met meer dan 15 jaar ervaring transformeren wij uw woning tot een moderne, 
-                  functionele en energiezuinige ruimte in Hasselt en heel Limburg.
+                  Zoekt u een betrouwbare partner voor uw renovatieproject in Hasselt? MMT Projects 
+                  staat al meer dan 15 jaar garant voor kwaliteitsvolle renovatiewerken in Hasselt 
+                  en heel de provincie Limburg.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
@@ -56,14 +57,113 @@ const Renovatie = () => {
           </div>
         </header>
 
+        {/* Intro */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+                Van kleine verbouwingen tot complete huisrenovaties - wij maken van uw droomhuis werkelijkheid.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Services */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Onze Renovatieservices in Hasselt</h2>
+              <p className="text-xl text-gray-600">
+                Als ervaren aannemer in Hasselt bieden wij een volledig pakket aan renovatiediensten. 
+                Onze specialisten begeleiden u van A tot Z bij uw renovatieproject.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <Home className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">Badkamerrenovatie</h3>
+                  <p className="text-gray-700 text-sm">
+                    Badkamerrenovatie en sanitaire installaties
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <Building2 className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">Keukenrenovatie</h3>
+                  <p className="text-gray-700 text-sm">
+                    Keukenrenovatie en maatwerk keukens
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <Shield className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">Dakwerken</h3>
+                  <p className="text-gray-700 text-sm">
+                    Dakwerken en dakisolatie
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                    <Hammer className="h-6 w-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3">Vloerwerken</h3>
+                  <p className="text-gray-700 text-sm">
+                    Vloerwerken en tegelwerken
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold mb-6 text-center">Alle Renovatiewerken</h3>
+              <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <ul className="space-y-3">
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-green-500" />
+                    <span>Schilderwerken binnen en buiten</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-green-500" />
+                    <span>Elektriciteitswerken en verlichting</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-green-500" />
+                    <span>Centrale verwarming en cv-installaties</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="h-5 w-5 mr-3 text-green-500" />
+                    <span>Ramen en deuren plaatsen</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Why Choose Us */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Waarom Kiezen voor MMT Projects Renovatie?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Waarom Kiezen voor MMT Projects in Hasselt?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Als lokale renovatiespecialist in Hasselt begrijpen wij dat renovatie meer is dan alleen opknappen. 
-                Het gaat om het creëren van een ruimte die perfect aansluit bij uw huidige levensstijl.
+                Met onze jarenlange ervaring in renovatiewerken hebben wij ons bewezen als dé renovatiespecialist 
+                in Hasselt en omstreken. Onze vakmannen kennen de lokale bouwvoorschriften en werken uitsluitend 
+                met kwaliteitsmaterialen van betrouwbare leveranciers uit de regio.
               </p>
             </div>
             
@@ -75,7 +175,7 @@ const Renovatie = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">15+ Jaar Ervaring</h3>
                   <p className="text-gray-700">
-                    Honderden renovatieprojecten gerealiseerd in Hasselt, Genk, Sint-Truiden en heel Limburg.
+                    Bewezen expertise in renovatiewerken doorheen heel Limburg.
                   </p>
                 </CardContent>
               </Card>
@@ -87,7 +187,7 @@ const Renovatie = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Lokale Expertise</h3>
                   <p className="text-gray-700">
-                    Diepgaande kennis van Hasselt en omgeving voor efficiënte renovatieprojecten.
+                    Diepgaande kennis van bouwvoorschriften in Hasselt en omgeving.
                   </p>
                 </CardContent>
               </Card>
@@ -99,95 +199,7 @@ const Renovatie = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4">Kwaliteitsgarantie</h3>
                   <p className="text-gray-700">
-                    Vakmanschap en hoogwaardige materialen met volledige garantie op ons werk.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Services */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Renovatie Specialisaties</h2>
-              <p className="text-xl text-gray-600">Onze expertise in verschillende renovatieprojecten</p>
-            </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="h-48 relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
-                    alt="Energiezuinige renovatie" 
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <Home className="h-6 w-6" />
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Energiezuinige Renovaties</h3>
-                  <p className="text-gray-700 text-sm">
-                    Verlaag uw energiekosten met onze duurzame renovatieoplossingen.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="h-48 relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" 
-                    alt="Structurele renovatie" 
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <Building2 className="h-6 w-6" />
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Structurele Renovaties</h3>
-                  <p className="text-gray-700 text-sm">
-                    Complexe aanpassingen aan draagmuren en dakstructuren.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="h-48 relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1493663284031-b7e3aaa4cab7" 
-                    alt="Karakterrenovatie" 
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <Star className="h-6 w-6" />
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Karakterrenovaties</h3>
-                  <p className="text-gray-700 text-sm">
-                    Behoud van authentieke elementen met moderne comfort.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="h-48 relative">
-                  <img 
-                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858" 
-                    alt="Totaalrenovatie" 
-                    className="w-full h-full object-cover rounded-t-lg"
-                  />
-                  <div className="absolute bottom-0 left-0 p-4 text-white">
-                    <Hammer className="h-6 w-6" />
-                  </div>
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-3">Totaalrenovaties</h3>
-                  <p className="text-gray-700 text-sm">
-                    Complete woningtransformatie van kelder tot zolder.
+                    Uitgebreide garantie op alle renovatiewerken en vakmanschap.
                   </p>
                 </CardContent>
               </Card>
@@ -196,82 +208,103 @@ const Renovatie = () => {
         </section>
 
         {/* Service Area */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Service Gebied - 50km Rondom Hasselt</h2>
-              <p className="text-xl text-gray-600">Wij verzorgen renovatieprojecten in heel Limburg</p>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ons Werkgebied - Renovatie in Heel Limburg</h2>
+              <p className="text-xl text-gray-600">
+                Vanuit ons hoofdkantoor in Hasselt voeren wij renovatieprojecten uit in een straal van 50 kilometer.
+              </p>
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
               <Card className="bg-white p-6">
                 <h3 className="text-xl font-bold mb-4 text-blue-600">Hoofdsteden</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Hasselt</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Genk</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Sint-Truiden</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Tongeren</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Bilzen</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Renovatie Diepenbeek</li>
                 </ul>
               </Card>
 
               <Card className="bg-white p-6">
                 <h3 className="text-xl font-bold mb-4 text-blue-600">Regio Noord</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Lommel, Neerpelt</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Overpelt, Bocholt</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Hamont-Achel</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Peer, Bree</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Maaseik, Kinrooi</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Beringen, Heusden-Zolder</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Houthalen-Helchteren</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Lommel</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Maaseik</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Peer</li>
                 </ul>
               </Card>
 
               <Card className="bg-white p-6">
                 <h3 className="text-xl font-bold mb-4 text-blue-600">Regio Zuid</h3>
                 <ul className="space-y-2 text-gray-700">
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Tessenderlo</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Herk-de-Stad</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Borgloon, Hoeselt</li>
+                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Riemst, Lanaken</li>
                   <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Maasmechelen</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Lanaken, Riemst</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Dilsen-Stokkem</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Borgloon, Voeren</li>
-                  <li className="flex items-center"><CheckCircle className="h-4 w-4 mr-2 text-green-500" />Hoeselt, Wellen</li>
                 </ul>
               </Card>
             </div>
           </div>
         </section>
 
-        {/* Process */}
+        {/* Local Expertise */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Lokale Expertise en Vergunningen</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Dankzij onze jarenlange aanwezigheid in Hasselt kennen wij de lokale bouwreglementering 
+                van Hasselt en omliggende gemeenten door en door. Wij begeleiden u bij het aanvragen van 
+                bouwvergunningen en zorgen ervoor dat uw renovatieproject volledig conform de geldende normen wordt uitgevoerd.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
         <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Renovatie Process</h2>
-              <p className="text-xl text-gray-600">Van analyse tot droomhuis in 4 stappen</p>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Veelgestelde Vragen over Renovatie in Hasselt</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">1</div>
-                <h3 className="text-xl font-bold mb-4">Analyse & Planning</h3>
-                <p className="text-gray-700">Wij analyseren uw woning en bespreken uw renovatiewensen.</p>
-              </div>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <Card className="bg-white border border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Hoelang duurt een renovatieproject in Hasselt gemiddeld?</h3>
+                  <p className="text-gray-700">
+                    De duur van renovatiewerken hangt af van de omvang van het project. Een badkamerrenovatie 
+                    in Hasselt duurt gemiddeld 1-2 weken, terwijl een volledige huisrenovatie 2-6 maanden kan duren.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">2</div>
-                <h3 className="text-xl font-bold mb-4">Vergunningen</h3>
-                <p className="text-gray-700">Wij regelen alle benodigde vergunningen voor uw renovatie.</p>
-              </div>
+              <Card className="bg-white border border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Welke vergunningen zijn nodig voor renovatie in Hasselt?</h3>
+                  <p className="text-gray-700">
+                    Voor bepaalde renovatiewerken in Hasselt is een stedenbouwkundige vergunning vereist. 
+                    Wij adviseren u graag over de nodige vergunningen voor uw specifieke project.
+                  </p>
+                </CardContent>
+              </Card>
 
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">3</div>
-                <h3 className="text-xl font-bold mb-4">Uitvoering</h3>
-                <p className="text-gray-700">Start van de renovatie met kwaliteit en transparante communicatie.</p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">4</div>
-                <h3 className="text-xl font-bold mb-4">Oplevering</h3>
-                <p className="text-gray-700">Uw gerenoveerde woning wordt opgeleverd met alle garanties.</p>
-              </div>
+              <Card className="bg-white border border-gray-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold mb-3">Biedt MMT Projects garantie op renovatiewerken?</h3>
+                  <p className="text-gray-700">
+                    Ja, wij bieden uitgebreide garantie op al onze renovatiewerken in Hasselt en omgeving. 
+                    De garantietermijn varieert afhankelijk van het type werk.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
@@ -279,10 +312,10 @@ const Renovatie = () => {
         {/* CTA */}
         <section className="py-20 px-4 bg-blue-600 text-white">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Renovatieproject in Hasselt</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Gratis Offerte voor Uw Renovatieproject</h2>
             <p className="text-xl mb-8 text-blue-100">
-              Klaar om uw renovatiedroom waar te maken? MMT Projects staat klaar om uw 
-              renovatieproject in Hasselt of omgeving te realiseren.
+              Heeft u plannen voor een renovatie in Hasselt of omgeving? Vraag dan vrijblijvend een offerte aan. 
+              Onze experts bezoeken u graag thuis om uw project te bespreken en een gedetailleerde prijsopgave op te maken.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
@@ -302,7 +335,7 @@ const Renovatie = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Contact MMT Projects - Renovatie Specialist Hasselt</h3>
+                <h3 className="text-2xl font-bold mb-6">Contact MMT Projects</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <MapPin className="h-6 w-6 mr-4 text-blue-600" />
@@ -318,7 +351,8 @@ const Renovatie = () => {
                   </div>
                 </div>
                 <p className="mt-6 text-gray-600">
-                  <strong>Service gebied:</strong> 50km rondom Hasselt, inclusief alle gemeenten in Limburg.
+                  Bel vandaag nog voor een gratis renovatie-advies in Hasselt en omstreken. 
+                  Ons team staat klaar om uw renovatiedromen waar te maken!
                 </p>
               </div>
               
@@ -331,7 +365,7 @@ const Renovatie = () => {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 mr-3 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span>15+ jaar ervaring in renovaties</span>
+                    <span>15+ jaar ervaring in renovatiewerken</span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 mr-3 text-green-500 flex-shrink-0 mt-0.5" />

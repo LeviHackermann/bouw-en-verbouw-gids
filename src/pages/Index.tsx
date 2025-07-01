@@ -94,6 +94,11 @@ const Index = () => {
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <a href="/parket-leggen-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Parket leggen
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <a href="/tegelwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                       Tegelwerk
                     </a>
@@ -189,6 +194,9 @@ const Index = () => {
                       </a>
                       <a href="/laminaat-leggen-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Laminaat leggen
+                      </a>
+                      <a href="/parket-leggen-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Parket leggen
                       </a>
                       <a href="/tegelwerk-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Tegelwerk
@@ -579,6 +587,7 @@ const Index = () => {
                 <li><a href="/keukenrenovatie-hasselt-limburg" className="hover:text-blue-600">Keukenrenovatie</a></li>
                 <li><a href="/vloerleggen-hasselt-limburg" className="hover:text-blue-600">Vloerleggen</a></li>
                 <li><a href="/laminaat-leggen-hasselt-limburg" className="hover:text-blue-600">Laminaat leggen</a></li>
+                <li><a href="/parket-leggen-hasselt-limburg" className="hover:text-blue-600">Parket leggen</a></li>
                 <li><a href="/tegelwerk-hasselt-limburg" className="hover:text-blue-600">Tegelwerk</a></li>
                 <li><a href="/stucwerk-hasselt-limburg" className="hover:text-blue-600">Stucwerk</a></li>
                 <li><a href="/schilderwerk-hasselt-limburg" className="hover:text-blue-600">Schilderwerk</a></li>

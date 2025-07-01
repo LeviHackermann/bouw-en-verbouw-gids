@@ -1,4 +1,3 @@
-
 import { 
   Building2, Hammer, Home, Wrench, Shield, Users, Award, Phone, 
   Mail, MapPin, Menu, X, ChevronRight, ArrowRight
@@ -26,6 +25,7 @@ const Index = () => {
             <nav className="hidden md:flex items-center gap-8">
               <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
               <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Diensten</a>
+              <a href="/nieuwbouw-hasselt-limburg" className="text-gray-700 hover:text-blue-600 transition-colors">Nieuwbouw</a>
               <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Over ons</a>
               <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors">Voordelen</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
@@ -53,6 +53,7 @@ const Index = () => {
                 <div className="flex flex-col gap-6 mt-8">
                   <a href="#" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Home</a>
                   <a href="#services" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Diensten</a>
+                  <a href="/nieuwbouw-hasselt-limburg" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Nieuwbouw</a>
                   <a href="#about" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Over ons</a>
                   <a href="#benefits" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Voordelen</a>
                   <a href="#contact" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Contact</a>
@@ -410,7 +411,7 @@ const Index = () => {
             <div>
               <h4 className="text-lg font-semibold mb-4">Diensten</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-blue-600">Nieuwbouw</a></li>
+                <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
                 <li><a href="#" className="hover:text-blue-600">Renovatie</a></li>
                 <li><a href="#" className="hover:text-blue-600">Totaalprojecten</a></li>
                 <li><a href="#" className="hover:text-blue-600">Herstelling en onderhoud</a></li>
@@ -423,6 +424,7 @@ const Index = () => {
               <ul className="space-y-2 text-gray-600">
                 <li><a href="#" className="hover:text-blue-600">Home</a></li>
                 <li><a href="#services" className="hover:text-blue-600">Diensten</a></li>
+                <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
                 <li><a href="#about" className="hover:text-blue-600">Over ons</a></li>
                 <li><a href="#benefits" className="hover:text-blue-600">Voordelen</a></li>
                 <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>

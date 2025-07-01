@@ -203,6 +203,12 @@ const Index = () => {
       icon: Home,
       link: "/kozijnen-hasselt-limburg"
     },
+    {
+      name: "Ramen Plaatsen",
+      description: "Professionele raaminstallatie voor particuliere woningen en bedrijfspanden.",
+      icon: Home,
+      link: "/ramen-plaatsen-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

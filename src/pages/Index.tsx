@@ -227,6 +227,12 @@ const Index = () => {
       icon: Wrench,
       link: "/onderhoud-herstelling-hasselt-limburg"
     },
+    {
+      name: "Plaatsing Zonnepanelen",
+      description: "Professionele installatie van zonnepanelen voor duurzame energie.",
+      icon: Zap,
+      link: "/plaatsing-zonnepanelen-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

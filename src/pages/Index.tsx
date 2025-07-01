@@ -1,4 +1,3 @@
-
 import { 
   Building2, Hammer, Home, Wrench, Shield, Users, Award, Phone, 
   Mail, MapPin, Menu, X, ChevronRight, ArrowRight, ChevronDown
@@ -45,8 +44,8 @@ const Index = () => {
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Renovatie & verbouwing
+                    <a href="/verbouwing-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Verbouwing
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
@@ -101,8 +100,8 @@ const Index = () => {
                       <a href="/nieuwbouw-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Nieuwbouw
                       </a>
-                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
-                        Renovatie & verbouwing
+                      <a href="/verbouwing-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Verbouwing
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten
@@ -474,7 +473,7 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4">Diensten</h4>
               <ul className="space-y-2 text-gray-600">
                 <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
-                <li><a href="#" className="hover:text-blue-600">Renovatie</a></li>
+                <li><a href="/verbouwing-hasselt-limburg" className="hover:text-blue-600">Verbouwing</a></li>
                 <li><a href="#" className="hover:text-blue-600">Totaalprojecten</a></li>
                 <li><a href="#" className="hover:text-blue-600">Herstelling en onderhoud</a></li>
                 <li><a href="#" className="hover:text-blue-600">Dakwerken</a></li>

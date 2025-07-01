@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -18,6 +17,7 @@ import Sloopwerk from "./pages/Sloopwerk";
 import Badkamerrenovatie from "./pages/Badkamerrenovatie";
 import Keukenrenovatie from "./pages/Keukenrenovatie";
 import Vloerleggen from "./pages/Vloerleggen";
+import Tegelwerk from "./pages/Tegelwerk";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +41,7 @@ const App = () => (
             <Route path="/badkamerrenovatie-hasselt-limburg" element={<Badkamerrenovatie />} />
             <Route path="/keukenrenovatie-hasselt-limburg" element={<Keukenrenovatie />} />
             <Route path="/vloerleggen-hasselt-limburg" element={<Vloerleggen />} />
+            <Route path="/tegelwerk-hasselt-limburg" element={<Tegelwerk />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

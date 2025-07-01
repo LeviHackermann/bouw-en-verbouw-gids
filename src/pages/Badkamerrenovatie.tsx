@@ -6,6 +6,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from "react-helmet-async";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Badkamerrenovatie = () => {
   return (
@@ -17,29 +19,10 @@ const Badkamerrenovatie = () => {
         <link rel="canonical" href="https://mmtprojects.be/badkamerrenovatie-hasselt-limburg" />
       </Helmet>
 
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <Building2 className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-semibold">MMT Projects</span>
-            </div>
-            <div className="flex items-center gap-4">
-              <Button 
-                className="bg-blue-600 hover:bg-blue-700 text-white"
-                size="sm"
-              >
-                <Phone className="mr-2 h-4 w-4" />
-                0484 11 77 27
-              </Button>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Navigation />
 
       {/* Hero Section */}
-      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-white">
+      <section className="py-16 px-4 bg-gradient-to-br from-blue-50 to-white mt-16">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -342,52 +325,7 @@ const Badkamerrenovatie = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <div className="flex items-center mb-4">
-                <Building2 className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-semibold">MMT Projects</span>
-              </div>
-              <p className="text-gray-600 mb-4">Uw betrouwbare partner voor badkamerrenovaties in Hasselt en Limburg</p>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Diensten</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>Badkamerrenovatie</li>
-                <li>Sanitair installatie</li>
-                <li>Tegelwerk</li>
-                <li>Loodgieterswerk</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li className="flex items-center">
-                  <Phone className="h-4 w-4 mr-2 text-blue-600" />
-                  0484 11 77 27
-                </li>
-                <li className="flex items-center">
-                  <Mail className="h-4 w-4 mr-2 text-blue-600" />
-                  info@mmtprojects.be
-                </li>
-                <li className="flex items-center">
-                  <MapPin className="h-4 w-4 mr-2 text-blue-600" />
-                  Daaleindestraat 100, 3720 Hasselt
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-8 pt-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

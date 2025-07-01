@@ -1,291 +1,212 @@
-
-import { Building2, Phone, Mail, MapPin, Paintbrush, Brush, Home, Shield } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Helmet } from 'react-helmet-async';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Schilderwerk = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
         <title>Professioneel Schilderwerk in Hasselt en Limburg - MMT Projects</title>
-        <meta name="description" content="Professioneel schilderwerk in Hasselt en Limburg. MMT Projects levert kwaliteitsvolle schilderdiensten binnen 50km van Hasselt. Offerte op maat ✓ Ervaren schilders ✓" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://mmtprojects.be/schilderwerk-hasselt-limburg" />
+        <meta name="description" content="✓ Professioneel schilderwerk in Hasselt, Genk, en heel Limburg. Binnen- en buitenschilderwerk. Ervaren schilders. Gratis offerte! ☎ 0484117727" />
+        <meta name="keywords" content="schilderwerk, Hasselt, Limburg, schilder, binnen schilderwerk, buiten schilderwerk, MMT Projects" />
       </Helmet>
 
+      <Navigation />
+
       {/* Header */}
-      <header className="bg-blue-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="bg-white/20 p-4 rounded-full">
-                <Paintbrush className="h-12 w-12" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Professioneel Schilderwerk in Hasselt en Limburg
-            </h1>
-            <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-              Bij MMT Projects bent u aan het juiste adres voor hoogkwaardig schilderwerk in Hasselt en heel Limburg. Met jarenlange ervaring in de bouwsector leveren wij professionele schilderdiensten voor particulieren en bedrijven in een straal van 50 kilometer rond Hasselt.
-            </p>
+      <header className="bg-blue-600 text-white py-16 px-4 mt-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="flex items-center justify-center mb-4">
+            <Building2 className="h-12 w-12 mr-4" />
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            Professioneel Schilderwerk in Hasselt en Limburg
+          </h1>
+          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            MMT Projects - Uw specialist in schilderwerken voor binnen en buiten
+          </p>
         </div>
       </header>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Onze Schilderdiensten in Hasselt en Omgeving
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-              Als gespecialiseerd bouwbedrijf uit Hasselt bieden wij een breed scala aan schilderwerk diensten:
+      {/* Main Content */}
+      <main className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Introduction */}
+          <section className="mb-16">
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Bij MMT Projects bent u aan het juiste adres voor vakkundig schilderwerk in Hasselt en omstreken.
+              Als ervaren constructiebedrijf met een focus op kwaliteit en duurzaamheid, zorgen wij voor een
+              perfecte afwerking van uw schilderproject, zowel binnen als buiten.
             </p>
-          </div>
+          </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Home className="h-8 w-8 text-blue-600" />
+          {/* Why Choose Us */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Waarom Kiezen Voor MMT Projects Voor Uw Schilderwerk?
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              Ons team van professionele schilders heeft jarenlange ervaring in het uitvoeren van diverse
+              schilderprojecten in Hasselt, Genk, Sint-Truiden, Tongeren en heel de provincie Limburg. We
+              werken met hoogwaardige materialen en moderne technieken om een duurzaam en esthetisch resultaat
+              te garanderen.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Ervaren Schilders</h3>
+                  <p className="text-gray-600">Gekwalificeerde vakmensen met passie voor schilderwerk</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Kwaliteit Gegarandeerd</h3>
+                  <p className="text-gray-600">Duurzame materialen en professionele afwerking</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border-none shadow-lg">
+                <CardContent className="p-6 text-center">
+                  <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold mb-2">Flexibele Planning</h3>
+                  <p className="text-gray-600">We passen ons aan uw schema aan</p>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+
+          {/* Our Services */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Onze Schilderwerken Omvatten:
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "Binnenschilderwerk (muren, plafonds, houtwerk)",
+                "Buitenschilderwerk (gevels, ramen, deuren)",
+                "Decoratief schilderwerk (speciale technieken)",
+                "Renovatieschilderwerk (herstel en schilderen)",
+                "Industrieel schilderwerk (bedrijfspanden)",
+                "Onderhoudsschilderwerk (bescherming en verfraaiing)"
+              ].map((service, index) => (
+                <div key={index} className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
+                  <span className="text-gray-700">{service}</span>
                 </div>
-                <h3 className="text-xl font-semibold mb-4">Binnen Schilderwerk</h3>
-                <p className="text-gray-600">Voor woningen en kantoren</p>
-              </CardContent>
-            </Card>
+              ))}
+            </div>
+          </section>
 
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Building2 className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Buiten Schilderwerk</h3>
-                <p className="text-gray-600">Gevelonderhoud en bescherming</p>
-              </CardContent>
-            </Card>
+          {/* Service Area */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Werkgebied: Heel Limburg en Omgeving
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+              MMT Projects verzorgt schilderwerken in een straal van 50 kilometer rondom ons kantoor in Hasselt.
+              Dit betekent dat we ook actief zijn in:
+            </p>
+            <p className="text-gray-700 leading-relaxed">
+              Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Lummen, Beringen, Houthalen-Helchteren,
+              Maasmechelen, Lanaken, Riemst, Hoeselt, Alken, Wellen, Borgloon, Heers, Nieuwerkerken,
+              Herk-de-Stad, Halen en alle tussenliggende gemeenten.
+            </p>
+          </section>
 
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Industrieel Schilderwerk</h3>
-                <p className="text-gray-600">Voor bedrijfspanden</p>
-              </CardContent>
-            </Card>
+          {/* Local Expertise */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900">
+              Lokale Expertise Die Het Verschil Maakt
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Als Hasselts bedrijf begrijpen we de klimatologische omstandigheden van onze streek. We weten
+              welke verfsoorten het beste presteren in de vochtige winters en warme zomers van Limburg.
+              Onze lokale kennis zorgt ervoor dat uw schilderwerk jarenlang mooi blijft.
+            </p>
+          </section>
 
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Brush className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Renovatie & Herschildering</h3>
-                <p className="text-gray-600">Van bestaande oppervlakten</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Paintbrush className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Decoratief Schilderwerk</h3>
-                <p className="text-gray-600">En wandafwerking</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-lg hover:shadow-xl transition-shadow">
-              <CardContent className="p-8 text-center">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-semibold mb-4">Houtwerk Behandeling</h3>
-                <p className="text-gray-600">En bescherming</p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Waarom Kiezen voor MMT Projects Schilderwerk?
+          {/* CTA Section */}
+          <section className="bg-blue-50 p-8 rounded-2xl mb-16">
+            <div className="text-center">
+              <h2 className="text-3xl font-bold mb-6 text-gray-900">
+                Gratis Offerte en Advies
               </h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Met onze vestiging aan de Daaleindestraat in Hasselt kennen wij de lokale bouwmarkt als geen ander. Onze ervaren schilders werken met hoogwaardige materialen en moderne technieken om duurzame resultaten te garanderen. Wij staan bekend om onze betrouwbaarheid, vakmanschap en persoonlijke service in heel Limburg.
+              <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                Wilt u weten wat het schilderwerk aan uw woning kost? Neem vandaag nog contact met ons op
+                voor een vrijblijvende offerte. Onze specialisten komen graag bij u thuis in Hasselt of omgeving
+                om de situatie te bekijken en u te adviseren over de beste oplossing.
               </p>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <Shield className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Kwaliteit en Duurzaamheid</h3>
-                    <p className="text-gray-600">Wij werken uitsluitend met A-merk verven en materialen die bestand zijn tegen de Belgische weersomstandigheden.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <Building2 className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Lokale Expertise</h3>
-                    <p className="text-gray-600">Jarenlange ervaring in schilderwerk doorheen Limburg met kennis van lokale klimaat en architecturale stijlen.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="bg-blue-100 p-2 rounded-lg mr-4 flex-shrink-0">
-                    <Phone className="h-6 w-6 text-blue-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Snel en Betrouwbaar</h3>
-                    <p className="text-gray-600">Wij plannen uw schilderwerk zorgvuldig in en houden ons aan afgesproken deadlines.</p>
-                  </div>
-                </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Bel voor gratis offerte
+                </Button>
+                <Button size="lg" variant="outline">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Email ons
+                </Button>
               </div>
             </div>
-            
-            <div className="lg:pl-12">
-              <img 
-                src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3" 
-                alt="Professioneel schilderwerk" 
-                className="rounded-2xl shadow-xl w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Service Area Section */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-              Schilderwerk Service Gebied
+          {/* Contact Information */}
+          <section className="mb-16">
+            <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">
+              Neem Vandaag Nog Contact Op
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Vanuit ons hoofdkantoor in Hasselt bedienen wij de volgende gemeenten en steden voor professioneel schilderwerk:
+            <p className="text-lg text-gray-700 text-center mb-8">
+              Bent u toe aan een professionele schilderbeurt voor uw woning in Hasselt of omgeving? MMT Projects staat klaar om u te helpen.
+              Van klein onderhoud tot grote renovatieprojecten - wij regelen het allemaal.
             </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-12">
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Binnen 25km van Hasselt</h3>
-                <div className="grid grid-cols-2 gap-2 text-gray-700">
-                  <span>Genk</span>
-                  <span>Sint-Truiden</span>
-                  <span>Diepenbeek</span>
-                  <span>Zonhoven</span>
-                  <span>Beringen</span>
-                  <span>Herk-de-Stad</span>
-                  <span>Lummen</span>
-                  <span>Kuringen</span>
-                  <span>Kermt</span>
+            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Contactgegevens:</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MapPin className="h-6 w-6 text-blue-600 mr-4" />
+                  <div>
+                    <p className="font-semibold">Adres:</p>
+                    <p className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</p>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-lg">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Binnen 50km van Hasselt</h3>
-                <div className="grid grid-cols-2 gap-2 text-gray-700">
-                  <span>Tongeren</span>
-                  <span>Bilzen</span>
-                  <span>Maasmechelen</span>
-                  <span>Lanaken</span>
-                  <span>Riemst</span>
-                  <span>Hoeselt</span>
-                  <span>Wellen</span>
-                  <span>Borgloon</span>
-                  <span>Heers</span>
-                  <span>Gingelom</span>
-                  <span>Nieuwerkerken</span>
-                  <span>Alken</span>
-                  <span>Halen</span>
-                  <span>Tessenderlo</span>
+                <div className="flex items-center">
+                  <Mail className="h-6 w-6 text-blue-600 mr-4" />
+                  <div>
+                    <p className="font-semibold">Email:</p>
+                    <p className="text-gray-700">info@mmtprojects.be</p>
+                  </div>
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+                <div className="flex items-center">
+                  <Phone className="h-6 w-6 text-blue-600 mr-4" />
+                  <div>
+                    <p className="font-semibold">Telefoon:</p>
+                    <p className="text-gray-700">0484117727</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-blue-600 text-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Offerte Aanvragen voor Schilderwerk
-          </h2>
-          <p className="text-xl text-blue-100 mb-12 max-w-3xl mx-auto">
-            Heeft u schilderwerk nodig in Hasselt of elders in Limburg? Neem vandaag nog contact op voor een vrijblijvende offerte. Onze schilderspecialisten komen graag ter plaatse om uw project te bespreken en een gedetailleerde prijsopgave te maken.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              Bel Direct: 0484117727
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Mail className="mr-2 h-5 w-5" />
-              info@mmtprojects.be
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Contact MMT Projects - Uw Schilder in Limburg
-            </h2>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <MapPin className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Adres</h3>
-              <p className="text-gray-400">Daaleindestraat 100<br />3720 Hasselt</p>
-            </div>
-            
-            <div>
-              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Telefoon</h3>
-              <p className="text-gray-400">0484117727</p>
-            </div>
-            
-            <div>
-              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Mail className="h-8 w-8" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Email</h3>
-              <p className="text-gray-400">info@mmtprojects.be</p>
-            </div>
-          </div>
-          
-          <div className="text-center mt-12">
-            <p className="text-xl text-gray-300">
-              Bel ons vandaag nog voor professioneel schilderwerk in Hasselt, Genk, Sint-Truiden, Tongeren en heel Limburg.<br />
-              <strong>MMT Projects - uw betrouwbare partner voor al uw schilderprojecten!</strong>
+          {/* Additional SEO Content */}
+          <section className="bg-gray-50 p-8 rounded-2xl">
+            <p className="text-gray-700 leading-relaxed">
+              MMT Projects is uw betrouwbare partner voor schilderwerken in heel de provincie Limburg.
+              Of u nu woont in het historische centrum van Hasselt, de groene wijken van Genk, of de landelijke
+              omgeving van Sint-Truiden - onze ervaren vakmensen komen naar u toe. We bedienen alle postcodes
+              in onze regio en staan bekend om onze punctualiteit, vakmanschap en eerlijke prijzen.
             </p>
-          </div>
+          </section>
         </div>
-      </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

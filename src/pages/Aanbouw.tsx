@@ -1,139 +1,87 @@
-
 import { Helmet } from 'react-helmet-async';
-import { 
-  Building2, Phone, Mail, MapPin, CheckCircle, Award, Users, Shield,
-  Home, Hammer, ArrowRight, Star, PlusCircle
-} from "lucide-react";
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Aanbouw = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Aanbouw Hasselt - Professionele Uitbreidingen door MMT Projects</title>
-        <meta name="description" content="Aanbouw Hasselt ✓ MMT Projects realiseert kwaliteitsvolle uitbreidingen in Limburg ✓ 10+ jaar ervaring ✓ Gratis offerte ✓ Bel 0484117727" />
-        <meta name="keywords" content="aanbouw Hasselt, uitbreiding Hasselt, aanbouwer Limburg, MMT Projects" />
+        <title>Aanbouw Hasselt - Professionele aanbouw door MMT Projects</title>
+        <meta name="description" content="Aanbouw Hasselt ✓ MMT Projects ✓ 50km service gebied ✓ Professionele aanbouwdiensten in Limburg ✓ Gratis offerte ✓ Lokale expertise sinds jaren" />
+        <meta name="keywords" content="aanbouw Hasselt, aanbouw Limburg, MMT Projects, aanbouwdiensten, uitbouw Hasselt" />
+        <link rel="canonical" href="https://mmtprojects.be/aanbouw-hasselt-limburg" />
       </Helmet>
 
-      {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+      <Navigation />
+
+      {/* Header */}
+      <header className="bg-blue-600 text-white py-20 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <Building2 className="h-8 w-8 text-blue-600" />
-              <span className="ml-2 text-xl font-semibold">MMT Projects</span>
+          <div className="flex items-center mb-6">
+            <Building2 className="h-12 w-12 mr-4" />
+            <div>
+              <h1 className="text-4xl font-bold">Aanbouw in Hasselt - Professionele Uitbreiding van uw Woning</h1>
+              <p className="text-xl mt-2 text-blue-100">Realiseer uw droomuitbreiding met MMT Projects</p>
             </div>
-            <div className="flex items-center gap-4">
-              <a href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white" size="sm">
-                <Phone className="mr-2 h-4 w-4" />
-                0484 11 77 27
-              </Button>
-            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mt-8">
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Phone className="mr-2 h-5 w-5" />
+              Bel 0484117727
+            </Button>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+              <Mail className="mr-2 h-5 w-5" />
+              Gratis offerte
+            </Button>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative bg-gradient-to-br from-blue-50 via-white to-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <PlusCircle className="h-4 w-4" />
-              Professionele Aanbouw Specialist
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900 mb-6">
-              Aanbouw Hasselt - <span className="text-blue-600">Professionele Uitbreidingen</span> door MMT Projects
-            </h1>
-            
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-8">
-              MMT Projects is uw betrouwbare partner voor hoogkwalitatieve aanbouw projecten in Hasselt en omgeving. Met jarenlange ervaring in de bouwsector realiseren wij uitbreidingen die perfect aansluiten bij uw bestaande woning.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
-                <Phone className="mr-2 h-5 w-5" />
-                Gratis Offerte
-              </Button>
-              <Button size="lg" variant="outline" className="border-gray-300">
-                Onze Services
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
+      {/* Introduction */}
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Professionele Aanbouw Services in Hasselt en Omgeving</h2>
+          <p className="text-lg text-gray-700 leading-relaxed">
+            MMT Projects biedt hoogwaardige aanbouw oplossingen voor woningen in Hasselt en een straal van 50 kilometer eromheen. Onze ervaren vakmensen zorgen voor een perfecte uitvoering van uw aanbouwproject, van ontwerp tot oplevering.
+          </p>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
+      {/* Services */}
+      <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Onze Aanbouw Services in Limburg</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Als gespecialiseerd bouwbedrijf in Hasselt bieden wij complete aanbouw oplossingen voor particulieren en bedrijven. Onze ervaren vakmensen zorgen voor een naadloze integratie van uw nieuwe ruimte met het bestaande gebouw.
-            </p>
-          </div>
-
+          <h2 className="text-3xl font-bold text-center mb-12">Onze Aanbouw Diensten in Hasselt</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Home className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Keukenuitbreidingen</h3>
-                <p className="text-gray-700">Ruimere keuken voor meer comfort en functionaliteit</p>
+            <Card className="bg-white border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <Building2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Aanbouw Ontwerp</h3>
+                <p className="text-gray-600">
+                  Professioneel ontwerp van uw aanbouw, afgestemd op uw wensen en budget.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Building2 className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Extra Slaapkamers</h3>
-                <p className="text-gray-700">Meer slaapruimte voor een groeiend gezin</p>
+            <Card className="bg-white border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <CheckCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Volledige Uitvoering</h3>
+                <p className="text-gray-600">
+                  Van fundering tot afwerking, wij verzorgen de complete uitvoering van uw aanbouw.
+                </p>
               </CardContent>
             </Card>
 
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Shield className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Thuiskantoren</h3>
-                <p className="text-gray-700">Professionele werkruimte in uw eigen huis</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Hammer className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Garages</h3>
-                <p className="text-gray-700">Veilige en droge stalling voor uw voertuig</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <Star className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Veranda's</h3>
-                <p className="text-gray-700">Overdekte buitenruimte voor het hele jaar</p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300">
-              <CardContent className="p-6">
-                <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                  <PlusCircle className="h-8 w-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Complete Woonuitbreidingen</h3>
-                <p className="text-gray-700">Grootschalige uitbreidingen voor meer leefruimte</p>
+            <Card className="bg-white border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-3">Garantie en Kwaliteit</h3>
+                <p className="text-gray-600">
+                  Wij bieden garantie op onze aanbouwen en werken met hoogwaardige materialen.
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -141,185 +89,111 @@ const Aanbouw = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Aanbouw Hasselt?</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Award className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">10+ Jaar Ervaring</h3>
-              <p className="text-gray-700">Meer dan 10 jaar ervaring in aanbouw projecten in Limburg</p>
-            </div>
+      <section className="py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8">Waarom Kiezen voor MMT Projects voor Uw Aanbouw?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="bg-gray-50 border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-semibold mb-3">Ervaren Team</h3>
+                <p className="text-gray-600">
+                  Ons team heeft jarenlange ervaring met aanbouwprojecten in de regio Hasselt.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <MapPin className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Lokale Kennis</h3>
-              <p className="text-gray-700">Lokale kennis van bouwvoorschriften in Hasselt en omgeving</p>
-            </div>
+            <Card className="bg-gray-50 border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-semibold mb-3">Kwaliteit en Betrouwbaarheid</h3>
+                <p className="text-gray-600">
+                  Wij staan garant voor kwaliteit en betrouwbaarheid in al onze projecten.
+                </p>
+              </CardContent>
+            </Card>
 
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Persoonlijke Begeleiding</h3>
-              <p className="text-gray-700">Persoonlijke begeleiding van ontwerp tot oplevering</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Kwaliteitsmaterialen</h3>
-              <p className="text-gray-700">Gebruik van duurzame en kwalitatieve bouwmaterialen</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Transparante Prijzen</h3>
-              <p className="text-gray-700">Transparante prijsstelling zonder verrassingen</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Building2 className="h-8 w-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-gray-900">Duurzame Oplossingen</h3>
-              <p className="text-gray-700">Energiezuinige isolatie en moderne verwarmingssystemen</p>
-            </div>
+            <Card className="bg-gray-50 border-none shadow-sm">
+              <CardContent className="p-6 text-center">
+                <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="font-semibold mb-3">Snelle Realisatie</h3>
+                <p className="text-gray-600">
+                  Wij zorgen voor een snelle en efficiënte realisatie van uw aanbouwproject.
+                </p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Service Area */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Servicegebied Aanbouw</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              MMT Projects verzorgt aanbouw projecten in heel Limburg. We zijn actief binnen 50km van Hasselt.
-            </p>
-          </div>
-          
-          <div className="bg-blue-50 rounded-2xl p-8">
-            <p className="text-gray-700 leading-relaxed text-center">
-              <strong>Onze werkgebieden:</strong> Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Beringen, Houthalen-Helchteren, Lummen, Herk-de-Stad, Alken, Wellen, Borgloon, Hoeselt, Riemst, Lanaken, Maasmechelen, As, Opglabbeek, Meeuwen-Gruitrode, Hamont-Achel, Neerpelt, Overpelt, Lommel, Hechtel-Eksel, Ham, Tessenderlo en alle gemeenten binnen 50km van Hasselt.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Het Aanbouw Proces</h2>
-          </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">1</div>
-              <h3 className="text-lg font-bold mb-2">Adviesgesprek</h3>
-              <p className="text-gray-600">Vrijblijvend gesprek bij u thuis</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">2</div>
-              <h3 className="text-lg font-bold mb-2">Offerte</h3>
-              <p className="text-gray-600">Gedetailleerde prijsopgave</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">3</div>
-              <h3 className="text-lg font-bold mb-2">Vergunningen</h3>
-              <p className="text-gray-600">Wij regelen alle benodigde vergunningen</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-blue-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold">4</div>
-              <h3 className="text-lg font-bold mb-2">Uitvoering</h3>
-              <p className="text-gray-600">Professionele realisatie van uw aanbouw</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gray-900 text-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Klaar voor uw aanbouw project in Hasselt?</h2>
-            <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-              Neem vandaag nog contact op voor een vrijblijvend adviesgesprek. Onze aanbouw specialisten staan klaar om uw uitbreidingsplannen te bespreken.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel Direct: 0484 11 77 27
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Ons
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-100 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Werkgebied Aanbouw</h2>
+          <p className="text-lg text-gray-700 text-center mb-6">
+            MMT Projects verzorgt aanbouwprojecten in een straal van 50 kilometer rond Hasselt. Wij zijn actief in:
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 text-gray-700">
             <div>
-              <div className="flex items-center mb-4">
-                <Building2 className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-semibold">MMT Projects</span>
+              <h3 className="font-semibold mb-2">Grote steden:</h3>
+              <p>Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Beringen, Houthalen-Helchteren, Lommel, Maaseik</p>
+            </div>
+            <div>
+              <h3 className="font-semibold mb-2">Kleinere gemeenten:</h3>
+              <p>Lanaken, Riemst, Hoeselt, Wellen, Kortessem, Nieuwerkerken, Herk-de-Stad, Halen, Ham, Tessenderlo, Borgloon, Heers</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Neem Contact Op voor Uw Aanbouwproject</h2>
+          <p className="text-lg text-gray-700 text-center mb-8">
+            Wilt u meer weten over onze aanbouw mogelijkheden? Neem contact op met MMT Projects voor een vrijblijvende offerte en deskundig advies.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Phone className="mr-2 h-5 w-5" />
+              Bel 0484117727
+            </Button>
+            <Button size="lg" variant="outline">
+              <Mail className="mr-2 h-5 w-5" />
+              Email ons
+            </Button>
+          </div>
+
+          <div className="bg-gray-50 p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold mb-6 text-center">Contactgegevens</h3>
+            <div className="space-y-4">
+              <div className="flex items-center">
+                <MapPin className="h-6 w-6 text-blue-600 mr-4" />
+                <div>
+                  <p className="font-semibold">Adres:</p>
+                  <p className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</p>
+                </div>
               </div>
-              <p className="text-gray-600 mb-4">Uw betrouwbare partner voor aanbouw in Hasselt en omgeving</p>
+              <div className="flex items-center">
+                <Mail className="h-6 w-6 text-blue-600 mr-4" />
+                <div>
+                  <p className="font-semibold">Email:</p>
+                  <p className="text-gray-700">info@mmtprojects.be</p>
+                </div>
+              </div>
+              <div className="flex items-center">
+                <Phone className="h-6 w-6 text-blue-600 mr-4" />
+                <div>
+                  <p className="font-semibold">Telefoon:</p>
+                  <p className="text-gray-700">0484117727</p>
+                </div>
+              </div>
             </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Onze Services</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li>Keukenuitbreidingen</li>
-                <li>Extra slaapkamers</li>
-                <li>Thuiskantoren</li>
-                <li>Garages & veranda's</li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <ul className="space-y-4 text-gray-600">
-                <li className="flex items-start">
-                  <MapPin className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>Daaleindestraat 100, 3720 Hasselt</span>
-                </li>
-                <li className="flex items-start">
-                  <Phone className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>0484 11 77 27</span>
-                </li>
-                <li className="flex items-start">
-                  <Mail className="h-5 w-5 mr-2 flex-shrink-0 text-blue-600" />
-                  <span>info@mmtprojects.be</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center text-gray-600">
-            <p>&copy; {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.</p>
           </div>
         </div>
-      </footer>
+      </section>
+
+      <Footer />
     </div>
   );
 };

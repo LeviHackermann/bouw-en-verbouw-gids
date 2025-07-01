@@ -1,10 +1,12 @@
 import { 
   Building2, Home, CheckCircle, MapPin, Phone, Mail, 
-  Award, Shield, Users, ArrowRight, Star
+  Award, Shield, Users, ArrowRight, Star, Clock
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from 'react-helmet-async';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Nieuwbouw = () => {
   const serviceAreas = [

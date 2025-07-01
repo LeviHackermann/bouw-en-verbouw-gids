@@ -1,8 +1,9 @@
-
 import { Helmet } from 'react-helmet-async';
-import { Building2, Phone, Mail, MapPin, CheckCircle, Users, Award, Shield } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Tuinmuren = () => {
   return (

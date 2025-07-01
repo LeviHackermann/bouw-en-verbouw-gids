@@ -1,8 +1,9 @@
-
-import { Building2, Shield, Users, Phone, Mail, MapPin } from "lucide-react";
+import { Helmet } from 'react-helmet-async';
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Helmet } from 'react-helmet-async';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Schuttingen = () => {
   return (

@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award, Hammer } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
@@ -56,7 +56,7 @@ const Afbraakwerken = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="bg-white border-none shadow-sm">
               <CardContent className="p-6 text-center">
-                <Sloop className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <Hammer className="h-12 w-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-3">Sloop van Gebouwen</h3>
                 <p className="text-gray-600">
                   Volledige of gedeeltelijke sloop van gebouwen en structuren.
@@ -198,10 +198,3 @@ const Afbraakwerken = () => {
 };
 
 export default Afbraakwerken;
-
-// Dummy Sloop icon, replace with actual icon if available
-const Sloop = () => (
-  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" className="w-6 h-6">
-    <path d="M3 13h18M3 17h18M3 9h18M3 5h18M6 13V5m12 8V5"></path>
-  </svg>
-);

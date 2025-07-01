@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award, Thermometer } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -90,9 +90,11 @@ const Isolatie = () => {
         <link rel="canonical" href="https://www.mmtprojects.be/isolatie-hasselt-limburg" />
       </Helmet>
 
+      <Navigation />
+
       <div className="min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-blue-600 text-white py-16">
+        <header className="bg-blue-600 text-white py-16 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
               <div className="flex justify-center mb-6">

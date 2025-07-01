@@ -1,4 +1,3 @@
-
 import { 
   Building2, Hammer, Home, Wrench, Shield, Users, Award, Phone, 
   Mail, MapPin, Menu, X, ChevronRight, ArrowRight, ChevronDown
@@ -145,6 +144,12 @@ const Index = () => {
                           Professionele gevelwerken in Limburg
                         </p>
                       </NavigationMenuLink>
+                      <NavigationMenuLink href="/tuinmuren-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Tuinmuren</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Vakkundige aanleg van tuinmuren
+                        </p>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -225,8 +230,8 @@ const Index = () => {
                       <a href="/gevelrenovatie-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Gevelrenovatie
                       </a>
-                      <a href="/dakbedekking-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
-                        Dakbedekking
+                      <a href="/tuinmuren-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Tuinmuren
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten
@@ -618,6 +623,7 @@ const Index = () => {
                 <li><Link to="/stucwerk-hasselt-limburg" className="hover:text-white">Stucwerk</Link></li>
                 <li><Link to="/schilderwerk-hasselt-limburg" className="hover:text-white">Schilderwerk</Link></li>
                 <li><Link to="/gevelrenovatie-hasselt-limburg" className="hover:text-white">Gevelrenovatie</Link></li>
+                <li><Link to="/tuinmuren-hasselt-limburg" className="hover:text-white">Tuinmuren</Link></li>
               </ul>
             </div>
             <div>

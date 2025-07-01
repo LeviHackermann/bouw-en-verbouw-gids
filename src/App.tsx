@@ -25,6 +25,7 @@ import LaminaatLeggen from "./pages/LaminaatLeggen";
 import ParketLeggen from "./pages/ParketLeggen";
 import Gevelrenovatie from "./pages/Gevelrenovatie";
 import Dakbedekking from "./pages/Dakbedekking";
+import Tuinmuren from "./pages/Tuinmuren";
 
 const queryClient = new QueryClient();
 
@@ -55,6 +56,7 @@ const App = () => (
             <Route path="/parket-leggen-hasselt-limburg" element={<ParketLeggen />} />
             <Route path="/gevelrenovatie-hasselt-limburg" element={<Gevelrenovatie />} />
             <Route path="/dakbedekking-hasselt-limburg" element={<Dakbedekking />} />
+            <Route path="/tuinmuren-hasselt-limburg" element={<Tuinmuren />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

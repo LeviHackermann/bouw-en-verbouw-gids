@@ -215,6 +215,12 @@ const Index = () => {
       icon: Home,
       link: "/deuren-plaatsen-hasselt-limburg"
     },
+    {
+      name: "Onderhoud en Herstelling",
+      description: "Professioneel onderhoud en herstelling van gebouwen.",
+      icon: Wrench,
+      link: "/onderhoud-herstelling-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

@@ -197,6 +197,12 @@ const Index = () => {
       icon: Home,
       link: "/isolatie-hasselt-limburg"
     },
+    {
+      name: "Kozijnen",
+      description: "Professionele kozijnen installatie, renovatie en reparatie.",
+      icon: Home,
+      link: "/kozijnen-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

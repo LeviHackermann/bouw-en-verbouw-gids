@@ -12,6 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLabel, NavigationMenuSeparator, Link } from "@radix-ui/react-navigation-menu";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,118 +29,125 @@ const Index = () => {
             </div>
             
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-              
-              {/* Diensten Dropdown */}
-              <DropdownMenu>
-                <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
-                  Diensten
-                  <ChevronDown className="ml-1 h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
-                  <DropdownMenuItem asChild>
-                    <a href="/nieuwbouw-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Nieuwbouw
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/verbouwing-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Verbouwing
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/renovatie-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Renovatie
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/aanbouw-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Aanbouw
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/metselwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Metselwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/timmerwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Timmerwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/sloopwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Sloopwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/badkamerrenovatie-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Badkamerrenovatie
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/keukenrenovatie-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Keukenrenovatie
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/vloerleggen-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Vloerleggen
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/laminaat-leggen-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Laminaat leggen
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/parket-leggen-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Parket leggen
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/tegelwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Tegelwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/stucwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Stucwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/schilderwerk-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Schilderwerk
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/gevelrenovatie-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Gevelrenovatie
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Totaalprojecten
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Herstelling en onderhoud
-                    </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <a href="/dakwerken-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
-                      Dakwerken
-                    </a>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-              
-              <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Over ons</a>
-              <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors">Voordelen</a>
-              <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-            </nav>
+            <NavigationMenu className="hidden lg:block">
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid w-[600px] grid-cols-2 gap-3 p-4">
+                      <Link to="/nieuwbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Nieuwbouw</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Complete nieuwbouwprojecten in Hasselt en omgeving
+                        </p>
+                      </Link>
+                      <Link to="/verbouwing-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Verbouwing</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele verbouwingen voor uw woning
+                        </p>
+                      </Link>
+                      <Link to="/renovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Renovatie</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Renovatiewerken voor een frisse uitstraling
+                        </p>
+                      </Link>
+                      <Link to="/aanbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Aanbouw</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Uitbreiding van uw woning met een aanbouw
+                        </p>
+                      </Link>
+                      <Link to="/dakwerken-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Dakwerken</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele dakwerken en dakreparaties
+                        </p>
+                      </Link>
+                      <Link to="/dakbedekking-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Dakbedekking</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Dakbedekking met kwaliteitsmaterialen
+                        </p>
+                      </Link>
+                      <Link to="/metselwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Metselwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Vakkundig metselwerk voor alle toepassingen
+                        </p>
+                      </Link>
+                      <Link to="/timmerwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Timmerwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professioneel timmerwerk op maat
+                        </p>
+                      </Link>
+                      <Link to="/sloopwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Sloopwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Veilige en efficiënte sloopwerkzaamheden
+                        </p>
+                      </Link>
+                      <Link to="/badkamerrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Badkamerrenovatie</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Complete badkamerrenovaties
+                        </p>
+                      </Link>
+                      <Link to="/keukenrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Keukenrenovatie</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele keukenrenovaties
+                        </p>
+                      </Link>
+                      <Link to="/vloerleggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Vloerleggen</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Vakkundig leggen van alle vloertypes
+                        </p>
+                      </Link>
+                      <Link to="/laminaat-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Laminaat Leggen</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professioneel laminaat leggen
+                        </p>
+                      </Link>
+                      <Link to="/parket-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Parket Leggen</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Vakkundig parket installeren
+                        </p>
+                      </Link>
+                      <Link to="/tegelwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Tegelwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professioneel tegelwerk voor binnen en buiten
+                        </p>
+                      </Link>
+                      <Link to="/stucwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Stucwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Vakkundig stucwerk voor gladde afwerking
+                        </p>
+                      </Link>
+                      <Link to="/schilderwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Schilderwerk</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professioneel schilderwerk binnen en buiten
+                        </p>
+                      </Link>
+                      <Link to="/gevelrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Gevelrenovatie</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele gevelwerken in Limburg
+                        </p>
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
             
             {/* Contact Button */}
             <div className="hidden md:flex">
@@ -570,54 +578,43 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-100 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="flex items-center">
-                <Building2 className="h-8 w-8 text-blue-600" />
-                <span className="ml-2 text-xl font-semibold">MMT Projects</span>
-              </div>
-              <p className="mt-4 text-gray-600">Uw betrouwbare partner in bouwen & verbouwen</p>
+              <h3 className="text-lg font-semibold mb-4">MMT Projects</h3>
+              <p className="text-gray-400">
+                Uw betrouwbare partner voor alle bouwprojecten in Hasselt en omgeving.
+              </p>
             </div>
-            
             <div>
               <h4 className="text-lg font-semibold mb-4">Diensten</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
-                <li><a href="/verbouwing-hasselt-limburg" className="hover:text-blue-600">Verbouwing</a></li>
-                <li><a href="/renovatie-hasselt-limburg" className="hover:text-blue-600">Renovatie</a></li>
-                <li><a href="/aanbouw-hasselt-limburg" className="hover:text-blue-600">Aanbouw</a></li>
-                <li><a href="/metselwerk-hasselt-limburg" className="hover:text-blue-600">Metselwerk</a></li>
-                <li><a href="/timmerwerk-hasselt-limburg" className="hover:text-blue-600">Timmerwerk</a></li>
-                <li><a href="/sloopwerk-hasselt-limburg" className="hover:text-blue-600">Sloopwerk</a></li>
-                <li><a href="/badkamerrenovatie-hasselt-limburg" className="hover:text-blue-600">Badkamerrenovatie</a></li>
-                <li><a href="/keukenrenovatie-hasselt-limburg" className="hover:text-blue-600">Keukenrenovatie</a></li>
-                <li><a href="/vloerleggen-hasselt-limburg" className="hover:text-blue-600">Vloerleggen</a></li>
-                <li><a href="/laminaat-leggen-hasselt-limburg" className="hover:text-blue-600">Laminaat leggen</a></li>
-                <li><a href="/parket-leggen-hasselt-limburg" className="hover:text-blue-600">Parket leggen</a></li>
-                <li><a href="/tegelwerk-hasselt-limburg" className="hover:text-blue-600">Tegelwerk</a></li>
-                <li><a href="/stucwerk-hasselt-limburg" className="hover:text-blue-600">Stucwerk</a></li>
-                <li><a href="/schilderwerk-hasselt-limburg" className="hover:text-blue-600">Schilderwerk</a></li>
-                <li><a href="/gevelrenovatie-hasselt-limburg" className="hover:text-blue-600">Gevelrenovatie</a></li>
-                <li><a href="#" className="hover:text-blue-600">Totaalprojecten</a></li>
-                <li><a href="#" className="hover:text-blue-600">Herstelling en onderhoud</a></li>
-                <li><a href="/dakwerken-hasselt-limburg" className="hover:text-blue-600">Dakwerken</a></li>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/nieuwbouw-hasselt-limburg" className="hover:text-white">Nieuwbouw</Link></li>
+                <li><Link to="/verbouwing-hasselt-limburg" className="hover:text-white">Verbouwing</Link></li>
+                <li><Link to="/renovatie-hasselt-limburg" className="hover:text-white">Renovatie</Link></li>
+                <li><Link to="/aanbouw-hasselt-limburg" className="hover:text-white">Aanbouw</Link></li>
+                <li><Link to="/dakwerken-hasselt-limburg" className="hover:text-white">Dakwerken</Link></li>
+                <li><Link to="/dakbedekking-hasselt-limburg" className="hover:text-white">Dakbedekking</Link></li>
+                <li><Link to="/metselwerk-hasselt-limburg" className="hover:text-white">Metselwerk</Link></li>
+                <li><Link to="/timmerwerk-hasselt-limburg" className="hover:text-white">Timmerwerk</Link></li>
               </ul>
             </div>
-            
             <div>
-              <h4 className="text-lg font-semibold mb-4">Links</h4>
-              <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-blue-600">Home</a></li>
-                <li><a href="#services" className="hover:text-blue-600">Diensten</a></li>
-                <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
-                <li><a href="#about" className="hover:text-blue-600">Over ons</a></li>
-                <li><a href="#benefits" className="hover:text-blue-600">Voordelen</a></li>
-                <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+              <h4 className="text-lg font-semibold mb-4">Meer Diensten</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><Link to="/sloopwerk-hasselt-limburg" className="hover:text-white">Sloopwerk</Link></li>
+                <li><Link to="/badkamerrenovatie-hasselt-limburg" className="hover:text-white">Badkamerrenovatie</Link></li>
+                <li><Link to="/keukenrenovatie-hasselt-limburg" className="hover:text-white">Keukenrenovatie</Link></li>
+                <li><Link to="/vloerleggen-hasselt-limburg" className="hover:text-white">Vloerleggen</Link></li>
+                <li><Link to="/laminaat-leggen-hasselt-limburg" className="hover:text-white">Laminaat Leggen</Link></li>
+                <li><Link to="/parket-leggen-hasselt-limburg" className="hover:text-white">Parket Leggen</Link></li>
+                <li><Link to="/tegelwerk-hasselt-limburg" className="hover:text-white">Tegelwerk</Link></li>
+                <li><Link to="/stucwerk-hasselt-limburg" className="hover:text-white">Stucwerk</Link></li>
+                <li><Link to="/schilderwerk-hasselt-limburg" className="hover:text-white">Schilderwerk</Link></li>
+                <li><Link to="/gevelrenovatie-hasselt-limburg" className="hover:text-white">Gevelrenovatie</Link></li>
               </ul>
             </div>
-            
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <ul className="space-y-4 text-gray-600">

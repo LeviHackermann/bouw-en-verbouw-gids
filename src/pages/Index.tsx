@@ -209,6 +209,12 @@ const Index = () => {
       icon: Home,
       link: "/ramen-plaatsen-hasselt-limburg"
     },
+    {
+      name: "Deuren Plaatsen",
+      description: "Professionele deurinstallatie voor binnen- en buitendeuren.",
+      icon: Home,
+      link: "/deuren-plaatsen-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

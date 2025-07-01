@@ -26,6 +26,7 @@ import Gevelrenovatie from "./pages/Gevelrenovatie";
 import Dakbedekking from "./pages/Dakbedekking";
 import Tuinmuren from "./pages/Tuinmuren";
 import Bestrating from "./pages/Bestrating";
+import Schuttingen from "./pages/Schuttingen";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/dakbedekking-hasselt-limburg" element={<Dakbedekking />} />
             <Route path="/tuinmuren-hasselt-limburg" element={<Tuinmuren />} />
             <Route path="/bestrating-hasselt-limburg" element={<Bestrating />} />
+            <Route path="/schuttingen-hasselt-limburg" element={<Schuttingen />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

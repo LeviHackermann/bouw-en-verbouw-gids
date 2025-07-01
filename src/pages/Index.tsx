@@ -156,6 +156,12 @@ const Index = () => {
                           Professionele bestratingsdiensten
                         </p>
                       </NavigationMenuLink>
+                      <NavigationMenuLink href="/schuttingen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Schuttingen</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele schutting plaatsing
+                        </p>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -241,6 +247,9 @@ const Index = () => {
                       </a>
                       <a href="/bestrating-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Bestrating
+                      </a>
+                      <a href="/schuttingen-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Schuttingen
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten
@@ -634,6 +643,7 @@ const Index = () => {
                 <li><Link to="/gevelrenovatie-hasselt-limburg" className="hover:text-white">Gevelrenovatie</Link></li>
                 <li><Link to="/tuinmuren-hasselt-limburg" className="hover:text-white">Tuinmuren</Link></li>
                 <li><Link to="/bestrating-hasselt-limburg" className="hover:text-white">Bestrating</Link></li>
+                <li><Link to="/schuttingen-hasselt-limburg" className="hover:text-white">Schuttingen</Link></li>
               </ul>
             </div>
             <div>

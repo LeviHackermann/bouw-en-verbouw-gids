@@ -31,6 +31,7 @@ import Schuttingen from "./pages/Schuttingen";
 import Terrasbouw from "./pages/Terrasbouw";
 import Carport from "./pages/Carport";
 import Elektriciteit from "./pages/Elektriciteit";
+import Loodgieterswerk from "./pages/Loodgieterswerk";
 
 const queryClient = new QueryClient();
 
@@ -67,6 +68,7 @@ const App = () => (
             <Route path="/terrasbouw-hasselt-limburg" element={<Terrasbouw />} />
             <Route path="/carport-hasselt-limburg" element={<Carport />} />
             <Route path="/elektriciteit-hasselt-limburg" element={<Elektriciteit />} />
+            <Route path="/loodgieterswerk-hasselt-limburg" element={<Loodgieterswerk />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

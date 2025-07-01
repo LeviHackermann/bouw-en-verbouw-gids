@@ -185,6 +185,12 @@ const Index = () => {
       icon: Zap,
       link: "/elektriciteit-hasselt-limburg"
     },
+    {
+      name: "Loodgieterswerk",
+      description: "Professioneel loodgieterswerk voor installatie en reparatie.",
+      icon: Wrench,
+      link: "/loodgieterswerk-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

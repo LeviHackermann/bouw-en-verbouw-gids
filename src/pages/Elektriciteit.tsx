@@ -1,8 +1,9 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Zap, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Elektriciteit = () => {
   return (
@@ -12,9 +13,11 @@ const Elektriciteit = () => {
         <meta name="description" content="Elektriciteit Hasselt ✓ MMT Projects - Professionele elektrische installaties in Limburg ✓ Gekwalificeerde elektriciens ✓ 50km serviceregio ✓ Gratis offerte ☎ 0484117727" />
       </Helmet>
 
+      <Navigation />
+
       <div className="min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-blue-600 text-white py-16">
+        <header className="bg-blue-600 text-white py-16 mt-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center mb-6">
               <Zap className="h-12 w-12 mr-4" />
@@ -251,6 +254,8 @@ const Elektriciteit = () => {
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 };

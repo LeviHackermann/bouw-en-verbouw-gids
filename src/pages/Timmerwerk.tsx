@@ -1,7 +1,8 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Building2, Phone, Mail, MapPin, Hammer, Home, Wrench, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Timmerwerk = () => {
   return (
@@ -11,6 +12,8 @@ const Timmerwerk = () => {
         <meta name="description" content="Timmerwerk Hasselt ✓ MMT Projects biedt professionele timmerdiensten in Limburg ✓ Dakconstructies, interieur, verbouwingen ✓ Ervaren vakmensen ✓ Bel 0484117727" />
         <meta name="keywords" content="timmerwerk hasselt, timmerman limburg, dakconstructie, interieur timmerwerk, verbouwing, renovatie timmerwerk" />
       </Helmet>
+
+      <Navigation />
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -230,6 +233,8 @@ const Timmerwerk = () => {
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 };

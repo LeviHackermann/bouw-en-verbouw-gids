@@ -1,8 +1,9 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Dakbedekking = () => {
   return (
@@ -13,8 +14,10 @@ const Dakbedekking = () => {
         <meta name="keywords" content="dakbedekking Hasselt, dakwerken Limburg, dakdekkers Hasselt, dakrenovatie, dakpannen, leien, MMT Projects" />
       </Helmet>
 
+      <Navigation />
+
       {/* Header */}
-      <header className="bg-blue-600 text-white py-20">
+      <header className="bg-blue-600 text-white py-20 mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Building2 className="h-16 w-16 mx-auto mb-6" />
@@ -243,6 +246,8 @@ const Dakbedekking = () => {
           </p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

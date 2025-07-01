@@ -1,8 +1,9 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Building2, Phone, Mail, MapPin, CheckCircle, Clock, Shield, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const LaminaatLeggen = () => {
   return (
@@ -13,8 +14,10 @@ const LaminaatLeggen = () => {
         <meta name="keywords" content="laminaat leggen, Hasselt, Limburg, vloeren, laminaatvloer, MMT Projects" />
       </Helmet>
 
+      <Navigation />
+
       {/* Header */}
-      <header className="bg-blue-600 text-white py-16 px-4">
+      <header className="bg-blue-600 text-white py-16 px-4 mt-16">
         <div className="max-w-4xl mx-auto text-center">
           <div className="flex items-center justify-center mb-4">
             <Building2 className="h-12 w-12 mr-4" />
@@ -200,6 +203,8 @@ const LaminaatLeggen = () => {
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };

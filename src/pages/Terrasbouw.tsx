@@ -1,8 +1,9 @@
-
 import { Helmet } from 'react-helmet-async';
 import { Building2, CheckCircle, Phone, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Terrasbouw = () => {
   return (
@@ -13,9 +14,11 @@ const Terrasbouw = () => {
         <meta name="keywords" content="terrasbouw hasselt, terras aanleg limburg, houten terras, betonnen terras, natuursteen terras, terras hasselt" />
       </Helmet>
 
+      <Navigation />
+
       <div className="min-h-screen bg-white">
         {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 px-4">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 px-4 mt-16">
           <div className="max-w-4xl mx-auto text-center">
             <Building2 className="h-16 w-16 mx-auto mb-6 text-blue-200" />
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -292,6 +295,8 @@ const Terrasbouw = () => {
           </div>
         </section>
       </div>
+
+      <Footer />
     </>
   );
 };

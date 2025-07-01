@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Building2, Phone, Mail, MapPin, CheckCircle, Award, Users, Shield,
@@ -58,12 +57,19 @@ const Renovatie = () => {
         </header>
 
         {/* Intro */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-24 px-4 bg-gradient-to-br from-gray-50 via-white to-blue-50/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                <Star className="h-4 w-4" />
+                15+ jaar ervaring in renovatie
+              </div>
+              <p className="text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-light">
                 Van kleine verbouwingen tot complete huisrenovaties - wij maken van uw droomhuis werkelijkheid.
               </p>
+              <div className="mt-8 flex justify-center">
+                <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+              </div>
             </div>
           </div>
         </section>

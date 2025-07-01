@@ -1,11 +1,18 @@
+
 import { 
   Building2, Hammer, Home, Wrench, Shield, Users, Award, Phone, 
-  Mail, MapPin, Menu, X, ChevronRight, ArrowRight
+  Mail, MapPin, Menu, X, ChevronRight, ArrowRight, ChevronDown
 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -24,8 +31,42 @@ const Index = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-8">
               <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-              <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors">Diensten</a>
-              <a href="/nieuwbouw-hasselt-limburg" className="text-gray-700 hover:text-blue-600 transition-colors">Nieuwbouw</a>
+              
+              {/* Diensten Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-blue-600 transition-colors">
+                  Diensten
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg">
+                  <DropdownMenuItem asChild>
+                    <a href="/nieuwbouw-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Nieuwbouw
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Renovatie & verbouwing
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Totaalprojecten
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Herstelling en onderhoud
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Dakwerken
+                    </a>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Over ons</a>
               <a href="#benefits" className="text-gray-700 hover:text-blue-600 transition-colors">Voordelen</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
@@ -52,8 +93,29 @@ const Index = () => {
               <SheetContent>
                 <div className="flex flex-col gap-6 mt-8">
                   <a href="#" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Home</a>
-                  <a href="#services" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Diensten</a>
-                  <a href="/nieuwbouw-hasselt-limburg" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Nieuwbouw</a>
+                  
+                  {/* Mobile Diensten Menu */}
+                  <div className="flex flex-col gap-2">
+                    <span className="text-lg font-medium">Diensten</span>
+                    <div className="flex flex-col gap-2 ml-4">
+                      <a href="/nieuwbouw-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Nieuwbouw
+                      </a>
+                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Renovatie & verbouwing
+                      </a>
+                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Totaalprojecten
+                      </a>
+                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Herstelling en onderhoud
+                      </a>
+                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Dakwerken
+                      </a>
+                    </div>
+                  </div>
+                  
                   <a href="#about" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Over ons</a>
                   <a href="#benefits" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Voordelen</a>
                   <a href="#contact" className="text-lg" onClick={() => setMobileMenuOpen(false)}>Contact</a>

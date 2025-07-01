@@ -23,6 +23,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from 'react-helmet-async';
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -290,6 +292,8 @@ const Index = () => {
         <link rel="canonical" href="https://www.mmtprojects.be/" />
       </Helmet>
 
+      <Navigation />
+
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
@@ -471,16 +475,9 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-gray-600">
-              © {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.
-            </p>
-          </div>
-        </footer>
       </div>
+
+      <Footer />
     </>
   );
 };

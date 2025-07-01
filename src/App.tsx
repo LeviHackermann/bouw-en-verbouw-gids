@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -15,6 +14,7 @@ import Dakwerken from "./pages/Dakwerken";
 import Metselwerk from "./pages/Metselwerk";
 import Timmerwerk from "./pages/Timmerwerk";
 import Sloopwerk from "./pages/Sloopwerk";
+import Afbraakwerken from "./pages/Afbraakwerken";
 import Badkamerrenovatie from "./pages/Badkamerrenovatie";
 import Keukenrenovatie from "./pages/Keukenrenovatie";
 import Vloerleggen from "./pages/Vloerleggen";
@@ -57,6 +57,7 @@ const App = () => (
             <Route path="/metselwerk-hasselt-limburg" element={<Metselwerk />} />
             <Route path="/timmerwerk-hasselt-limburg" element={<Timmerwerk />} />
             <Route path="/sloopwerk-hasselt-limburg" element={<Sloopwerk />} />
+            <Route path="/afbraakwerken-hasselt-limburg" element={<Afbraakwerken />} />
             <Route path="/badkamerrenovatie-hasselt-limburg" element={<Badkamerrenovatie />} />
             <Route path="/keukenrenovatie-hasselt-limburg" element={<Keukenrenovatie />} />
             <Route path="/vloerleggen-hasselt-limburg" element={<Vloerleggen />} />

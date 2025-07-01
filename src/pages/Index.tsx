@@ -90,6 +90,12 @@ const Index = () => {
       link: "/sloopwerk-hasselt-limburg"
     },
     {
+      name: "Afbraakwerken",
+      description: "Professionele afbraakwerken met milieuvriendelijke aanpak.",
+      icon: Hammer,
+      link: "/afbraakwerken-hasselt-limburg"
+    },
+    {
       name: "Badkamerrenovatie",
       description: "Uw droombadkamer, van ontwerp tot realisatie.",
       icon: Home,

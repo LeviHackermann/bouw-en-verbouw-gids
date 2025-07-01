@@ -54,6 +54,11 @@ const Index = () => {
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
+                    <a href="/aanbouw-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                      Aanbouw
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
                     <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                       Totaalprojecten
                     </a>
@@ -110,6 +115,9 @@ const Index = () => {
                       </a>
                       <a href="/renovatie-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Renovatie
+                      </a>
+                      <a href="/aanbouw-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Aanbouw
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten
@@ -483,6 +491,7 @@ const Index = () => {
                 <li><a href="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</a></li>
                 <li><a href="/verbouwing-hasselt-limburg" className="hover:text-blue-600">Verbouwing</a></li>
                 <li><a href="/renovatie-hasselt-limburg" className="hover:text-blue-600">Renovatie</a></li>
+                <li><a href="/aanbouw-hasselt-limburg" className="hover:text-blue-600">Aanbouw</a></li>
                 <li><a href="#" className="hover:text-blue-600">Totaalprojecten</a></li>
                 <li><a href="#" className="hover:text-blue-600">Herstelling en onderhoud</a></li>
                 <li><a href="#" className="hover:text-blue-600">Dakwerken</a></li>

@@ -233,6 +233,12 @@ const Index = () => {
       icon: Zap,
       link: "/plaatsing-zonnepanelen-hasselt-limburg"
     },
+    {
+      name: "Batterijen Zonnepanelen",
+      description: "Hoogwaardige batterijen voor optimale energieopslag bij uw zonnepanelen.",
+      icon: Zap,
+      link: "/batterijen-zonnepanelen-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

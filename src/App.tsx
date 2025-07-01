@@ -30,6 +30,7 @@ import Bestrating from "./pages/Bestrating";
 import Schuttingen from "./pages/Schuttingen";
 import Terrasbouw from "./pages/Terrasbouw";
 import Carport from "./pages/Carport";
+import Elektriciteit from "./pages/Elektriciteit";
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => (
             <Route path="/schuttingen-hasselt-limburg" element={<Schuttingen />} />
             <Route path="/terrasbouw-hasselt-limburg" element={<Terrasbouw />} />
             <Route path="/carport-hasselt-limburg" element={<Carport />} />
+            <Route path="/elektriciteit-hasselt-limburg" element={<Elektriciteit />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

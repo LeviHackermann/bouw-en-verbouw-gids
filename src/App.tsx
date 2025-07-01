@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -32,6 +31,7 @@ import Terrasbouw from "./pages/Terrasbouw";
 import Carport from "./pages/Carport";
 import Elektriciteit from "./pages/Elektriciteit";
 import Loodgieterswerk from "./pages/Loodgieterswerk";
+import Isolatie from "./pages/Isolatie";
 
 const queryClient = new QueryClient();
 
@@ -69,6 +69,7 @@ const App = () => (
             <Route path="/carport-hasselt-limburg" element={<Carport />} />
             <Route path="/elektriciteit-hasselt-limburg" element={<Elektriciteit />} />
             <Route path="/loodgieterswerk-hasselt-limburg" element={<Loodgieterswerk />} />
+            <Route path="/isolatie-hasselt-limburg" element={<Isolatie />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

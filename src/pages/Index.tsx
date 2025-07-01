@@ -191,6 +191,12 @@ const Index = () => {
       icon: Wrench,
       link: "/loodgieterswerk-hasselt-limburg"
     },
+    {
+      name: "Isolatie",
+      description: "Professionele isolatiewerken voor optimale thermische isolatie.",
+      icon: Home,
+      link: "/isolatie-hasselt-limburg"
+    },
   ];
 
   const whyChooseUs = [

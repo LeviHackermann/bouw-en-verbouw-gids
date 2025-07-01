@@ -1,3 +1,4 @@
+
 import { 
   Building2, Hammer, Home, Wrench, Shield, Users, Award, Phone, 
   Mail, MapPin, Menu, X, ChevronRight, ArrowRight, ChevronDown
@@ -12,7 +13,8 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLabel, NavigationMenuSeparator, Link } from "@radix-ui/react-navigation-menu";
+import { Link } from "react-router-dom";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuTrigger, NavigationMenuContent, NavigationMenuLink } from "@/components/ui/navigation-menu";
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -35,114 +37,114 @@ const Index = () => {
                   <NavigationMenuTrigger>Diensten</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[600px] grid-cols-2 gap-3 p-4">
-                      <Link to="/nieuwbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      <NavigationMenuLink href="/nieuwbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Nieuwbouw</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Complete nieuwbouwprojecten in Hasselt en omgeving
                         </p>
-                      </Link>
-                      <Link to="/verbouwing-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/verbouwing-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Verbouwing</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professionele verbouwingen voor uw woning
                         </p>
-                      </Link>
-                      <Link to="/renovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/renovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Renovatie</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Renovatiewerken voor een frisse uitstraling
                         </p>
-                      </Link>
-                      <Link to="/aanbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/aanbouw-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Aanbouw</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Uitbreiding van uw woning met een aanbouw
                         </p>
-                      </Link>
-                      <Link to="/dakwerken-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/dakwerken-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Dakwerken</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professionele dakwerken en dakreparaties
                         </p>
-                      </Link>
-                      <Link to="/dakbedekking-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/dakbedekking-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Dakbedekking</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Dakbedekking met kwaliteitsmaterialen
                         </p>
-                      </Link>
-                      <Link to="/metselwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/metselwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Metselwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Vakkundig metselwerk voor alle toepassingen
                         </p>
-                      </Link>
-                      <Link to="/timmerwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/timmerwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Timmerwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professioneel timmerwerk op maat
                         </p>
-                      </Link>
-                      <Link to="/sloopwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/sloopwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Sloopwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Veilige en efficiënte sloopwerkzaamheden
                         </p>
-                      </Link>
-                      <Link to="/badkamerrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/badkamerrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Badkamerrenovatie</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Complete badkamerrenovaties
                         </p>
-                      </Link>
-                      <Link to="/keukenrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/keukenrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Keukenrenovatie</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professionele keukenrenovaties
                         </p>
-                      </Link>
-                      <Link to="/vloerleggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/vloerleggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Vloerleggen</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Vakkundig leggen van alle vloertypes
                         </p>
-                      </Link>
-                      <Link to="/laminaat-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/laminaat-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Laminaat Leggen</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professioneel laminaat leggen
                         </p>
-                      </Link>
-                      <Link to="/parket-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/parket-leggen-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Parket Leggen</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Vakkundig parket installeren
                         </p>
-                      </Link>
-                      <Link to="/tegelwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/tegelwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Tegelwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professioneel tegelwerk voor binnen en buiten
                         </p>
-                      </Link>
-                      <Link to="/stucwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/stucwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Stucwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Vakkundig stucwerk voor gladde afwerking
                         </p>
-                      </Link>
-                      <Link to="/schilderwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/schilderwerk-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Schilderwerk</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professioneel schilderwerk binnen en buiten
                         </p>
-                      </Link>
-                      <Link to="/gevelrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                      </NavigationMenuLink>
+                      <NavigationMenuLink href="/gevelrenovatie-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
                         <div className="text-sm font-medium leading-none">Gevelrenovatie</div>
                         <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                           Professionele gevelwerken in Limburg
                         </p>
-                      </Link>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -222,6 +224,9 @@ const Index = () => {
                       </a>
                       <a href="/gevelrenovatie-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Gevelrenovatie
+                      </a>
+                      <a href="/dakbedekking-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Dakbedekking
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten

@@ -89,54 +89,36 @@ const Loodgieterswerk = () => {
 
       <div className="min-h-screen bg-white">
         {/* Header */}
-        <header className="bg-blue-600 text-white py-4 px-4">
-          <div className="max-w-7xl mx-auto">
-            <nav className="flex justify-between items-center">
-              <div className="text-2xl font-bold">MMT Projects</div>
-              <div className="hidden md:flex space-x-6">
-                <a href="/" className="hover:text-blue-200">Home</a>
-                <a href="/diensten" className="hover:text-blue-200">Diensten</a>
-                <a href="/contact" className="hover:text-blue-200">Contact</a>
-              </div>
-            </nav>
-          </div>
-        </header>
-
-        {/* Hero Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  Professioneel Loodgieterswerk in Hasselt en Limburg
-                </h1>
-                <p className="text-xl text-gray-700 mb-8">
-                  Bent u op zoek naar betrouwbaar loodgieterswerk in Hasselt? MMT Projects is uw lokale specialist voor alle loodgieterswerkzaamheden in Hasselt en omstreken. Met jarenlange ervaring in de Limburgse bouwsector leveren wij kwalitatief hoogstaand loodgieterswerk voor particulieren en bedrijven.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                    <Phone className="mr-2 h-5 w-5" />
-                    0484 11 77 27
-                  </Button>
-                  <Button size="lg" variant="outline">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Gratis offerte
-                  </Button>
+        <header className="bg-blue-600 text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="flex justify-center mb-6">
+                <div className="bg-white/20 p-4 rounded-full">
+                  <Wrench className="h-12 w-12" />
                 </div>
               </div>
-              <div className="hidden md:block">
-                <img
-                  src="https://images.unsplash.com/photo-1581244277943-fe4a9c777189?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Professioneel loodgieterswerk"
-                  className="rounded-2xl shadow-xl w-full h-[400px] object-cover"
-                />
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Professioneel Loodgieterswerk in Hasselt en Limburg
+              </h1>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                Bent u op zoek naar betrouwbaar loodgieterswerk in Hasselt? MMT Projects is uw lokale specialist voor alle loodgieterswerkzaamheden in Hasselt en omstreken. Met jarenlange ervaring in de Limburgse bouwsector leveren wij kwalitatief hoogstaand loodgieterswerk voor particulieren en bedrijven.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                  <Phone className="mr-2 h-5 w-5" />
+                  Bel 0484117727
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                  <Mail className="mr-2 h-5 w-5" />
+                  Gratis offerte
+                </Button>
               </div>
             </div>
           </div>
-        </section>
+        </header>
 
         {/* Services Section */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -170,7 +152,7 @@ const Loodgieterswerk = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-16 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -234,7 +216,7 @@ const Loodgieterswerk = () => {
         </section>
 
         {/* Service Area */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-16 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
@@ -273,7 +255,7 @@ const Loodgieterswerk = () => {
         </section>
 
         {/* Emergency CTA */}
-        <section className="py-20 px-4 bg-red-600 text-white">
+        <section className="py-16 px-4 bg-red-600 text-white">
           <div className="max-w-5xl mx-auto">
             <div className="text-center">
               <div className="bg-white/10 inline-flex items-center px-4 py-2 rounded-full mb-6">
@@ -295,7 +277,7 @@ const Loodgieterswerk = () => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 bg-gray-900 text-white">
+        <section className="py-16 px-4 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">

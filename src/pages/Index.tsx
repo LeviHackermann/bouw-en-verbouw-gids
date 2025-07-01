@@ -69,7 +69,7 @@ const Index = () => {
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <a href="#" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
+                    <a href="/dakwerken-hasselt-limburg" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">
                       Dakwerken
                     </a>
                   </DropdownMenuItem>
@@ -125,7 +125,7 @@ const Index = () => {
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Herstelling en onderhoud
                       </a>
-                      <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                      <a href="/dakwerken-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Dakwerken
                       </a>
                     </div>
@@ -494,7 +494,7 @@ const Index = () => {
                 <li><a href="/aanbouw-hasselt-limburg" className="hover:text-blue-600">Aanbouw</a></li>
                 <li><a href="#" className="hover:text-blue-600">Totaalprojecten</a></li>
                 <li><a href="#" className="hover:text-blue-600">Herstelling en onderhoud</a></li>
-                <li><a href="#" className="hover:text-blue-600">Dakwerken</a></li>
+                <li><a href="/dakwerken-hasselt-limburg" className="hover:text-blue-600">Dakwerken</a></li>
               </ul>
             </div>
             

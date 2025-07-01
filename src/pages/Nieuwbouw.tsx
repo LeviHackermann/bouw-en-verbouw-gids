@@ -1,3 +1,4 @@
+
 import { 
   Building2, Home, CheckCircle, MapPin, Phone, Mail, 
   Award, Shield, Users, ArrowRight, Star, Clock
@@ -71,6 +72,8 @@ const Nieuwbouw = () => {
         <meta name="twitter:title" content="Nieuwbouw Hasselt | MMT Projects - Professionele Nieuwbouw Limburg" />
         <meta name="twitter:description" content="Nieuwbouw specialist in Hasselt en omgeving. MMT Projects realiseert uw droomhuis met 15+ jaar ervaring." />
       </Helmet>
+      
+      <Navigation />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -407,6 +410,8 @@ const Nieuwbouw = () => {
           </div>
         </section>
       </div>
+      
+      <Footer />
     </>
   );
 };

@@ -17,6 +17,7 @@ import Timmerwerk from "./pages/Timmerwerk";
 import Sloopwerk from "./pages/Sloopwerk";
 import Badkamerrenovatie from "./pages/Badkamerrenovatie";
 import Keukenrenovatie from "./pages/Keukenrenovatie";
+import Vloerleggen from "./pages/Vloerleggen";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/sloopwerk-hasselt-limburg" element={<Sloopwerk />} />
             <Route path="/badkamerrenovatie-hasselt-limburg" element={<Badkamerrenovatie />} />
             <Route path="/keukenrenovatie-hasselt-limburg" element={<Keukenrenovatie />} />
+            <Route path="/vloerleggen-hasselt-limburg" element={<Vloerleggen />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -150,6 +150,12 @@ const Index = () => {
                           Vakkundige aanleg van tuinmuren
                         </p>
                       </NavigationMenuLink>
+                      <NavigationMenuLink href="/bestrating-hasselt-limburg" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <div className="text-sm font-medium leading-none">Bestrating</div>
+                        <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                          Professionele bestratingsdiensten
+                        </p>
+                      </NavigationMenuLink>
                     </div>
                   </NavigationMenuContent>
                 </NavigationMenuItem>
@@ -232,6 +238,9 @@ const Index = () => {
                       </a>
                       <a href="/tuinmuren-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Tuinmuren
+                      </a>
+                      <a href="/bestrating-hasselt-limburg" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
+                        Bestrating
                       </a>
                       <a href="#" className="text-base text-gray-600" onClick={() => setMobileMenuOpen(false)}>
                         Totaalprojecten
@@ -624,6 +633,7 @@ const Index = () => {
                 <li><Link to="/schilderwerk-hasselt-limburg" className="hover:text-white">Schilderwerk</Link></li>
                 <li><Link to="/gevelrenovatie-hasselt-limburg" className="hover:text-white">Gevelrenovatie</Link></li>
                 <li><Link to="/tuinmuren-hasselt-limburg" className="hover:text-white">Tuinmuren</Link></li>
+                <li><Link to="/bestrating-hasselt-limburg" className="hover:text-white">Bestrating</Link></li>
               </ul>
             </div>
             <div>

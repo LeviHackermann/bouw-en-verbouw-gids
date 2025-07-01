@@ -1,230 +1,90 @@
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import {
   Building2,
   Home,
   Wrench,
   Hammer,
-  PaintBucket,
-  Zap,
   Phone,
   Mail,
-  MapPin,
-  Star,
-  CheckCircle,
   ArrowRight,
-  Menu,
-  X,
   Shield,
   Award,
   Users,
-  Clock
+  CheckCircle
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Helmet } from 'react-helmet-async';
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const serviceAreas = [
-    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
-    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
-    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
-    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
-    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren",
-    "As", "Opglabbeek", "Oudsbergen", "Hamont-Achel"
-  ];
-
   const services = [
     {
-      name: "Nieuwbouw",
-      description: "Van fundering tot afwerking, wij bouwen uw droomhuis.",
-      icon: Building2,
+      title: "Nieuwbouw",
+      description: "Van ontwerp tot realisatie bouwen wij uw droomhuis op maat.",
+      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       link: "/nieuwbouw-hasselt-limburg"
     },
     {
-      name: "Verbouwing",
-      description: "Vernieuw en verbeter uw woning met onze verbouwingsdiensten.",
-      icon: Wrench,
-      link: "/verbouwing-hasselt-limburg"
-    },
-    {
-      name: "Renovatie",
-      description: "Geef uw huis een nieuwe look met onze renovatiediensten.",
-      icon: Home,
+      title: "Renovatie & verbouwing",
+      description: "Wilt u uw woning moderniseren, uitbreiden of verbouwen? Wij zorgen voor een resultaat dat aan al uw wensen voldoet.",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       link: "/renovatie-hasselt-limburg"
     },
     {
-      name: "Aanbouw",
-      description: "Creëer extra ruimte met een aanbouw op maat.",
-      icon: Hammer,
+      title: "Totaalprojecten",
+      description: "Van eerste schets tot de laatste afwerking nemen wij u al het werk uit uw handen.",
+      image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       link: "/aanbouw-hasselt-limburg"
     },
     {
-      name: "Dakwerken",
-      description: "Voor al uw dakwerken, van reparatie tot volledige vernieuwing.",
-      icon: Home,
+      title: "Herstelling en onderhoud",
+      description: "Van kleine reparaties tot het onderhoud van uw woning, wij bieden duurzame oplossingen.",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      link: "/verbouwing-hasselt-limburg"
+    },
+    {
+      title: "Dakwerken",
+      description: "Plaatsen van een nieuw dak of gewoon vernieuwen wij doen het allemaal.",
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
       link: "/dakwerken-hasselt-limburg"
-    },
-    {
-      name: "Metselwerk",
-      description: "Professioneel metselwerk voor nieuwbouw en renovatie.",
-      icon: Home,
-      link: "/metselwerk-hasselt-limburg"
-    },
-    {
-      name: "Timmerwerk",
-      description: "Maatwerk timmerwerk voor interieur en exterieur.",
-      icon: Home,
-      link: "/timmerwerk-hasselt-limburg"
-    },
-    {
-      name: "Sloopwerk",
-      description: "Veilig en efficiënt sloopwerk voor uw project.",
-      icon: Home,
-      link: "/sloopwerk-hasselt-limburg"
-    },
-    {
-      name: "Badkamerrenovatie",
-      description: "Uw droombadkamer, van ontwerp tot realisatie.",
-      icon: Home,
-      link: "/badkamerrenovatie-hasselt-limburg"
-    },
-    {
-      name: "Keukenrenovatie",
-      description: "Een nieuwe keuken die perfect aansluit bij uw wensen.",
-      icon: Home,
-      link: "/keukenrenovatie-hasselt-limburg"
-    },
-    {
-      name: "Vloerleggen",
-      description: "Professioneel vloerleggen voor een perfect resultaat.",
-      icon: Home,
-      link: "/vloerleggen-hasselt-limburg"
-    },
-    {
-      name: "Tegelwerk",
-      description: "Stijlvol tegelwerk voor badkamer, keuken en meer.",
-      icon: Home,
-      link: "/tegelwerk-hasselt-limburg"
-    },
-    {
-      name: "Stucwerk",
-      description: "Gladde muren en plafonds met professioneel stucwerk.",
-      icon: Home,
-      link: "/stucwerk-hasselt-limburg"
-    },
-    {
-      name: "Schilderwerk",
-      description: "Kleur en bescherming met professioneel schilderwerk.",
-      icon: PaintBucket,
-      link: "/schilderwerk-hasselt-limburg"
-    },
-    {
-      name: "Laminaat Leggen",
-      description: "Snel en vakkundig laminaat gelegd.",
-      icon: Home,
-      link: "/laminaat-leggen-hasselt-limburg"
-    },
-    {
-      name: "Parket Leggen",
-      description: "Duurzame parketvloeren, vakkundig gelegd.",
-      icon: Home,
-      link: "/parket-leggen-hasselt-limburg"
-    },
-    {
-      name: "Gevelrenovatie",
-      description: "Geef uw gevel een nieuwe uitstraling.",
-      icon: Home,
-      link: "/gevelrenovatie-hasselt-limburg"
-    },
-    {
-      name: "Dakbedekking",
-      description: "Nieuwe dakbedekking voor een waterdicht dak.",
-      icon: Home,
-      link: "/dakbedekking-hasselt-limburg"
-    },
-    {
-      name: "Tuinmuren",
-      description: "Stevige en mooie tuinmuren.",
-      icon: Home,
-      link: "/tuinmuren-hasselt-limburg"
-    },
-    {
-      name: "Bestrating",
-      description: "Professionele bestrating voor uw tuin en oprit.",
-      icon: Home,
-      link: "/bestrating-hasselt-limburg"
-    },
-    {
-      name: "Schuttingen",
-      description: "Privacy en bescherming met een nieuwe schutting.",
-      icon: Home,
-      link: "/schuttingen-hasselt-limburg"
-    },
-    {
-      name: "Terrasbouw",
-      description: "Geniet van uw tuin met een terras op maat.",
-      icon: Home,
-      link: "/terrasbouw-hasselt-limburg"
-    },
-    {
-      name: "Carport",
-      description: "Bescherm uw auto met een carport.",
-      icon: Home,
-      link: "/carport-hasselt-limburg"
-    },
-    {
-      name: "Elektriciteit",
-      description: "Elektriciteitswerken voor uw woning.",
-      icon: Zap,
-      link: "/elektriciteit-hasselt-limburg"
-    },
-  ];
-
-  const whyChooseUs = [
-    {
-      title: "Lokale Expertise",
-      description: "Wij kennen Hasselt en Limburg als onze broekzak.",
-      icon: MapPin
-    },
-    {
-      title: "Kwaliteit",
-      description: "Wij leveren hoogwaardige kwaliteit en vakmanschap.",
-      icon: Shield
-    },
-    {
-      title: "Ervaring",
-      description: "Meer dan 15 jaar ervaring in de bouwsector.",
-      icon: Award
-    },
-    {
-      title: "Persoonlijk",
-      description: "Wij luisteren naar uw wensen en denken met u mee.",
-      icon: Users
     }
   ];
 
-  const testimonials = [
+  const values = [
     {
-      name: "Familie Peeters",
-      text: "MMT Projects heeft onze droomwoning gebouwd. Vakmanschap en kwaliteit staan hoog in het vaandel.",
-      stars: 5
+      icon: Shield,
+      title: "Ervaring & expertise",
+      description: "Met tientallen projecten op onze naam weten wij precies wat er nodig is om uw bouwplannen te realiseren."
     },
     {
-      name: "Jan & Marieke",
-      text: "Onze badkamerrenovatie is perfect uitgevoerd. We zijn zeer tevreden met het resultaat.",
-      stars: 4
+      icon: Users,
+      title: "Klantgericht",
+      description: "Wij luisteren naar uw wensen en denken met u mee. Samen maken we van uw project een succes."
     },
     {
-      name: "Peter S.",
-      text: "Snel en vakkundig laminaat gelegd. Een echte aanrader!",
-      stars: 5
+      icon: Award,
+      title: "Betrouwbaarheid",
+      description: "Afspraak is afspraak. U kunt rekenen op transparante communicatie en een vlekkeloze proces."
+    }
+  ];
+
+  const benefits = [
+    {
+      icon: Phone,
+      title: "Persoonlijke begeleiding & communicatie",
+      description: "Onze vakkundige projectleiders houden u tijdens het hele bouwproces op de hoogte. Met korte lijnen en duidelijke communicatie weet u precies waar u aan toe bent."
+    },
+    {
+      icon: CheckCircle,
+      title: "Alles onder een dak",
+      description: "Van ontwerp tot oplevering verzorgen wij het complete traject. U heeft één aanspreekpunt voor alle bouwwerkzaamheden, wat zorgt voor een zorgeloze ervaring."
+    },
+    {
+      icon: Award,
+      title: "Kwaliteit tegen scherpe prijzen",
+      description: "Door onze jarenlange samenwerking met betrouwbare partners en leveranciers kunnen wij altijd de beste kwaliteit materialen en expertise garanderen tegen scherpe prijzen."
     }
   ];
 
@@ -237,59 +97,70 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen bg-white">
+        <Navigation />
+        
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1600596542815-ffad6d1ba6a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="MMT Projects"
-              className="object-cover w-full h-full opacity-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/80"></div>
-          </div>
-
-          <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+        <section className="pt-20 pb-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-6">
-                  <Home className="h-4 w-4 mr-2" />
-                  <span className="text-sm font-medium">Uw partner in bouw en renovatie</span>
+                  <Building2 className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Professionele bouwpartner</span>
                 </div>
 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-                  MMT Projects - <span className="text-blue-600">Uw droom, onze expertise</span>
+                <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 mb-6">
+                  Uw partner in{" "}
+                  <span className="text-blue-600">bouwen</span>
+                  <br />
+                  <span className="text-blue-600">& verbouwen</span>
                 </h1>
 
-                <p className="mt-6 text-xl text-gray-700 max-w-lg">
-                  Van nieuwbouw tot renovatie, MMT Projects staat voor u klaar. Met meer dan 15 jaar ervaring realiseren wij uw projecten in Hasselt en omgeving.
+                <p className="text-xl text-gray-600 mb-8 max-w-lg">
+                  Van droomhuis tot renovatie - wij realiseren uw bouwplannen met vakmanschap en betrouwbaarheid
                 </p>
 
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     <Phone className="mr-2 h-5 w-5" />
-                    Gratis offerte aanvragen
+                    Neem contact op
                   </Button>
                   <Button size="lg" variant="outline" className="border-gray-300">
-                    Bekijk onze projecten
+                    Onze diensten
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
               </div>
 
-              <div className="hidden md:block relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                  <img
-                    src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                    alt="MMT Projects Team"
-                    className="w-full h-[400px] object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
-                  <div className="absolute bottom-0 left-0 p-8 text-white">
-                    <h2 className="text-3xl font-bold mb-2">15+ Jaar</h2>
-                    <p className="text-white/90">Ervaring in de bouwsector</p>
-                  </div>
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-8 text-white">
+                  <h2 className="text-2xl font-bold mb-4">Vakmanschap</h2>
+                  <p className="text-blue-100 mb-6">Met passie voor bouwen</p>
+                  <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl opacity-20"></div>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Values Section */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waar staan wij voor</h2>
+              <p className="text-xl text-gray-600">De waarden die ons drijven</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-gray-900">{value.title}</h3>
+                  <p className="text-gray-600">{value.description}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -298,23 +169,31 @@ const Index = () => {
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Onze diensten</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Van nieuwbouw tot renovatie, wij bieden een breed scala aan diensten om uw project te realiseren.
-              </p>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Wat doen wij?</h2>
+              <p className="text-xl text-gray-600">Onze specialisaties op een rij</p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Link to={service.link} key={index}>
-                  <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                    <div className="relative h-48">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute bottom-4 left-4">
+                        <Building2 className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
                     <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <service.icon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                        <div>
-                          <h3 className="text-xl font-bold mb-2 text-gray-900">{service.name}</h3>
-                          <p className="text-gray-700">{service.description}</p>
-                        </div>
+                      <h3 className="text-xl font-bold mb-3 text-gray-900">{service.title}</h3>
+                      <p className="text-gray-600 mb-4">{service.description}</p>
+                      <div className="flex items-center text-blue-600 font-medium">
+                        Meer informatie
+                        <ArrowRight className="ml-2 h-4 w-4" />
                       </div>
                     </CardContent>
                   </Card>
@@ -324,71 +203,23 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Why Choose Us Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom kiezen voor MMT Projects?</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Wij zijn uw betrouwbare partner in Hasselt en omgeving. Met meer dan 15 jaar ervaring en een focus op kwaliteit realiseren wij uw projecten.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whyChooseUs.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Service Area Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Service gebied</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Wij zijn actief in Hasselt en een straal van 50km rondom.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-              {serviceAreas.map((area, index) => (
-                <div key={index} className="flex items-center">
-                  <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                  <span className="text-gray-700">{area}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Testimonials Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Wat onze klanten zeggen</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Ontdek de voordelen van ons bedrijf</h2>
+              <p className="text-xl text-gray-600">Waarom kiezen voor ons?</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      {[...Array(testimonial.stars)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-500 inline-block" />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
-                    <p className="text-gray-900 font-medium">- {testimonial.name}</p>
-                  </CardContent>
-                </Card>
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center">
+                  <div className="bg-blue-600 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">{benefit.title}</h3>
+                  <p className="text-gray-600">{benefit.description}</p>
+                </div>
               ))}
             </div>
           </div>
@@ -399,18 +230,17 @@ const Index = () => {
           <div className="max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
               <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Klaar om uw project te starten?</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Samen bouwen aan uw toekomst</h2>
                 <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                  Neem vandaag nog contact met ons op voor een vrijblijvende offerte.
+                  Heeft u plannen om te bouwen of verbouwen? Neem dan vandaag nog contact met ons op. Ons team staat klaar om uw ideeën werkelijkheid te maken.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                     <Phone className="mr-2 h-5 w-5" />
-                    0484 11 77 27
+                    Bel ons direct
                   </Button>
                   <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                    <Mail className="mr-2 h-5 w-5" />
-                    info@mmtprojects.be
+                    Offerte aanvragen
                   </Button>
                 </div>
               </div>
@@ -420,10 +250,57 @@ const Index = () => {
 
         {/* Footer */}
         <footer className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-gray-600">
-              © {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.
-            </p>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-4 gap-8">
+              <div>
+                <div className="flex items-center space-x-2 mb-4">
+                  <Building2 className="h-6 w-6 text-blue-600" />
+                  <span className="text-lg font-bold text-gray-900">MMT Projects</span>
+                </div>
+                <p className="text-gray-600">
+                  Uw betrouwbare partner in bouwen & verbouwen
+                </p>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Diensten</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li><Link to="/nieuwbouw-hasselt-limburg" className="hover:text-blue-600">Nieuwbouw</Link></li>
+                  <li><Link to="/renovatie-hasselt-limburg" className="hover:text-blue-600">Renovatie</Link></li>
+                  <li><Link to="/verbouwing-hasselt-limburg" className="hover:text-blue-600">Totaalprojecten</Link></li>
+                  <li><Link to="/dakwerken-hasselt-limburg" className="hover:text-blue-600">Dakwerken</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Links</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li><Link to="/" className="hover:text-blue-600">Home</Link></li>
+                  <li><Link to="/diensten" className="hover:text-blue-600">Diensten</Link></li>
+                  <li><Link to="/over-ons" className="hover:text-blue-600">Over ons</Link></li>
+                  <li><Link to="/contact" className="hover:text-blue-600">Contact</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-4">Contact</h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-center">
+                    <Phone className="h-4 w-4 mr-2" />
+                    +32 484 11 77 27
+                  </li>
+                  <li className="flex items-center">
+                    <Mail className="h-4 w-4 mr-2" />
+                    info@mmtprojects.be
+                  </li>
+                  <li>3500 Hasselt, België</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
+              <p>© {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.</p>
+            </div>
           </div>
         </footer>
       </div>

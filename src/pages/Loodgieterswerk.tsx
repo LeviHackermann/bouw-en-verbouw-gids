@@ -246,34 +246,6 @@ const Loodgieterswerk = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-          <div className="max-w-4xl mx-auto relative z-10">
-            <div className="text-center space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                  Nood aan een Loodgieter?
-                </h2>
-                <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                  Neem contact op voor een gratis offerte of spoedinterventie. MMT Projects staat 24/7 voor u klaar.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
-                  <Phone className="mr-2 h-5 w-5" />
-                  0484 11 77 27
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
-                  <Mail className="mr-2 h-5 w-5" />
-                  E-mail versturen
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
       
       <Footer />

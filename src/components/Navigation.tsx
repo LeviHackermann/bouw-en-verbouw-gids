@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
@@ -9,6 +8,36 @@ const Navigation = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const trackPhoneClick = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'phone_click',
+        event_category: 'contact',
+        event_label: 'navigation_phone'
+      });
+    }
+  };
+
+  const trackEmailClick = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'email_click',
+        event_category: 'contact',
+        event_label: 'navigation_email'
+      });
+    }
+  };
+
+  const trackQuoteClick = () => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'quote_request',
+        event_category: 'contact',
+        event_label: 'navigation_quote'
+      });
+    }
   };
 
   const services = [
@@ -80,13 +109,21 @@ const Navigation = () => {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <a href="tel:0484117727" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a 
+                href="tel:0484117727" 
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={trackPhoneClick}
+              >
                 <Phone className="h-5 w-5" />
               </a>
-              <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <a 
+                href="mailto:info@mmtprojects.be" 
+                className="text-gray-700 hover:text-blue-600 transition-colors"
+                onClick={trackEmailClick}
+              >
                 <Mail className="h-5 w-5" />
               </a>
-              <Link to="/contact">
+              <Link to="/contact" onClick={trackQuoteClick}>
                 <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
                   Offerte aanvragen
                 </Button>
@@ -96,10 +133,18 @@ const Navigation = () => {
 
           {/* Mobile menu button and contact icons */}
           <div className="md:hidden flex items-center space-x-3">
-            <a href="tel:0484117727" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a 
+              href="tel:0484117727" 
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+              onClick={trackPhoneClick}
+            >
               <Phone className="h-5 w-5" />
             </a>
-            <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600 transition-colors">
+            <a 
+              href="mailto:info@mmtprojects.be" 
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+              onClick={trackEmailClick}
+            >
               <Mail className="h-5 w-5" />
             </a>
             <button
@@ -134,7 +179,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="px-3 py-4">
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Link to="/contact" onClick={() => { setIsMenuOpen(false); trackQuoteClick(); }}>
                   <Button size="sm" className="bg-blue-600 hover:bg-blue-700 w-full">
                     Offerte aanvragen
                   </Button>

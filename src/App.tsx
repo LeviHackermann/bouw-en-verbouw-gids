@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
 import Nieuwbouw from "./pages/Nieuwbouw";
 import Verbouwing from "./pages/Verbouwing";
 import Renovatie from "./pages/Renovatie";
@@ -52,6 +52,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="/nieuwbouw-hasselt-limburg" element={<Nieuwbouw />} />
             <Route path="/verbouwing-hasselt-limburg" element={<Verbouwing />} />
             <Route path="/renovatie-hasselt-limburg" element={<Renovatie />} />

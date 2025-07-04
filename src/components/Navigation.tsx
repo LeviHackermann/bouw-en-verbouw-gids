@@ -86,9 +86,11 @@ const Navigation = () => {
               <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600 transition-colors">
                 <Mail className="h-5 w-5" />
               </a>
-              <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                Offerte aanvragen
-              </Button>
+              <Link to="/contact">
+                <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  Offerte aanvragen
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -132,9 +134,11 @@ const Navigation = () => {
                 <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600">
                   <Mail className="h-5 w-5" />
                 </a>
-                <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
-                  Offerte aanvragen
-                </Button>
+                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                    Offerte aanvragen
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

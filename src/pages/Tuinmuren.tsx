@@ -1,339 +1,314 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { 
+  Home, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Tuinmuren = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Betonnen tuinmuren en keermuren",
+    "Natuursteen muren en afscheidingen",
+    "Bakstenen tuinmuren en omheiningen",
+    "Decoratieve muren en muurtjes",
+    "Onderhoud en renovatie tuinmuren"
+  ];
+
+  const recentProjects = [
+    "Natuursteen tuinmuur villa Hasselt-Noord",
+    "Betonnen keermuur tuin Genk", 
+    "Bakstenen afscheiding Sint-Truiden",
+    "Decoratieve muur renovatie Tongeren"
+  ];
+
+  const stats = [
+    { number: "300+", label: "Tuinmuren gebouwd", icon: Home },
+    { number: "15+", label: "Jaar ervaring", icon: Award },
+    { number: "100%", label: "Tevreden klanten", icon: Users },
+    { number: "10j", label: "Garantie", icon: Shield }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Tuinmuren Hasselt - Professionele Aanleg & Bouw | MMT Projects</title>
-        <meta name="description" content="Tuinmuren Hasselt ✓ Vakkundige aanleg door MMT Projects ✓ Specialist in Limburg ✓ Gratis offerte ✓ 50km service gebied ✓ Tel: 0484117727" />
+        <title>Tuinmuren Bouwen Hasselt | MMT Projects - Professionele Tuinmuren Limburg</title>
+        <meta name="description" content="Tuinmuren specialist in Hasselt en omgeving. MMT Projects bouwt betonnen, natuursteen en bakstenen tuinmuren vakkundig met 15+ jaar ervaring. Gratis offerte voor tuinmuren in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="tuinmuren hasselt, tuinmuur bouwen limburg, betonnen muur, natuursteen muur" />
+        <link rel="canonical" href="https://www.mmtprojects.be/tuinmuren-hasselt-limburg" />
+        
+        <meta property="og:title" content="Tuinmuren Bouwen Hasselt | MMT Projects - Professionele Tuinmuren Limburg" />
+        <meta property="og:description" content="Tuinmuren specialist in Hasselt en omgeving. MMT Projects bouwt betonnen, natuursteen en bakstenen tuinmuren vakkundig met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/tuinmuren-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tuinmuren Bouwen Hasselt | MMT Projects - Professionele Tuinmuren Limburg" />
+        <meta name="twitter:description" content="Tuinmuren specialist in Hasselt en omgeving. MMT Projects bouwt betonnen, natuursteen en bakstenen tuinmuren vakkundig met 15+ jaar ervaring." />
       </Helmet>
 
+      <Navigation />
+      
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-800 mb-6">
-                <Building2 className="h-5 w-5 mr-2" />
-                <span className="font-medium">Specialist in Tuinmuren</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Tuinmuren Hasselt - Vakkundige Aanleg Door MMT Projects
-              </h1>
-              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-                Bent u op zoek naar tuinmuren in Hasselt en omgeving? MMT Projects is uw specialist voor het bouwen van duurzame en esthetische tuinmuren in Hasselt, Limburg en binnen een straal van 50 kilometer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Bel Direct: 0484117727
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Gratis Offerte
-                </Button>
-              </div>
-            </div>
-          </div>
-        </header>
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-stone-50"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-stone-100 text-stone-700 border border-stone-200">
+                  <Home className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Tuinmuren Specialist</span>
+                </div>
+                
+                <div className="space-y-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                    Professionele <span className="text-stone-600">Tuinmuren</span> in Hasselt
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                    Op zoek naar duurzame tuinmuren voor uw buitenruimte? MMT Projects is uw specialist voor het bouwen van tuinmuren in Hasselt en Limburg. Van beton tot natuursteen - wij realiseren elke muur.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-stone-600 hover:bg-stone-700 text-white px-8 py-3 text-lg">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis offerte
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
+                    Onze materialen
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
 
-        {/* Waarom Kiezen Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Waarom Kiezen Voor Onze Tuinmuren in Hasselt?
-              </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Onze tuinmuren zijn meer dan alleen functioneel - ze vormen het karakter van uw buitenruimte. Of u nu een tuinmuur Hasselt nodig heeft voor privacy, als sierlijke afscheiding of voor terrasverschillen, wij realiseren het voor u.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Building2 className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Natuurstenen tuinmuren</h3>
-                  <p className="text-gray-600">Tijdloos en duurzaam, perfect voor authentieke tuinen</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Shield className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Betonnen tuinmuren</h3>
-                  <p className="text-gray-600">Modern en veelzijdig, ideaal voor eigentijdse ontwerpen</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Award className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Keerwanden</h3>
-                  <p className="text-gray-600">Functionele oplossingen voor terrasverschillen</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Decoratieve tuinmuren</h3>
-                  <p className="text-gray-600">Sierlijke afscheidingen voor uw tuin</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg hover:shadow-xl transition-shadow">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <CheckCircle className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Met geïntegreerde verlichting</h3>
-                  <p className="text-gray-600">Sfeervolle tuinmuren met LED-verlichting</p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Service Gebied Section */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Tuinmuren Service Gebied: Hasselt en Omgeving
-              </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                MMT Projects bedient met trots Hasselt en omliggende gemeenten voor tuinmuren projecten. 
-                Ons serviceteam is actief in een straal van 50 kilometer rond Hasselt.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Primaire service steden:</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    'Genk', 'Sint-Truiden', 'Tongeren', 'Bilzen', 'Diepenbeek', 'Lummen', 
-                    'Herk-de-Stad', 'Beringen', 'Heusden-Zolder', 'Leopoldsburg', 
-                    'Houthalen-Helchteren', 'Maaseik'
-                  ].map((city) => (
-                    <div key={city} className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">{city}</span>
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center lg:text-left">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <stat.icon className="h-5 w-5 text-stone-600 mr-2" />
+                        <span className="text-2xl font-bold text-gray-900">{stat.number}</span>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
                     </div>
                   ))}
                 </div>
               </div>
-
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Uitgebreide dekking Limburg:</h3>
-                <p className="text-gray-700 mb-6">
-                  Of u nu in het centrum van Hasselt woont of in een van de pittoreske dorpjes in Limburg, 
-                  onze ervaren vaklieden komen graag naar u toe voor een vrijblijvende offerte.
-                </p>
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <div className="flex items-center">
-                    <MapPin className="h-6 w-6 text-blue-600 mr-3" />
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Service Radius</h4>
-                      <p className="text-gray-600">50 kilometer rond Hasselt</p>
+              
+              <div className="relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13" 
+                    alt="Tuinmuren Hasselt" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <h3 className="text-2xl font-bold mb-2">Duurzame Tuinmuren</h3>
+                      <p className="text-white/90">Voor generaties gebouwd</p>
                     </div>
                   </div>
                 </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 bg-stone-600 text-white p-4 rounded-2xl shadow-lg">
+                  <Home className="h-8 w-8" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
+                  <Award className="h-8 w-8 text-stone-600" />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Proces Section */}
-        <section className="py-20 px-4 bg-white">
+        {/* Services Section */}
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Proces: Van Ontwerp Tot Realisatie
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Onze Tuinmuren Services
               </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Van ontwerp tot bouw - MMT Projects verzorgt uw complete tuinmuur project in Hasselt en omgeving met oog voor kwaliteit en duurzaamheid.
+              </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  1
-                </div>
-                <h3 className="text-xl font-bold mb-4">Gratis Advies & Opmeting</h3>
-                <p className="text-gray-600">
-                  Onze experts bezoeken uw locatie in Hasselt of omgeving voor een professionele opmeting
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  2
-                </div>
-                <h3 className="text-xl font-bold mb-4">Maatwerk Ontwerp</h3>
-                <p className="text-gray-600">
-                  Samen ontwerpen we de perfecte tuinmuur die past bij uw tuin en budget
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  3
-                </div>
-                <h3 className="text-xl font-bold mb-4">Vakkundige Uitvoering</h3>
-                <p className="text-gray-600">
-                  Onze gecertificeerde vaklieden zorgen voor een kwalitatieve en tijdige realisatie
-                </p>
-              </div>
-
-              <div className="text-center">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">
-                  4
-                </div>
-                <h3 className="text-xl font-bold mb-4">Nazorg & Garantie</h3>
-                <p className="text-gray-600">
-                  Na oplevering bieden we uitgebreide garantie en nazorg
-                </p>
-              </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((service, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-stone-100 rounded-xl flex items-center justify-center group-hover:bg-stone-600 transition-colors duration-300">
+                          <CheckCircle className="h-6 w-6 text-stone-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700 leading-relaxed">{service}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Waarom MMT Projects Section */}
-        <section className="py-20 px-4 bg-gray-50">
+        {/* Service Area */}
+        <section className="py-24 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Waarom MMT Projects Voor Uw Tuinmuren?
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Tuinmuren Bouwen in Heel Limburg
               </h2>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Lokale Expertise Hasselt</h3>
-                  <p className="text-gray-700">
-                    Als gevestigd bedrijf in Hasselt kennen wij de lokale omstandigheden, bodemgesteldheid 
-                    en bouwvoorschriften in Limburg perfect. Deze kennis vertalen we naar tuinmuren die optimaal presteren.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Ervaring & Kwaliteit</h3>
-                  <p className="text-gray-700">
-                    Met jaren ervaring in de bouwsector hebben wij honderden tuinmuren gerealiseerd in Hasselt 
-                    en omgeving. Onze portfolio spreekt voor zich.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Persoonlijke Service</h3>
-                  <p className="text-gray-700">
-                    Van het eerste contact tot en met de oplevering staat persoonlijke service centraal. 
-                    U heeft één vast aanspreekpunt voor uw tuinmuur project.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Materialen Section */}
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Materialen & Stijlen
-              </h2>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-                Wij werken met hoogwaardige materialen die bestand zijn tegen het Limburgse klimaat
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects bouwt professionele tuinmuren in Hasselt en omliggende gemeenten binnen een straal van 50 kilometer.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Natuursteen</h3>
-                <p className="text-gray-600">Tijdloos en duurzaam, perfect voor authentieke tuinen</p>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden</h3>
+                  <div className="space-y-4">
+                    {serviceAreas.slice(0, 3).map((area, index) => (
+                      <div key={index} className="flex items-center p-4 bg-stone-50 rounded-xl">
+                        <MapPin className="h-5 w-5 text-stone-600 mr-3 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-gray-900">Tuinmuren {area}</span>
+                          <p className="text-sm text-gray-600">Complete service beschikbaar</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Beton</h3>
-                <p className="text-gray-600">Modern en veelzijdig, ideaal voor eigentijdse ontwerpen</p>
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Alle Gemeenten</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {serviceAreas.slice(3).map((area, index) => (
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:bg-stone-50 transition-colors duration-200">
+                      <span className="text-sm font-medium text-gray-700">{area}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
+            </div>
+          </div>
+        </section>
 
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Klinkers</h3>
-                <p className="text-gray-600">Klassiek en onderhoudsarm</p>
-              </div>
-
-              <div className="bg-gray-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-bold mb-3 text-gray-900">Gecombineerd</h3>
-                <p className="text-gray-600">Voor unieke, op maat gemaakte oplossingen</p>
-              </div>
+        {/* References */}
+        <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Recente Tuinmuren Projecten
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ontdek onze laatst gebouwde tuinmuren in Hasselt en omgeving.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                          <Star className="h-6 w-6 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{project}</h3>
+                        <p className="text-gray-600 text-sm">Vakkundig uitgevoerd door MMT Projects</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gradient-to-br from-blue-900 to-blue-700 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Klaar voor uw tuinmuur in Hasselt?
-            </h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Neem vandaag nog contact op voor een vrijblijvende offerte. 
-              Onze experts adviseren u graag over de mogelijkheden voor uw specifieke situatie.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel Direct: 0484117727
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900">
-                <Mail className="mr-2 h-5 w-5" />
-                info@mmtprojects.be
-              </Button>
+        <section className="py-24 px-4 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                  Start Uw Tuinmuur Project
+                </h2>
+                <p className="text-xl text-stone-100 max-w-2xl mx-auto">
+                  Klaar voor een duurzame tuinmuur? Neem contact op voor een vrijblijvend adviesgesprek en gratis offerte.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="bg-white text-stone-900 hover:bg-stone-50 px-8 py-4 text-lg font-semibold">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-stone-900 px-8 py-4 text-lg font-semibold">
+                  <Mail className="mr-2 h-5 w-5" />
+                  E-mail versturen
+                </Button>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div className="bg-blue-800/50 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-4">Contact MMT Projects</h3>
-              <div className="grid md:grid-cols-3 gap-4 text-center">
-                <div className="flex items-center justify-center">
-                  <MapPin className="h-5 w-5 mr-2" />
-                  <span>Daaleindestraat 100, 3720 Hasselt</span>
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                MMT Projects - Uw Tuinmuren Specialist
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-stone-600 flex-shrink-0" />
+                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <Phone className="h-5 w-5 mr-2" />
-                  <span>0484117727</span>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="h-5 w-5 text-stone-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@mmtprojects.be</span>
                 </div>
-                <div className="flex items-center justify-center">
-                  <Mail className="h-5 w-5 mr-2" />
-                  <span>info@mmtprojects.be</span>
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="h-5 w-5 text-stone-600 flex-shrink-0" />
+                  <span className="text-gray-700">0484 11 77 27</span>
                 </div>
               </div>
-              <p className="mt-4 text-blue-100">
-                Snel contact via telefoon of mail - binnen 24 uur reactie gegarandeerd!
+              
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Professionele tuinmuren specialist in Hasselt en heel Limburg. 
+                Van ontwerp tot bouw - uw tuin krijgt de perfecte afscheiding.
               </p>
             </div>
           </div>
         </section>
       </div>
+      
+      <Footer />
     </>
   );
 };

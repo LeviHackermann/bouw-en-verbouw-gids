@@ -1,260 +1,313 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Zap, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { 
+  Zap, Lightbulb, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Elektriciteit = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Elektrische installaties nieuwbouw en renovatie",
+    "Stoppen en schakelaars professioneel geplaatst",
+    "Verlichting en LED-systemen op maat",
+    "Elektrische keuring en veiligheidscontrole",
+    "Domotica en slimme woning installaties"
+  ];
+
+  const recentProjects = [
+    "Complete elektrische installatie nieuwbouw Hasselt",
+    "LED verlichting kantoor Genk",
+    "Domotica systeem villa Sint-Truiden",
+    "Elektrische renovatie appartement Tongeren"
+  ];
+
+  const stats = [
+    { number: "600+", label: "Elektrische projecten", icon: Zap },
+    { number: "15+", label: "Jaar ervaring", icon: Award },
+    { number: "24/7", label: "Spoeddienst", icon: Clock },
+    { number: "100%", label: "Gecertificeerd", icon: Shield }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>Elektriciteit Hasselt | MMT Projects - Professionele Elektrische Installaties Limburg</title>
-        <meta name="description" content="Elektriciteit Hasselt ✓ MMT Projects - Professionele elektrische installaties in Limburg ✓ Gekwalificeerde elektriciens ✓ 50km serviceregio ✓ Gratis offerte ☎ 0484117727" />
+        <title>Elektriciteit Hasselt | MMT Projects - Professionele Elektricien Limburg</title>
+        <meta name="description" content="Elektriciteit specialist in Hasselt en omgeving. MMT Projects verzorgt elektrische installaties vakkundig met 15+ jaar ervaring. Gratis offerte voor elektriciteit in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="elektriciteit hasselt, elektricien limburg, elektrische installatie, verlichting, domotica" />
+        <link rel="canonical" href="https://www.mmtprojects.be/elektriciteit-hasselt-limburg" />
+        
+        <meta property="og:title" content="Elektriciteit Hasselt | MMT Projects - Professionele Elektricien Limburg" />
+        <meta property="og:description" content="Elektriciteit specialist in Hasselt en omgeving. MMT Projects verzorgt elektrische installaties vakkundig met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/elektriciteit-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Elektriciteit Hasselt | MMT Projects - Professionele Elektricien Limburg" />
+        <meta name="twitter:description" content="Elektriciteit specialist in Hasselt en omgeving. MMT Projects verzorgt elektrische installaties vakkundig met 15+ jaar ervaring." />
       </Helmet>
 
       <Navigation />
-
+      
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-600 text-white py-16 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center mb-6">
-              <Zap className="h-12 w-12 mr-4" />
-              <div>
-                <h1 className="text-4xl font-bold">Elektriciteit Hasselt - Professionele Elektrische Installaties in Limburg</h1>
-                <p className="text-xl mt-2 text-blue-100">Betrouwbare elektriciteitsdiensten door gekwalificeerde specialisten</p>
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 border border-blue-200">
+                  <Zap className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Elektriciteit Specialist</span>
+                </div>
+                
+                <div className="space-y-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                    Betrouwbare <span className="text-blue-600">Elektriciteit</span> in Hasselt
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                    Zoekt u een gecertificeerde elektricien in Hasselt? MMT Projects is uw specialist voor alle elektrische installaties in Limburg. Veilig, vakkundig en conform alle normen.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Spoedinterventie
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
+                    Gratis keuring
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center lg:text-left">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <stat.icon className="h-5 w-5 text-blue-600 mr-2" />
+                        <span className="text-2xl font-bold text-gray-900">{stat.number}</span>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1621905251189-08b45d3a5e7f" 
+                    alt="Elektriciteit Hasselt" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <h3 className="text-2xl font-bold mb-2">Gecertificeerd Werk</h3>
+                      <p className="text-white/90">Conform alle veiligheidsnormen</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-lg">
+                  <Lightbulb className="h-8 w-8" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
+                  <Award className="h-8 w-8 text-blue-600" />
+                </div>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row gap-4 mt-8">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel 0484117727
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                <Mail className="mr-2 h-5 w-5" />
-                Gratis offerte
-              </Button>
-            </div>
-          </div>
-        </header>
-
-        {/* Introduction */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6">Betrouwbare Elektriciteitswerken in Hasselt en Omstreken</h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              MMT Projects is uw specialist voor alle elektrische installaties in Hasselt en een straal van 50 kilometer eromheen. Met jarenlange ervaring in de elektriciteit bieden wij kwalitatieve diensten aan particulieren en bedrijven in heel Limburg.
-            </p>
           </div>
         </section>
 
-        {/* Services */}
-        <section className="py-16 px-4 bg-gray-50">
+        {/* Services Section */}
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Onze Elektriciteitsservices in Hasselt</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6 text-center">
-                  <Zap className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Elektrische Installaties</h3>
-                  <p className="text-gray-600">
-                    Complete elektrische installaties voor nieuwbouw en renovaties in Hasselt en omgeving.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6 text-center">
-                  <CheckCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Elektriciteitskeuring</h3>
-                  <p className="text-gray-600">
-                    Grondige keuringen en onderhoud van elektrische installaties door gecertificeerde elektriciens.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6 text-center">
-                  <Zap className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Industriële Elektriciteit</h3>
-                  <p className="text-gray-600">
-                    Industriële elektriciteitsoplossingen voor bedrijven in Hasselt en hele regio Limburg.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6 text-center">
-                  <Zap className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-3">Domotica</h3>
-                  <p className="text-gray-600">
-                    Moderne domotica-installaties voor slimme woningen en kantoren in Hasselt.
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Onze Elektriciteit Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Van eenvoudige reparaties tot complete installaties - MMT Projects verzorgt alle elektrische werken in Hasselt en omgeving met kwaliteit en veiligheid voorop.
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* Why Choose Us */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Waarom Kiezen voor MMT Projects Elektriciteit?</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-gray-50 border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Lokale Expertise in Limburg</h3>
-                  <p className="text-gray-600">
-                    Als gevestigde elektriciteitsspecialist in Hasselt kennen wij de lokale regelgeving en hebben jarenlange ervaring in de regio.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-50 border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Gekwalificeerde Elektriciens</h3>
-                  <p className="text-gray-600">
-                    Ons team bestaat uit volledig gekwalificeerde elektriciens die voldoen aan alle Belgische normen en certificeringen.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gray-50 border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Snelle Service</h3>
-                  <p className="text-gray-600">
-                    Dankzij onze ligging in Hasselt kunnen wij snel ter plaatse zijn voor spoedgevallen in heel Limburg.
-                  </p>
-                </CardContent>
-              </Card>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((service, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                          <CheckCircle className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700 leading-relaxed">{service}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* Service Area */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Ons Werkgebied - Elektriciteit in Heel Limburg</h2>
-            <p className="text-lg text-gray-700 mb-6">
-              MMT Projects verzorgt elektriciteitswerken in een straal van 50 kilometer rond Hasselt:
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="font-semibold mb-3">Grote steden:</h3>
-                <p className="text-gray-600 mb-4">
-                  Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Lommel, Peer, Beringen, Herk-de-Stad
-                </p>
+        <section className="py-24 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Elektriciteit in Heel Limburg
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt professionele elektrische installaties in Hasselt en omliggende gemeenten binnen een straal van 50 kilometer.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden</h3>
+                  <div className="space-y-4">
+                    {serviceAreas.slice(0, 3).map((area, index) => (
+                      <div key={index} className="flex items-center p-4 bg-blue-50 rounded-xl">
+                        <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-gray-900">Elektriciteit {area}</span>
+                          <p className="text-sm text-gray-600">Complete service beschikbaar</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
+
               <div>
-                <h3 className="font-semibold mb-3">Kleinere gemeenten:</h3>
-                <p className="text-gray-600">
-                  Zonhoven, Houthalen-Helchteren, As, Opglabbeek, Nieuwerkerken, Gingelom, Heers, Riemst, Lanaken, Maasmechelen, Dilsen-Stokkem, Maaseik, Kinrooi, Bree, Meeuwen-Gruitrode, Hamont-Achel, Neerpelt, Overpelt, Tessenderlo, Ham, Leopoldsburg
-                </p>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Alle Gemeenten</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {serviceAreas.slice(3).map((area, index) => (
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                      <span className="text-sm font-medium text-gray-700">{area}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Projects */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Elektriciteitsprojecten in de Regio Hasselt</h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Met tientallen jaren ervaring in elektriciteit hebben wij talloze projecten gerealiseerd voor klanten in Hasselt en omstreken. Van eenvoudige huishoudelijke installaties tot complexe industriële elektriciteitsprojecten - MMT Projects levert maatwerk voor elke situatie.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Onze elektriciens zijn vertrouwd met de specifieke eisen van woningen en bedrijven in Limburg. Wij zorgen ervoor dat uw elektrische installatie voldoet aan alle veiligheidsnormen en optimaal functioneert.
-            </p>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="py-16 px-4 bg-gray-50">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-8">Veelgestelde Vragen over Elektriciteit</h2>
-            <div className="space-y-6">
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Werkt MMT Projects in heel Limburg?</h3>
-                  <p className="text-gray-600">
-                    Ja, wij dekken een gebied van 50 kilometer rond Hasselt af, wat praktisch heel Limburg omvat inclusief Genk, Sint-Truiden, Tongeren en vele andere gemeenten.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Zijn jullie elektriciens gecertificeerd?</h3>
-                  <p className="text-gray-600">
-                    Alle elektriciens van MMT Projects beschikken over de vereiste certificeringen en jarenlange praktijkervaring in elektriciteitsinstallaties.
-                  </p>
-                </CardContent>
-              </Card>
-              <Card className="bg-white border-none shadow-sm">
-                <CardContent className="p-6">
-                  <h3 className="font-semibold mb-3">Doen jullie ook spoedinterventies?</h3>
-                  <p className="text-gray-600">
-                    Voor elektriciteitsnodsituaties in Hasselt en omstreken bieden wij snelle hulp. Neem contact op via 0484117727 voor dringende elektriciteitsproblemen.
-                  </p>
-                </CardContent>
-              </Card>
+        {/* References */}
+        <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Recente Elektriciteit Projecten
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ontdek onze laatst gerealiseerde elektrische installaties in Hasselt en omgeving.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                          <Star className="h-6 w-6 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{project}</h3>
+                        <p className="text-gray-600 text-sm">Vakkundig uitgevoerd door MMT Projects</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-blue-600 text-white">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Neem Contact Op voor Elektriciteit in Hasselt</h2>
-            <p className="text-xl mb-8 text-blue-100">
-              Heeft u een elektriciteitsproject in Hasselt of omgeving? Neem vrijblijvend contact op met MMT Projects voor een persoonlijk advies en offerte op maat.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel 0484117727
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                <Mail className="mr-2 h-5 w-5" />
-                Verstuur een e-mail
-              </Button>
+        <section className="py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                  Elektrische Problemen?
+                </h2>
+                <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                  Neem contact op voor spoedinterventie of een gratis offerte. Onze gecertificeerde elektriciens staan voor u klaar.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
+                  <Mail className="mr-2 h-5 w-5" />
+                  E-mail versturen
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Contact MMT Projects voor uw elektriciteitsdiensten</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div>
-                <MapPin className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Adres</h3>
-                <p className="text-gray-600">Daaleindestraat 100<br />3720 Hasselt</p>
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                MMT Projects - Uw Elektriciteit Specialist
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@mmtprojects.be</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">0484 11 77 27</span>
+                </div>
               </div>
-              <div>
-                <Phone className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Telefoon</h3>
-                <p className="text-gray-600">0484117727</p>
-              </div>
-              <div>
-                <Mail className="h-8 w-8 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-2">Email</h3>
-                <p className="text-gray-600">info@mmtprojects.be</p>
-              </div>
-            </div>
-            <div className="mt-12">
-              <p className="text-lg font-semibold text-gray-800 mb-4">
-                Wij staan klaar om uw elektriciteitsproject in Hasselt, Genk, Sint-Truiden, Tongeren of elders in Limburg tot een succesvol einde te brengen.
-              </p>
-              <p className="text-gray-600">
-                Bel vandaag nog voor een afspraak met onze elektriciteitsspecialisten.
+              
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Gecertificeerde elektriciteit specialist in Hasselt en heel Limburg. 
+                Veilige en vakkundige elektrische installaties met volledige garantie.
               </p>
             </div>
           </div>
         </section>
       </div>
-
+      
       <Footer />
     </>
   );

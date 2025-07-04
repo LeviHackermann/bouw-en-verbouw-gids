@@ -1,154 +1,168 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award, Thermometer } from 'lucide-react';
+import { 
+  Thermometer, Home, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Isolatie = () => {
-  const services = [
-    {
-      title: "Spouwmuurisolatie Hasselt",
-      items: [
-        "Injectie van hoogwaardige isolatiematerialen",
-        "Direct besparen op verwarmingskosten",
-        "Geschikt voor meeste woningen in Limburg",
-        "Professionele uitvoering door specialisten",
-        "Minimale overlast tijdens werkzaamheden"
-      ]
-    },
-    {
-      title: "Dakisolatie Limburg",
-      items: [
-        "Hellend dak isolatie",
-        "Plat dak isolatie",
-        "Zoldervloer isolatie",
-        "Tot 30% warmteverlies voorkomen",
-        "Expertise voor elke isolatieklus"
-      ]
-    },
-    {
-      title: "Vloerisolatie en Kelderplafond",
-      items: [
-        "Professionele vloerisolatie",
-        "Kelderplafond isolatie",
-        "Meer comfort en warmte",
-        "Lagere energiekosten",
-        "Aangepaste isolatieoplossingen"
-      ]
-    }
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
   ];
 
-  const hoofdsteden = [
-    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen", 
-    "Diepenbeek", "Beringen", "Lommel", "Pelt", "Peer"
+  const specializations = [
+    "Dak- en zolderisolatie voor optimale warmte-isolatie",
+    "Spouwmuurisolatie en gevelisolatie vakkundig uitgevoerd",
+    "Vloerisolatie en kruipruimte isolatie tegen koudebruggen",
+    "Energie-efficiënte isolatiematerialen en technieken",
+    "Isolatieadvies en energieaudit voor uw woning"
   ];
 
-  const gemeenten = [
-    "Houthalen-Helchteren", "Zonhoven", "Lummen", "Ham", "Tessenderlo", 
-    "Alken", "Wellen", "Riemst", "Lanaken", "Maasmechelen", 
-    "Dilsen-Stokkem", "As", "Opglabbeek", "Hechtel-Eksel", 
-    "Leopoldsburg", "Beringen"
+  const recentProjects = [
+    "Dakasolatie nieuwbouw woning Hasselt-Centrum",
+    "Spouwmuurisolatie historische villa Genk",
+    "Complete isolatie renovatie Sint-Truiden",
+    "Vloerisolatie appartement Tongeren"
   ];
 
-  const voordelen = [
-    "Lokale expertise: Jarenlange ervaring met isolatiewerken in Hasselt, Genk en heel Limburg",
-    "Kwaliteitsgarantie: Wij werken alleen met gecertificeerde isolatiematerialen",
-    "Snelle service: Isolatiewerken binnen 50km van Hasselt binnen korte termijn",
-    "Gratis advies: Persoonlijk isolatieadvies voor uw woning",
-    "Scherpe prijzen: Eerlijke tarieven voor al onze isolatiediensten"
-  ];
-
-  const waaromKiezen = [
-    {
-      icon: MapPin,
-      title: "Lokaal bedrijf in Hasselt",
-      description: "Gevestigd in het hart van Limburg"
-    },
-    {
-      icon: Shield,
-      title: "Gecertificeerde materialen",
-      description: "Alleen hoogwaardige isolatiematerialen"
-    },
-    {
-      icon: Clock,
-      title: "Snelle service binnen 50km",
-      description: "Korte levertijden in heel Limburg"
-    },
-    {
-      icon: Users,
-      title: "Gratis advies op maat",
-      description: "Persoonlijk isolatieadvies voor elke situatie"
-    }
+  const stats = [
+    { number: "400+", label: "Isolatie projecten", icon: Thermometer },
+    { number: "15+", label: "Jaar ervaring", icon: Award },
+    { number: "30%", label: "Energiebesparing", icon: Home },
+    { number: "100%", label: "Tevreden klanten", icon: Shield }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Isolatie Hasselt - Professionele Isolatiewerken in Limburg | MMT Projects</title>
-        <meta name="description" content="Isolatie Hasselt ✓ MMT Projects - Professionele isolatiewerken in Hasselt, Genk, Sint-Truiden en omgeving. Spouwmuurisolatie, dakisolatie & vloerisolatie. Gratis offerte!" />
+        <title>Isolatie Hasselt | MMT Projects - Professionele Isolatie Limburg</title>
+        <meta name="description" content="Isolatie specialist in Hasselt en omgeving. MMT Projects verzorgt dak-, spouwmuur- en vloerisolatie vakkundig met 15+ jaar ervaring. Gratis offerte voor isolatie in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="isolatie hasselt, daklsolatie limburg, spouwmuurisolatie, vloerisolatie, energiebesparing" />
         <link rel="canonical" href="https://www.mmtprojects.be/isolatie-hasselt-limburg" />
+        
+        <meta property="og:title" content="Isolatie Hasselt | MMT Projects - Professionele Isolatie Limburg" />
+        <meta property="og:description" content="Isolatie specialist in Hasselt en omgeving. MMT Projects verzorgt dak-, spouwmuur- en vloerisolatie vakkundig met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/isolatie-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Isolatie Hasselt | MMT Projects - Professionele Isolatie Limburg" />
+        <meta name="twitter:description" content="Isolatie specialist in Hasselt en omgeving. MMT Projects verzorgt dak-, spouwmuur- en vloerisolatie vakkundig met 15+ jaar ervaring." />
       </Helmet>
 
       <Navigation />
-
+      
       <div className="min-h-screen bg-white">
-        {/* Header */}
-        <header className="bg-blue-600 text-white py-16 mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <div className="flex justify-center mb-6">
-                <div className="bg-white/20 p-4 rounded-full">
-                  <Thermometer className="h-12 w-12" />
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 border border-blue-200">
+                  <Thermometer className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Isolatie Specialist</span>
+                </div>
+                
+                <div className="space-y-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                    Energie-efficiënte <span className="text-blue-600">Isolatie</span> in Hasselt
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                    Wilt u uw energiekosten verlagen? MMT Projects is uw specialist voor isolatie in Hasselt en Limburg. Professionele isolatie voor daken, muren en vloeren met maximale energiebesparing.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis energieaudit
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
+                    Bereken besparing
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center lg:text-left">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <stat.icon className="h-5 w-5 text-blue-600 mr-2" />
+                        <span className="text-2xl font-bold text-gray-900">{stat.number}</span>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Isolatie Hasselt - Professionele Isolatiewerken in Limburg
-              </h1>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Bij MMT Projects bent u aan het juiste adres voor professionele isolatiewerken in Hasselt en omgeving. Als ervaren isolatiebedrijf in Limburg zorgen wij voor optimale thermische isolatie van uw woning of bedrijfspand. Onze isolatiespecialisten bedienen Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek en alle gemeenten binnen een straal van 50 kilometer.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Bel 0484117727
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Gratis offerte
-                </Button>
+              
+              <div className="relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
+                    alt="Isolatie Hasselt" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <h3 className="text-2xl font-bold mb-2">30% Besparing</h3>
+                      <p className="text-white/90">Op uw energiekosten</p>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-lg">
+                  <Home className="h-8 w-8" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
+                  <Award className="h-8 w-8 text-blue-600" />
+                </div>
               </div>
             </div>
           </div>
-        </header>
+        </section>
 
         {/* Services Section */}
-        <section className="py-16 px-4 bg-gray-50">
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Onze Isolatiediensten in Hasselt en Omgeving
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Onze Isolatie Specialisaties
               </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Van dakasolatie tot spouwmuurisolatie - MMT Projects verzorgt alle isolatiewerken in Hasselt en omgeving voor maximale energiebesparing en comfort.
+              </p>
             </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Card key={index} className="bg-white shadow-lg">
-                  <CardHeader>
-                    <CardTitle className="text-xl text-blue-600 flex items-center">
-                      <Thermometer className="mr-2 h-6 w-6" />
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
-                      {service.items.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-start">
-                          <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((service, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                          <CheckCircle className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700 leading-relaxed">{service}</p>
+                      </div>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
@@ -156,181 +170,145 @@ const Isolatie = () => {
           </div>
         </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 px-4 bg-white">
+        {/* Service Area */}
+        <section className="py-24 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Waarom Kiezen voor MMT Projects Isolatie?
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Isolatie in Heel Limburg
               </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt professionele isolatie in Hasselt en omliggende gemeenten binnen een straal van 50 kilometer.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {waaromKiezen.map((item, index) => (
-                <div key={index} className="text-center">
-                  <div className="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <item.icon className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-700">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-16 bg-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900">Onze Voordelen</h3>
-              <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
                 <div>
-                  <h4 className="font-bold text-lg mb-3 text-gray-900">Waarom MMT Projects?</h4>
-                  <ul className="space-y-2">
-                    {voordelen.map((voordeel, index) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{voordeel}</span>
-                      </li>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden</h3>
+                  <div className="space-y-4">
+                    {serviceAreas.slice(0, 3).map((area, index) => (
+                      <div key={index} className="flex items-center p-4 bg-blue-50 rounded-xl">
+                        <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-gray-900">Isolatie {area}</span>
+                          <p className="text-sm text-gray-600">Complete service beschikbaar</p>
+                        </div>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-gray-900">Isolatie Premies en Subsidies</h4>
-                  <p className="text-gray-700 mb-4">
-                    Als isolatiebedrijf in Hasselt helpen wij u graag bij het aanvragen van isolatiepremies en subsidies. In Limburg zijn er verschillende steunmaatregelen beschikbaar voor isolatiewerken.
-                  </p>
-                  <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span>Hulp bij aanvragen premies</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span>Kennis van alle procedures</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                      <span>Ondersteuning bij subsidies</span>
-                    </li>
-                  </ul>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Alle Gemeenten</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {serviceAreas.slice(3).map((area, index) => (
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                      <span className="text-sm font-medium text-gray-700">{area}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Service Area */}
-        <section className="py-16 px-4 bg-gray-50">
+        {/* References */}
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-                Ons Werkgebied voor Isolatiewerken
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Recente Isolatie Projecten
               </h2>
-              <p className="text-xl text-gray-600">
-                MMT Projects voert isolatiewerken uit in heel Limburg binnen een straal van 50km
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ontdek onze laatst gerealiseerde isolatieprojecten in Hasselt en omgeving.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden Limburg</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {hoofdsteden.map((stad, index) => (
-                    <div key={index} className="flex items-center">
-                      <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                      <span className="text-gray-700">{stad}</span>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                          <Star className="h-6 w-6 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{project}</h3>
+                        <p className="text-gray-600 text-sm">Vakkundig uitgevoerd door MMT Projects</p>
+                      </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Omliggende Gemeenten</h3>
-                <div className="grid grid-cols-2 gap-4">
-                  {gemeenten.map((gemeente, index) => (
-                    <div key={index} className="flex items-center">
-                      <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                      <span className="text-gray-700">{gemeente}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 bg-green-600 text-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center">
-              <div className="bg-white/10 inline-flex items-center px-4 py-2 rounded-full mb-6">
-                <Thermometer className="h-5 w-5 mr-2" />
-                <span className="font-medium">Gratis Isolatie-offerte</span>
+        <section className="py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                  Bespaar op Energiekosten
+                </h2>
+                <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                  Neem contact op voor een gratis energieaudit en ontdek hoeveel u kunt besparen met professionele isolatie.
+                </p>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                🏠 Gratis Isolatie-offerte Hasselt
-              </h2>
-              <p className="text-xl mb-8 text-white/90">
-                Wilt u weten wat isolatiewerken kosten voor uw woning in Hasselt of omgeving? Vraag vandaag nog een gratis offerte aan bij MMT Projects. Onze isolatiespecialisten komen graag langs voor een vrijblijvende inspectie en advies op maat.
-              </p>
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 text-lg px-8 py-4">
-                <Phone className="mr-2 h-6 w-6" />
-                0484 11 77 27
-              </Button>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
+                  <Mail className="mr-2 h-5 w-5" />
+                  E-mail versturen
+                </Button>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Contact Section */}
-        <section className="py-16 px-4 bg-gray-900 text-white">
+        <section className="py-16 px-4 bg-gray-100">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Contact MMT Projects - Isolatie Hasselt
-              </h2>
-              <p className="text-xl text-gray-300">
-                Voor isolatiewerken in Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek en heel Limburg
+            <div className="text-center space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                MMT Projects - Uw Isolatie Specialist
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@mmtprojects.be</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">0484 11 77 27</span>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Professionele isolatie specialist in Hasselt en heel Limburg. 
+                Energie-efficiënte isolatie voor maximale besparing en comfort.
               </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div>
-                <MapPin className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Adres</h3>
-                <p className="text-gray-300">Daaleindestraat 100<br />3720 Hasselt</p>
-              </div>
-              <div>
-                <Phone className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Telefoon</h3>
-                <p className="text-gray-300">0484117727</p>
-              </div>
-              <div>
-                <Mail className="h-12 w-12 text-blue-400 mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2">Email</h3>
-                <p className="text-gray-300">info@mmtprojects.be</p>
-              </div>
-            </div>
-
-            <div className="mt-16 text-center">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Bel voor gratis inspectie
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Vraag offerte aan
-                </Button>
-              </div>
             </div>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-gray-600">
-              © {new Date().getFullYear()} MMT Projects. Alle rechten voorbehouden.
-            </p>
-          </div>
-        </footer>
       </div>
+      
+      <Footer />
     </>
   );
 };

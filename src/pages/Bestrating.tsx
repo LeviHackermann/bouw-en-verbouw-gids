@@ -1,11 +1,11 @@
 
+import { Helmet } from 'react-helmet-async';
 import { 
-  Building2, Home, CheckCircle, MapPin, Phone, Mail, 
-  Award, Shield, Users, ArrowRight, Star, Clock
-} from "lucide-react";
+  Square, Layers, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Helmet } from 'react-helmet-async';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -15,120 +15,153 @@ const Bestrating = () => {
     "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
     "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
     "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
-    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren",
-    "As", "Opglabbeek", "Oudsbergen", "Hamont-Achel"
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
   ];
 
   const specializations = [
-    "Professionele terrasbestrating in Hasselt en omgeving",
-    "Duurzame opritbestrating met hoogwaardige materialen",
-    "Moderne tuinpadbestrating aangepast aan uw tuinontwerp",
-    "Bestrating van parkeerplaatsen en toegangswegen",
-    "Onderhoud en renovatie van bestaande bestrating"
+    "Betonklinkers en gebakken klinkers professioneel gelegd",
+    "Natuursteen bestrating voor exclusieve uitstraling",
+    "Opritten en parking bestrating duurzaam uitgevoerd",
+    "Tuinpaden en terrassen met diverse materialen",
+    "Drainage en onderfundering voor langdurige kwaliteit"
   ];
 
   const recentProjects = [
-    "Terrasbestrating villa Hasselt-Kermt",
-    "Opritbestrating moderne woning Genk-Centrum", 
-    "Tuinpadbestrating landelijke tuin Sint-Truiden",
-    "Parkeerplaats bestrating kantoorgebouw Bilzen"
+    "Oprit bestrating moderne woning Hasselt-Centrum",
+    "Natuursteen terras villa Genk",
+    "Klinkerbestrating historisch pand Sint-Truiden",
+    "Parking bestrating bedrijf Tongeren"
+  ];
+
+  const stats = [
+    { number: "400+", label: "Bestrating projecten", icon: Square },
+    { number: "15+", label: "Jaar ervaring", icon: Award },
+    { number: "100%", label: "Tevreden klanten", icon: Users },
+    { number: "10j", label: "Garantie", icon: Shield }
   ];
 
   return (
     <>
       <Helmet>
         <title>Bestrating Hasselt | MMT Projects - Professionele Bestrating Limburg</title>
-        <meta name="description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects realiseert terrassen, opritten en tuinpaden met 15+ jaar ervaring. Gratis offerte voor bestrating in Hasselt, Genk, Sint-Truiden en heel Limburg." />
-        <meta name="keywords" content="bestrating hasselt, bestrating limburg, terras bestrating, oprit bestrating, tuinpad bestrating" />
+        <meta name="description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects legt betonklinkers, natuursteen en klinkers vakkundig met 15+ jaar ervaring. Gratis offerte voor bestrating in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="bestrating hasselt, klinkers leggen limburg, natuursteen bestrating, oprit bestrating" />
         <link rel="canonical" href="https://www.mmtprojects.be/bestrating-hasselt-limburg" />
         
         <meta property="og:title" content="Bestrating Hasselt | MMT Projects - Professionele Bestrating Limburg" />
-        <meta property="og:description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects realiseert terrassen, opritten en tuinpaden met 15+ jaar ervaring." />
+        <meta property="og:description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects legt betonklinkers, natuursteen en klinkers vakkundig met 15+ jaar ervaring." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.mmtprojects.be/bestrating-hasselt-limburg" />
         
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Bestrating Hasselt | MMT Projects - Professionele Bestrating Limburg" />
-        <meta name="twitter:description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects realiseert terrassen, opritten en tuinpaden met 15+ jaar ervaring." />
+        <meta name="twitter:description" content="Bestrating specialist in Hasselt en omgeving. MMT Projects legt betonklinkers, natuursteen en klinkers vakkundig met 15+ jaar ervaring." />
       </Helmet>
-      
+
       <Navigation />
       
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="https://images.unsplash.com/photo-1558618047-3c8c5d1f5f3c" 
-              alt="Bestrating Hasselt" 
-              className="object-cover w-full h-full opacity-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/80"></div>
-          </div>
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-blue-50"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
           
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-6">
-                  <Building2 className="h-4 w-4 mr-2" />
-                  <span className="text-sm font-medium">Bestrating Specialist Hasselt</span>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 border border-blue-200">
+                  <Square className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Bestrating Specialist</span>
                 </div>
                 
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
-                  <span className="text-blue-600">Bestrating Hasselt</span> - Professionele Bestratingsdiensten in Limburg
-                </h1>
+                <div className="space-y-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                    Professionele <span className="text-blue-600">Bestrating</span> in Hasselt
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                    Zoekt u vakkundige bestrating in Hasselt? MMT Projects is uw specialist voor klinkers, natuursteen en betonbestrating in Limburg. Duurzame kwaliteit met stijlvolle afwerking.
+                  </p>
+                </div>
                 
-                <p className="mt-6 text-xl text-gray-700 max-w-lg">
-                  Bent u op zoek naar professionele bestrating in Hasselt? MMT Projects is dé specialist in bestratingsdiensten in Hasselt en heel Limburg. Van terrassen tot opritten, wij realiseren elke bestrating met vakmanschap.
-                </p>
-                
-                <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
                     <Phone className="mr-2 h-5 w-5" />
-                    Gratis offerte aanvragen
+                    Gratis prijsofferte
                   </Button>
-                  <Button size="lg" variant="outline" className="border-gray-300">
+                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
                     Onze referenties
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center lg:text-left">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <stat.icon className="h-5 w-5 text-blue-600 mr-2" />
+                        <span className="text-2xl font-bold text-gray-900">{stat.number}</span>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
               
-              <div className="hidden md:block relative">
-                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4" 
-                    alt="Bestrating project Hasselt" 
-                    className="w-full h-[400px] object-cover"
+                    src="https://images.unsplash.com/photo-1578662996442-48f60103fc96" 
+                    alt="Bestrating Hasselt" 
+                    className="w-full h-[500px] object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                   <div className="absolute bottom-0 left-0 p-8 text-white">
-                    <h2 className="text-3xl font-bold mb-2">15+ Jaar</h2>
-                    <p className="text-white/90">Ervaring in bestrating</p>
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <h3 className="text-2xl font-bold mb-2">Duurzame Bestrating</h3>
+                      <p className="text-white/90">Van klassiek tot modern design</p>
+                    </div>
                   </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-lg">
+                  <Layers className="h-8 w-8" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
+                  <Award className="h-8 w-8 text-blue-600" />
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Why Choose MMT Projects */}
-        <section className="py-20 px-4 bg-gray-50">
+        {/* Services Section */}
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Bestrating?</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Onze Bestrating Specialisaties
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Als ervaren bestratingspecialist in Hasselt begrijpen wij dat bestrating meer is dan alleen stenen leggen. Het gaat om duurzaamheid, esthetiek en functionaliteit. Onze lokale expertise in Hasselt zorgt voor perfecte resultaten.
+                Van klinkerbestrating tot natuursteen - MMT Projects verzorgt alle soorten bestrating in Hasselt en omgeving met vakmanschap en kwaliteit.
               </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {specializations.map((specialization, index) => (
-                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                      <p className="text-gray-700">{specialization}</p>
+              {specializations.map((service, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                          <CheckCircle className="h-6 w-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700 leading-relaxed">{service}</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -138,43 +171,41 @@ const Bestrating = () => {
         </section>
 
         {/* Service Area */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-24 px-4 bg-white">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Bestrating Service Gebied - 50km Rondom Hasselt</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Bestrating in Heel Limburg
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                MMT Projects verzorgt bestratingsdiensten in Hasselt en een uitgebreide regio van 50 kilometer rondom onze thuisbasis.
+                MMT Projects verzorgt professionele bestrating in Hasselt en omliggende gemeenten binnen een straal van 50 kilometer.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden en grote gemeenten:</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center">
-                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="font-semibold">Bestrating Hasselt</span>
-                    <span className="text-gray-600 ml-2">(centrum en alle deelgemeenten)</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="font-semibold">Bestrating Genk</span>
-                    <span className="text-gray-600 ml-2">- moderne bestratingsstijlen</span>
-                  </div>
-                  <div className="flex items-center">
-                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
-                    <span className="font-semibold">Bestrating Sint-Truiden</span>
-                    <span className="text-gray-600 ml-2">- traditionele en moderne bestrating</span>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden</h3>
+                  <div className="space-y-4">
+                    {serviceAreas.slice(0, 3).map((area, index) => (
+                      <div key={index} className="flex items-center p-4 bg-blue-50 rounded-xl">
+                        <MapPin className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-gray-900">Bestrating {area}</span>
+                          <p className="text-sm text-gray-600">Complete service beschikbaar</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold mb-6 text-gray-900">Omliggende gemeenten voor bestrating:</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {serviceAreas.slice(5).map((area, index) => (
-                    <div key={index} className="text-sm text-gray-600 py-1">
-                      {area}
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Alle Gemeenten</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {serviceAreas.slice(3).map((area, index) => (
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors duration-200">
+                      <span className="text-sm font-medium text-gray-700">{area}</span>
                     </div>
                   ))}
                 </div>
@@ -183,70 +214,32 @@ const Bestrating = () => {
           </div>
         </section>
 
-        {/* Specializations */}
-        <section className="py-20 px-4 bg-gray-50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Bestrating Specialisaties in Hasselt</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Shield className="h-8 w-8 text-green-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Duurzame Bestrating</h3>
-                  <p className="text-gray-700">
-                    Alle bestratingprojecten van MMT Projects zijn duurzaam en gebruiken hoogwaardige materialen voor een langdurig resultaat.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Building2 className="h-8 w-8 text-blue-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Moderne Bestratingsstijlen</h3>
-                  <p className="text-gray-700">
-                    Van klassieke kasseien tot moderne tegels - wij realiseren elke bestratingsstijl in Hasselt en omgeving.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-8 text-center">
-                  <div className="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
-                    <Users className="h-8 w-8 text-purple-600" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Bestrating op Maat</h3>
-                  <p className="text-gray-700">
-                    Elk bestratingproject is uniek. Wij luisteren naar uw wensen en realiseren bestrating die perfect bij uw eigendom past.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
         {/* References */}
-        <section className="py-20 px-4 bg-white">
+        <section className="py-24 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Bestrating Referenties in Hasselt en Omgeving</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Recente Bestrating Projecten
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                MMT Projects heeft een indrukwekkend portfolio van bestratingprojecten in Hasselt en heel Limburg.
+                Ontdek onze laatst gerealiseerde bestrating projecten in Hasselt en omgeving.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-8">
               {recentProjects.map((project, index) => (
-                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center">
-                      <Star className="h-5 w-5 text-yellow-500 mr-3" />
-                      <span className="text-gray-900 font-medium">{project}</span>
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                          <Star className="h-6 w-6 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{project}</h3>
+                        <p className="text-gray-600 text-sm">Vakkundig uitgevoerd door MMT Projects</p>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>
@@ -256,50 +249,61 @@ const Bestrating = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900 text-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
-              <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Bestratingproject in Hasselt</h2>
-                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                  Klaar om uw bestratingdroom waar te maken? MMT Projects staat klaar om uw bestratingproject in Hasselt of omgeving te realiseren.
+        <section className="py-24 px-4 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                  Start Uw Bestrating Project
+                </h2>
+                <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+                  Klaar voor een professionele bestrating? Neem contact op voor een gratis offerte en vakkundig advies.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                    <Phone className="mr-2 h-5 w-5" />
-                    0484 11 77 27
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                    <Mail className="mr-2 h-5 w-5" />
-                    info@mmtprojects.be
-                  </Button>
-                </div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-50 px-8 py-4 text-lg font-semibold">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg font-semibold">
+                  <Mail className="mr-2 h-5 w-5" />
+                  E-mail versturen
+                </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Contact Info */}
-        <section className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Bestrating Specialist Hasselt</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center">
-                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                MMT Projects - Uw Bestrating Specialist
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@mmtprojects.be</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
+                  <span className="text-gray-700">0484 11 77 27</span>
+                </div>
               </div>
-              <div className="flex items-center justify-center">
-                <Mail className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">info@mmtprojects.be</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">0484117727</span>
-              </div>
+              
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Professionele bestrating specialist in Hasselt en heel Limburg. 
+                Van klinkers tot natuursteen - altijd vakkundig werk met langdurige garantie.
+              </p>
             </div>
-            <p className="mt-6 text-gray-600">
-              MMT Projects - Uw betrouwbare partner voor bestrating in Hasselt, Genk, Sint-Truiden en heel Limburg.
-            </p>
           </div>
         </section>
       </div>

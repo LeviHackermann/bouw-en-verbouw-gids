@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Wrench, Droplets, CheckCircle, Phone, Mail, MapPin, 
@@ -20,7 +19,7 @@ const Loodgieterswerk = () => {
 
   const specializations = [
     "Sanitair installaties en onderhoud complete badkamers",
-    "Leidingwerk nieuwbouw en renovatie projecten",
+    "Leidingwerk nieuwbouw en renovatie projecten", 
     "Reparaties en ontstopping van leidingen",
     "Verwarmingsinstallaties en CV-ketels",
     "Waterlekkage opsporing en herstel"
@@ -272,37 +271,6 @@ const Loodgieterswerk = () => {
                   E-mail versturen
                 </Button>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-8">
-              <h3 className="text-2xl font-bold text-gray-900">
-                MMT Projects - Uw Loodgieter in Limburg
-              </h3>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Mail className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-gray-700">info@mmtprojects.be</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Phone className="h-5 w-5 text-blue-600 flex-shrink-0" />
-                  <span className="text-gray-700">0484 11 77 27</span>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Betrouwbare loodgieterswerk specialist in Hasselt en heel Limburg. 
-                Van kleine reparaties tot complete installaties - altijd vakkundig werk met garantie.
-              </p>
             </div>
           </div>
         </section>

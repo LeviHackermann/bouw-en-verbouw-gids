@@ -1,200 +1,311 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { 
+  Building2, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Renovatie = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Complete woningrenovatie van A tot Z",
+    "Badkamerrenovatie en keukenrenovatie",
+    "Gevelrenovatie en dakwerken",
+    "Energetische renovatie en isolatie",
+    "Renovatie begeleiding en projectmanagement"
+  ];
+
+  const recentProjects = [
+    "Complete renovatie woning Hasselt-Centrum",
+    "Energetische renovatie villa Genk",
+    "Badkamer en keuken renovatie Sint-Truiden",
+    "Gevelrenovatie appartement Tongeren"
+  ];
+
+  const stats = [
+    { number: "400+", label: "Renovatie projecten", icon: Building2 },
+    { number: "15+", label: "Jaar ervaring", icon: Award },
+    { number: "24/7", label: "Projectbegeleiding", icon: Clock },
+    { number: "100%", label: "Tevreden klanten", icon: Shield }
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Renovatie Hasselt - Professionele Renovatie Services door MMT Projects</title>
-        <meta name="description" content="Renovatie in Hasselt ✓ MMT Projects ✓ 50km service gebied ✓ Professionele renovaties in Limburg ✓ Gratis offerte ✓ Lokale expertise sinds jaren" />
-        <meta name="keywords" content="renovatie Hasselt, renovatie Limburg, MMT Projects, woningrenovatie, renovatiewerken Hasselt" />
-        <link rel="canonical" href="https://mmtprojects.be/renovatie-hasselt-limburg" />
+        <title>Renovatie Hasselt | MMT Projects - Professionele Renovatie Services Limburg</title>
+        <meta name="description" content="Renovatie specialist in Hasselt en omgeving. MMT Projects verzorgt complete renovaties professioneel met 15+ jaar ervaring. Gratis offerte voor renovatie in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="renovatie hasselt, woningrenovatie limburg, badkamerrenovatie, keukenrenovatie" />
+        <link rel="canonical" href="https://www.mmtprojects.be/renovatie-hasselt-limburg" />
+        
+        <meta property="og:title" content="Renovatie Hasselt | MMT Projects - Professionele Renovatie Services Limburg" />
+        <meta property="og:description" content="Renovatie specialist in Hasselt en omgeving. MMT Projects verzorgt complete renovaties professioneel met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/renovatie-hasselt-limburg" />
       </Helmet>
 
       <Navigation />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-white to-purple-50"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-100 text-purple-700 border border-purple-200">
+                  <Building2 className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Renovatie Specialist</span>
+                </div>
+                
+                <div className="space-y-6">
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
+                    Complete <span className="text-purple-600">Renovatie</span> in Hasselt
+                  </h1>
+                  
+                  <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
+                    Woning aan renovatie toe? MMT Projects is uw specialist voor complete renovaties in Hasselt en Limburg. Van badkamer tot volledige woning - alles onder één dak.
+                  </p>
+                </div>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis renovatie advies
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
+                    Renovatie calculator
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
 
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-20 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center mb-6">
-            <Building2 className="h-12 w-12 mr-4" />
-            <div>
-              <h1 className="text-4xl font-bold">Renovatie in Hasselt - Professionele Renovatie Services door MMT Projects</h1>
-              <p className="text-xl mt-2 text-blue-100">Uw partner voor kwalitatieve renovaties in Limburg</p>
-            </div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-4 mt-8">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              Bel 0484117727
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Mail className="mr-2 h-5 w-5" />
-              Gratis offerte
-            </Button>
-          </div>
-        </div>
-      </header>
-
-      {/* Introduction */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6">Professionele Renovatie Services in Hasselt en Omgeving</h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            MMT Projects biedt uitgebreide renovatiediensten in Hasselt en een straal van 50 kilometer eromheen. Of het nu gaat om een complete woningrenovatie, badkamerrenovatie of keukenrenovatie, wij zorgen voor een professionele aanpak en hoogwaardige resultaten.
-          </p>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Onze Renovatie Diensten in Hasselt</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Building2 className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Complete Woningrenovatie</h3>
-                <p className="text-gray-600">
-                  Van vloeren tot plafonds, wij verzorgen de complete renovatie van uw woning.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <CheckCircle className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Badkamerrenovatie</h3>
-                <p className="text-gray-600">
-                  Wij transformeren uw oude badkamer in een moderne en functionele ruimte.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-3">Keukenrenovatie</h3>
-                <p className="text-gray-600">
-                  Wij realiseren uw droomkeuken met een renovatie op maat.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Waarom Kiezen voor MMT Projects voor Uw Renovatie?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gray-50 border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-3">Ervaren Team</h3>
-                <p className="text-gray-600">
-                  Ons team heeft jarenlange ervaring met renovaties in de regio Limburg.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-50 border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-3">Kwaliteit en Betrouwbaarheid</h3>
-                <p className="text-gray-600">
-                  Wij werken met hoogwaardige materialen en garanderen duurzame resultaten.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gray-50 border-none shadow-sm">
-              <CardContent className="p-6 text-center">
-                <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="font-semibold mb-3">Snelle Uitvoering</h3>
-                <p className="text-gray-600">
-                  Wij zorgen voor een efficiënte en snelle uitvoering van uw renovatieproject.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Werkgebied Renovatie</h2>
-          <p className="text-lg text-gray-700 text-center mb-6">
-            MMT Projects verzorgt renovaties in een straal van 50 kilometer rond Hasselt. Wij zijn actief in:
-          </p>
-          <div className="grid md:grid-cols-2 gap-8 text-gray-700">
-            <div>
-              <h3 className="font-semibold mb-2">Grote steden:</h3>
-              <p>Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Beringen, Houthalen-Helchteren, Lommel, Maaseik</p>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-2">Kleinere gemeenten:</h3>
-              <p>Lanaken, Riemst, Hoeselt, Wellen, Kortessem, Nieuwerkerken, Herk-de-Stad, Halen, Ham, Tessenderlo, Borgloon, Heers</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Neem Contact Op voor Uw Renovatie</h2>
-          <p className="text-lg text-gray-700 text-center mb-8">
-            Wilt u meer weten over onze renovatiediensten? Neem contact op met MMT Projects voor een vrijblijvende offerte en deskundig advies.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white">
-              <Phone className="mr-2 h-5 w-5" />
-              Bel 0484117727
-            </Button>
-            <Button size="lg" variant="outline">
-              <Mail className="mr-2 h-5 w-5" />
-              Email ons
-            </Button>
-          </div>
-
-          <div className="bg-gray-50 p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-6 text-center">Contactgegevens</h3>
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <MapPin className="h-6 w-6 text-blue-600 mr-4" />
-                <div>
-                  <p className="font-semibold">Adres:</p>
-                  <p className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</p>
+                {/* Stats */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center lg:text-left">
+                      <div className="flex items-center justify-center lg:justify-start mb-2">
+                        <stat.icon className="h-5 w-5 text-purple-600 mr-2" />
+                        <span className="text-2xl font-bold text-gray-900">{stat.number}</span>
+                      </div>
+                      <p className="text-sm text-gray-600">{stat.label}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div className="flex items-center">
-                <Mail className="h-6 w-6 text-blue-600 mr-4" />
-                <div>
-                  <p className="font-semibold">Email:</p>
-                  <p className="text-gray-700">info@mmtprojects.be</p>
+              
+              <div className="relative">
+                <div className="relative bg-white rounded-3xl shadow-2xl overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1484154218962-a197022b5858" 
+                    alt="Renovatie Hasselt" 
+                    className="w-full h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <div className="bg-white/20 backdrop-blur-sm rounded-lg p-4">
+                      <h3 className="text-2xl font-bold mb-2">Complete Renovatie</h3>
+                      <p className="text-white/90">Van ontwerp tot oplevering</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center">
-                <Phone className="h-6 w-6 text-blue-600 mr-4" />
-                <div>
-                  <p className="font-semibold">Telefoon:</p>
-                  <p className="text-gray-700">0484117727</p>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-6 -right-6 bg-purple-600 text-white p-4 rounded-2xl shadow-lg">
+                  <Building2 className="h-8 w-8" />
+                </div>
+                <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
+                  <Award className="h-8 w-8 text-purple-600" />
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+        {/* Services Section */}
+        <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Onze Renovatie Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Van kleine aanpassingen tot complete renovaties - MMT Projects verzorgt alle renovatiewerken in Hasselt en omgeving met oog voor detail en kwaliteit.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((service, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors duration-300">
+                          <CheckCircle className="h-6 w-6 text-purple-600 group-hover:text-white transition-colors duration-300" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-700 leading-relaxed">{service}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Area */}
+        <section className="py-24 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Renovatie in Heel Limburg
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt professionele renovaties in Hasselt en omliggende gemeenten binnen een straal van 50 kilometer.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden</h3>
+                  <div className="space-y-4">
+                    {serviceAreas.slice(0, 3).map((area, index) => (
+                      <div key={index} className="flex items-center p-4 bg-purple-50 rounded-xl">
+                        <MapPin className="h-5 w-5 text-purple-600 mr-3 flex-shrink-0" />
+                        <div>
+                          <span className="font-semibold text-gray-900">Renovatie {area}</span>
+                          <p className="text-sm text-gray-600">Complete service beschikbaar</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Alle Gemeenten</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                  {serviceAreas.slice(3).map((area, index) => (
+                    <div key={index} className="text-center p-3 bg-gray-50 rounded-lg hover:bg-purple-50 transition-colors duration-200">
+                      <span className="text-sm font-medium text-gray-700">{area}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* References */}
+        <section className="py-24 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-gray-900">
+                Recente Renovatie Projecten
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Ontdek onze laatst uitgevoerde renovatie projecten in Hasselt en omgeving.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-white">
+                  <CardContent className="p-8">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center">
+                          <Star className="h-6 w-6 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-gray-900 mb-2">{project}</h3>
+                        <p className="text-gray-600 text-sm">Professioneel uitgevoerd door MMT Projects</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-24 px-4 bg-gradient-to-br from-purple-900 via-purple-800 to-purple-900 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <div className="text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+                  Start Uw Renovatie Project
+                </h2>
+                <p className="text-xl text-purple-100 max-w-2xl mx-auto">
+                  Klaar voor een renovatie? Neem contact op voor een gratis adviesgesprek en offerte. Van badkamer tot complete woning - wij regelen alles.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button size="lg" className="bg-white text-purple-900 hover:bg-purple-50 px-8 py-4 text-lg font-semibold">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-4 text-lg font-semibold">
+                  <Mail className="mr-2 h-5 w-5" />
+                  E-mail versturen
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-16 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center space-y-8">
+              <h3 className="text-2xl font-bold text-gray-900">
+                MMT Projects - Uw Renovatie Specialist
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="flex items-center justify-center space-x-3">
+                  <MapPin className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Mail className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-gray-700">info@mmtprojects.be</span>
+                </div>
+                <div className="flex items-center justify-center space-x-3">
+                  <Phone className="h-5 w-5 text-purple-600 flex-shrink-0" />
+                  <span className="text-gray-700">0484 11 77 27</span>
+                </div>
+              </div>
+              
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Professionele renovatie specialist in Hasselt en heel Limburg. 
+                Complete renovaties met persoonlijke begeleiding en kwaliteitsgarantie.
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 

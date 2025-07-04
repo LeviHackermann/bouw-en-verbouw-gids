@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Building2, Hammer, CheckCircle, Phone, Mail, MapPin, 
@@ -20,7 +19,7 @@ const Afbraakwerken = () => {
 
   const specializations = [
     "Veilige sloop van gebouwen en constructies",
-    "Asbestverwijdering volgens geldende normen",
+    "Asbestverwijdering volgens geldende normen", 
     "Selectieve afbraak voor renovatieprojecten",
     "Puinruiming en materiaalscheiding",
     "Milieuverantwoorde afvoer van afbraakmateriaal"

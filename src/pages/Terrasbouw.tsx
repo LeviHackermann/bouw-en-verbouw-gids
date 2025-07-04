@@ -38,7 +38,7 @@ const Terrasbouw = () => {
       <Helmet>
         <title>Terrasbouw Hasselt | MMT Projects - Professionele Terrasbouw Limburg</title>
         <meta name="description" content="Terrasbouw specialist in Hasselt en omgeving. MMT Projects bouwt houten, betonnen en natuursteen terrassen met 15+ jaar ervaring. Gratis offerte voor terrasbouw in Hasselt, Genk, Sint-Truiden en heel Limburg." />
-        <meta name="keywords" content="terrasbouw hasselt, terras aanleg limburg, houten terras, betonnen terras" />
+        <meta name="keywords" content="terrasbouw hasselt, terras aanleggen limburg, houten terras, betonnen terras" />
         <link rel="canonical" href="https://www.mmtprojects.be/terrasbouw-hasselt-limburg" />
         
         <meta property="og:title" content="Terrasbouw Hasselt | MMT Projects - Professionele Terrasbouw Limburg" />
@@ -58,7 +58,7 @@ const Terrasbouw = () => {
         <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
           <div className="absolute inset-0 z-0">
             <img 
-              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" 
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5" 
               alt="Terrasbouw Hasselt" 
               className="object-cover w-full h-full opacity-20"
             />
@@ -78,7 +78,7 @@ const Terrasbouw = () => {
                 </h1>
                 
                 <p className="mt-6 text-xl text-gray-700 max-w-lg">
-                  Bent u op zoek naar een terrasaannemer in Hasselt? MMT Projects is dé specialist in houten, betonnen en natuursteen terrassen in Hasselt en heel Limburg. Uw droomterras wordt werkelijkheid.
+                  Bent u op zoek naar professionele terrasbouw in Hasselt? MMT Projects is dé specialist in het aanleggen van houten, betonnen en natuursteen terrassen in Hasselt en heel Limburg. Geniet van uw buitenruimte.
                 </p>
                 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4">
@@ -96,7 +96,7 @@ const Terrasbouw = () => {
               <div className="hidden md:block relative">
                 <div className="relative rounded-2xl overflow-hidden shadow-xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c" 
+                    src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688" 
                     alt="Terrasbouw project Hasselt" 
                     className="w-full h-[400px] object-cover"
                   />
@@ -117,7 +117,7 @@ const Terrasbouw = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Terrasbouw?</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Als ervaren terrasbouwspecialist in Hasselt begrijpen wij dat uw terras een verlengstuk is van uw woonruimte. Onze vakmensen bouwen terrassen die perfect aansluiten bij uw wensen en levensstijl.
+                Als ervaren terrasbouwspecialist in Hasselt begrijpen wij dat een terras meer is dan alleen een vlakke ondergrond. Het gaat om het creëren van uw perfecte buitenverblijf.
               </p>
             </div>
             
@@ -197,7 +197,7 @@ const Terrasbouw = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Houten Terrassen</h3>
                   <p className="text-gray-700">
-                    Duurzame houten terrassen in hardhout, thermowood en andere hoogwaardige houtsoorten voor een natuurlijke uitstraling.
+                    Warme en natuurlijke houten terrassen in hardhout, thermowood en andere duurzame houtsoorten.
                   </p>
                 </CardContent>
               </Card>
@@ -209,7 +209,7 @@ const Terrasbouw = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Betonnen Terrassen</h3>
                   <p className="text-gray-700">
-                    Moderne betonnen terrassen met verschillende afwerkingen: gepolijst, gestempeld of geborsteld voor een strakke look.
+                    Moderne betonnen terrassen met verschillende afwerkingen voor eigentijdse buitenruimtes.
                   </p>
                 </CardContent>
               </Card>
@@ -221,7 +221,7 @@ const Terrasbouw = () => {
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900">Natuursteen Terrassen</h3>
                   <p className="text-gray-700">
-                    Luxueuze natuursteen terrassen in blauwe steen, graniet of leisteen voor een tijdloze en elegante uitstraling.
+                    Elegante natuursteen terrassen die tijdloos zijn en perfect passen bij elke woonstijl.
                   </p>
                 </CardContent>
               </Card>
@@ -251,54 +251,6 @@ const Terrasbouw = () => {
                 </Card>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900 text-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
-              <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Terrasbouwproject in Hasselt</h2>
-                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                  Klaar voor uw droomterras? MMT Projects staat klaar om uw terrasbouwproject in Hasselt of omgeving te realiseren.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                    <Phone className="mr-2 h-5 w-5" />
-                    0484 11 77 27
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                    <Mail className="mr-2 h-5 w-5" />
-                    info@mmtprojects.be
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Terrasbouw Specialist Hasselt</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center">
-                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">info@mmtprojects.be</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">0484117727</span>
-              </div>
-            </div>
-            <p className="mt-6 text-gray-600">
-              MMT Projects - Uw betrouwbare partner voor terrasbouw in Hasselt, Genk, Sint-Truiden en heel Limburg.
-            </p>
           </div>
         </section>
       </div>

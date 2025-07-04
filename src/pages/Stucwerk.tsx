@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Palette, CheckCircle, Phone, Mail, MapPin, 
@@ -20,7 +19,7 @@ const Stucwerk = () => {
 
   const specializations = [
     "Glad stucwerk voor moderne afwerking",
-    "Decoratief stucwerk en ornamenten",
+    "Decoratief stucwerk en ornamenten", 
     "Herstel en renovatie oud stucwerk",
     "Buitenstuc en gevelafwerking",
     "Speciaal stucwerk en textuurafwerkingen"
@@ -82,17 +81,6 @@ const Stucwerk = () => {
                   <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
                     Op zoek naar vakkundig stucwerk? MMT Projects is uw specialist voor alle stucwerken in Hasselt en Limburg. Van glad stucwerk tot decoratieve afwerkingen - altijd perfect afgewerkt.
                   </p>
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 text-lg">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Gratis offerte
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
-                    Stucwerk voorbeelden
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
                 </div>
 
                 {/* Stats */}

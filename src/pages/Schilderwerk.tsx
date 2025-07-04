@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Brush, CheckCircle, Phone, Mail, MapPin, 
@@ -78,17 +77,6 @@ const Schilderwerk = () => {
                   <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
                     Schilderwerk nodig? MMT Projects is uw specialist voor binnen- en buitenschilderwerk in Hasselt en Limburg. Vakkundige schilders, kwaliteitsverf en perfecte afwerking.
                   </p>
-                </div>
-                
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-yellow-600 hover:bg-yellow-700 text-white px-8 py-3 text-lg">
-                    <Phone className="mr-2 h-5 w-5" />
-                    Gratis kleuradvies
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-2 border-gray-300 px-8 py-3 text-lg">
-                    Verf calculator
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
                 </div>
 
                 {/* Stats */}
@@ -240,65 +228,6 @@ const Schilderwerk = () => {
                   </CardContent>
                 </Card>
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-24 px-4 bg-gradient-to-br from-yellow-900 via-yellow-800 to-yellow-900 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-10"></div>
-          <div className="max-w-4xl mx-auto relative z-10">
-            <div className="text-center space-y-8">
-              <div className="space-y-4">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-                  Klaar Voor Schilderwerk?
-                </h2>
-                <p className="text-xl text-yellow-100 max-w-2xl mx-auto">
-                  Tijd voor een verfje? Neem contact op voor gratis kleuradvies en offerte. Van binnen tot buiten - onze vakkundige schilders maken het verschil.
-                </p>
-              </div>
-              
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button size="lg" className="bg-white text-yellow-900 hover:bg-yellow-50 px-8 py-4 text-lg font-semibold">
-                  <Phone className="mr-2 h-5 w-5" />
-                  0484 11 77 27
-                </Button>
-                <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-yellow-900 px-8 py-4 text-lg font-semibold">
-                  <Mail className="mr-2 h-5 w-5" />
-                  E-mail versturen
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="py-16 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center space-y-8">
-              <h3 className="text-2xl font-bold text-gray-900">
-                MMT Projects - Uw Schilderwerk Specialist
-              </h3>
-              
-              <div className="grid md:grid-cols-3 gap-8">
-                <div className="flex items-center justify-center space-x-3">
-                  <MapPin className="h-5 w-5 text-yellow-600 flex-shrink-0" />
-                  <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Mail className="h-5 w-5 text-yellow-600 flex-shrink-0" />
-                  <span className="text-gray-700">info@mmtprojects.be</span>
-                </div>
-                <div className="flex items-center justify-center space-x-3">
-                  <Phone className="h-5 w-5 text-yellow-600 flex-shrink-0" />
-                  <span className="text-gray-700">0484 11 77 27</span>
-                </div>
-              </div>
-              
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Professionele schilderwerk specialist in Hasselt en heel Limburg. 
-                Binnen- en buitenschilderwerk met kwaliteitsgarantie en vakkundige uitvoering.
-              </p>
             </div>
           </div>
         </section>

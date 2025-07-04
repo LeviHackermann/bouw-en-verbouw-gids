@@ -3,6 +3,13 @@ import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+// Extend Window interface to include dataLayer
+declare global {
+  interface Window {
+    dataLayer?: any[];
+  }
+}
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

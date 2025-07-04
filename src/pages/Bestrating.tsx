@@ -19,7 +19,7 @@ const Bestrating = () => {
 
   const specializations = [
     "Betonklinkers en gebakken klinkers professioneel gelegd",
-    "Natuursteen bestrating voor exclusieve uitstraling",
+    "Natuursteen bestrating voor exclusieve uitstraling", 
     "Opritten en parking bestrating duurzaam uitgevoerd",
     "Tuinpaden en terrassen met diverse materialen",
     "Drainage en onderfundering voor langdurige kwaliteit"

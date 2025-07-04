@@ -19,7 +19,7 @@ const Keukenrenovatie = () => {
 
   const specializations = [
     "Complete keukenrenovatie van A tot Z",
-    "Moderne keukenkasten en werkbladen",
+    "Moderne keukenkasten en werkbladen", 
     "Keukeneiland en bar installaties",
     "Sanitair en loodgieterswerk keukens",
     "Elektrische installaties en verlichting"

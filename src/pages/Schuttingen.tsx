@@ -19,7 +19,7 @@ const Schuttingen = () => {
 
   const specializations = [
     "Houten schuttingen en privacy afscheiding",
-    "Betonnen schuttingen en muren",
+    "Betonnen schuttingen en muren", 
     "Metalen hekwerken en omheiningen",
     "Tuinhekjes en toegangspoorten",
     "Onderhoud en reparatie schuttingen"
@@ -27,7 +27,7 @@ const Schuttingen = () => {
 
   const recentProjects = [
     "Houten schutting woonwijk Hasselt-Zuid",
-    "Betonnen afscheiding villa Genk", 
+    "Betonnen afscheiding villa Genk",
     "Metalen hekwerk bedrijfspand Sint-Truiden",
     "Tuinhek renovatie Tongeren-Centrum"
   ];

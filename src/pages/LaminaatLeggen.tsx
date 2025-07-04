@@ -1,211 +1,310 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, Phone, Mail, MapPin, CheckCircle, Clock, Shield, Star } from "lucide-react";
+import { 
+  Building2, Layers, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const LaminaatLeggen = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Professioneel laminaat leggen in alle ruimtes",
+    "Ondervloer voorbereiding en egalisatie",
+    "Laminaat met geïntegreerde ondervloer",
+    "Plinten en afwerkingsprofielen plaatsen",
+    "Herstel en vervanging bestaande laminaatvloeren"
+  ];
+
+  const recentProjects = [
+    "Laminaatvloer complete woning Hasselt-Centrum",
+    "Laminaat leggen nieuwbouw appartement Genk",
+    "Vloervervanging renovatie woning Sint-Truiden",
+    "Laminaat kantoorruimte moderne villa Tongeren"
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Professioneel Laminaat Leggen in Hasselt en Omgeving - MMT Projects</title>
-        <meta name="description" content="✓ Laminaat leggen door experts in Hasselt, Genk, Sint-Truiden en heel Limburg. 15+ jaar ervaring. Gratis offerte! ☎ 0484117727" />
-        <meta name="keywords" content="laminaat leggen, Hasselt, Limburg, vloeren, laminaatvloer, MMT Projects" />
+        <title>Laminaat Leggen Hasselt | MMT Projects - Professionele Laminaatvloeren Limburg</title>
+        <meta name="description" content="Laminaat leggen specialist in Hasselt en omgeving. MMT Projects levert vakkundig laminaat leggen met 15+ jaar ervaring. Gratis offerte voor laminaatvloeren in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="laminaat leggen hasselt, laminaatvloer limburg, vloeren leggen, parket" />
+        <link rel="canonical" href="https://www.mmtprojects.be/laminaat-leggen-hasselt-limburg" />
+        
+        <meta property="og:title" content="Laminaat Leggen Hasselt | MMT Projects - Professionele Laminaatvloeren Limburg" />
+        <meta property="og:description" content="Laminaat leggen specialist in Hasselt en omgeving. MMT Projects levert vakkundig laminaat leggen met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/laminaat-leggen-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Laminaat Leggen Hasselt | MMT Projects - Professionele Laminaatvloeren Limburg" />
+        <meta name="twitter:description" content="Laminaat leggen specialist in Hasselt en omgeving. MMT Projects levert vakkundig laminaat leggen met 15+ jaar ervaring." />
       </Helmet>
-
+      
       <Navigation />
-
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-16 px-4 mt-16">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex items-center justify-center mb-4">
-            <Building2 className="h-12 w-12 mr-4" />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" 
+              alt="Laminaat Leggen Hasselt" 
+              className="object-cover w-full h-full opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/80"></div>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Professioneel Laminaat Leggen in Hasselt en Omgeving
-          </h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            MMT Projects - Uw specialist in laminaatvloeren voor heel Limburg
-          </p>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="py-16 px-4">
-        <div className="max-w-4xl mx-auto">
-          {/* Introduction */}
-          <section className="mb-16">
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Bij MMT Projects bent u aan het juiste adres voor het vakkundig leggen van laminaat in Hasselt en omstreken. 
-              Als gespecialiseerd constructiebedrijf met jarenlange ervaring in de regio Limburg, zorgen wij voor een 
-              perfecte afwerking van uw laminaatvloer tegen een scherpe prijs.
-            </p>
-          </section>
-
-          {/* Why Choose Us */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Waarom Kiezen Voor MMT Projects Voor Uw Laminaat?
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Ons ervaren team legt al meer dan 15 jaar laminaatvloeren in Hasselt, Genk, Sint-Truiden, Tongeren en 
-              heel de provincie Limburg. We kennen de lokale woningen en hun specifieke uitdagingen, van historische 
-              panden in het centrum van Hasselt tot moderne nieuwbouwprojecten in Diepenbeek.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6 text-center">
-                  <Star className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">15+ Jaar Ervaring</h3>
-                  <p className="text-gray-600">Jarenlange expertise in de regio Limburg</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6 text-center">
-                  <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Kwaliteit Gegarandeerd</h3>
-                  <p className="text-gray-600">A-merken laminaat met volledige garantie</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-none shadow-lg">
-                <CardContent className="p-6 text-center">
-                  <Clock className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">Snel & Efficiënt</h3>
-                  <p className="text-gray-600">Meeste projecten afgerond binnen 1-2 dagen</p>
-                </CardContent>
-              </Card>
-            </div>
-          </section>
-
-          {/* Our Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Onze Laminaat Leg Service Omvat:
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {[
-                "Professionele voorbereiding van de ondergrond",
-                "Nauwkeurige opmeting en berekening van materialen",
-                "Vakkundige plaatsing van laminaatplanken",
-                "Perfecte afwerking van plinten en overgangen",
-                "Volledige opruiming na afronding van de werkzaamheden"
-              ].map((service, index) => (
-                <div key={index} className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-1" />
-                  <span className="text-gray-700">{service}</span>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-6">
+                  <Layers className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Laminaat Leggen Specialist Hasselt</span>
                 </div>
+                
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+                  <span className="text-blue-600">Laminaat Leggen</span> Hasselt - Professionele Vloeren in Limburg
+                </h1>
+                
+                <p className="mt-6 text-xl text-gray-700 max-w-lg">
+                  Bent u op zoek naar vakkundig laminaat leggen in Hasselt? MMT Projects is dé specialist in laminaatvloeren in Hasselt en heel Limburg. Perfecte afwerking, scherpe prijzen.
+                </p>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis offerte aanvragen
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-gray-300">
+                    Onze referenties
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="hidden md:block relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
+                    alt="Laminaat project Hasselt" 
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <h2 className="text-3xl font-bold mb-2">15+ Jaar</h2>
+                    <p className="text-white/90">Ervaring in laminaat</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose MMT Projects */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Laminaat?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Als ervaren laminaatspecialist in Hasselt begrijpen wij dat laminaat leggen meer is dan alleen planken plaatsen. Het gaat om precisie, kwaliteit en een perfecte afwerking die jarenlang meegaat.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((specialization, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <p className="text-gray-700">{specialization}</p>
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Service Area */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Werkgebied: Heel Limburg en Omgeving
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              MMT Projects legt laminaat in een straal van 50 kilometer rondom ons kantoor in Hasselt. 
-              Dit betekent dat we ook actief zijn in:
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-              Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Lummen, Beringen, Houthalen-Helchteren, 
-              Maasmechelen, Lanaken, Riemst, Hoeselt, Alken, Wellen, Borgloon, Heers, Nieuwerkerken, 
-              Herk-de-Stad, Halen en alle tussenliggende gemeenten.
-            </p>
-          </section>
-
-          {/* Local Expertise */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900">
-              Lokale Expertise Die Het Verschil Maakt
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Als Hasselts bedrijf begrijpen we de klimatologische omstandigheden van onze streek. We weten 
-              welke laminaattypes het beste presteren in de vochtige winters en warme zomers van Limburg. 
-              Onze lokale kennis zorgt ervoor dat uw laminaatvloer jarenlang mooi blijft.
-            </p>
-          </section>
-
-          {/* CTA Section */}
-          <section className="bg-blue-50 p-8 rounded-2xl mb-16">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold mb-6 text-gray-900">
-                Gratis Offerte en Advies
-              </h2>
-              <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-                Wilt u weten wat het leggen van laminaat in uw woning kost? Neem vandaag nog contact met ons op 
-                voor een vrijblijvende offerte. Onze specialisten komen gratuut bij u thuis in Hasselt of omgeving 
-                om de situatie te bekijken en u te adviseren over de beste oplossing.
+        {/* Service Area */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Laminaat Service Gebied - 50km Rondom Hasselt</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt laminaat leggen in Hasselt en een uitgebreide regio van 50 kilometer rondom onze thuisbasis.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Bel voor gratis offerte
-                </Button>
-                <Button size="lg" variant="outline">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Email ons
-                </Button>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden en grote gemeenten:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Laminaat Hasselt</span>
+                    <span className="text-gray-600 ml-2">(centrum en alle deelgemeenten)</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Laminaat Genk</span>
+                    <span className="text-gray-600 ml-2">- moderne technieken</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Laminaat Sint-Truiden</span>
+                    <span className="text-gray-600 ml-2">- alle vloertypes</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Omliggende gemeenten voor laminaat:</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {serviceAreas.slice(5).map((area, index) => (
+                    <div key={index} className="text-sm text-gray-600 py-1">
+                      {area}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Contact Information */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-gray-900 text-center">
-              Neem Vandaag Nog Contact Op
-            </h2>
-            <p className="text-lg text-gray-700 text-center mb-8">
-              Bent u toe aan een nieuwe laminaatvloer in Hasselt of omgeving? MMT Projects staat klaar om u te helpen. 
-              Van klein onderhoud tot grote renovatieprojecten - wij regelen het allemaal.
-            </p>
+        {/* Specializations */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Laminaat Specialisaties in Hasselt</h2>
+            </div>
             
-            <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-              <h3 className="text-2xl font-bold mb-6 text-center text-gray-900">Contactgegevens:</h3>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <MapPin className="h-6 w-6 text-blue-600 mr-4" />
-                  <div>
-                    <p className="font-semibold">Adres:</p>
-                    <p className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</p>
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-amber-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Layers className="h-8 w-8 text-amber-600" />
                   </div>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-blue-600 mr-4" />
-                  <div>
-                    <p className="font-semibold">Email:</p>
-                    <p className="text-gray-700">info@mmtprojects.be</p>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Premium Laminaat</h3>
+                  <p className="text-gray-700">
+                    Hoogwaardige laminaatvloeren met realistische houtstructuren en optimale slijtvastheid voor alle ruimtes.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Building2 className="h-8 w-8 text-blue-600" />
                   </div>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-blue-600 mr-4" />
-                  <div>
-                    <p className="font-semibold">Telefoon:</p>
-                    <p className="text-gray-700">0484117727</p>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Ondervloer Systemen</h3>
+                  <p className="text-gray-700">
+                    Professionele ondervloer preparatie en isolatie voor optimaal comfort en geluidsisolatie.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Shield className="h-8 w-8 text-green-600" />
                   </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Complete Afwerking</h3>
+                  <p className="text-gray-700">
+                    Plinten, overgangsprofie len en perfecte afwerking voor een volledig afgewerkt resultaat.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* References */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Laminaat Referenties in Hasselt en Omgeving</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects heeft een indrukwekkend portfolio van laminaatprojecten in Hasselt en heel Limburg.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center">
+                      <Star className="h-5 w-5 text-yellow-500 mr-3" />
+                      <span className="text-gray-900 font-medium">{project}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900 text-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Laminaatproject in Hasselt</h2>
+                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                  Klaar voor een nieuwe laminaatvloer? MMT Projects staat klaar om uw laminaatproject in Hasselt of omgeving te realiseren.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                    <Phone className="mr-2 h-5 w-5" />
+                    0484 11 77 27
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                    <Mail className="mr-2 h-5 w-5" />
+                    info@mmtprojects.be
+                  </Button>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          {/* Additional SEO Content */}
-          <section className="bg-gray-50 p-8 rounded-2xl">
-            <p className="text-gray-700 leading-relaxed">
-              MMT Projects is uw betrouwbare partner voor laminaat leggen in heel de provincie Limburg. 
-              Of u nu woont in het historische centrum van Hasselt, de groene wijken van Genk, of de landelijke 
-              omgeving van Sint-Truiden - onze ervaren vakmensen komen naar u toe. We bedienen alle postcodes 
-              in onze regio en staan bekend om onze punctualiteit, vakmanschap en eerlijke prijzen.
+        {/* Contact Info */}
+        <section className="py-12 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Laminaat Specialist Hasselt</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-center justify-center">
+                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">info@mmtprojects.be</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Phone className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">0484117727</span>
+              </div>
+            </div>
+            <p className="mt-6 text-gray-600">
+              MMT Projects - Uw betrouwbare partner voor laminaat leggen in Hasselt, Genk, Sint-Truiden en heel Limburg.
             </p>
-          </section>
-        </div>
-      </main>
-
+          </div>
+        </section>
+      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 

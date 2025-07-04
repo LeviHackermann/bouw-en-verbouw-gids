@@ -1,254 +1,310 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { 
+  Building2, Home, CheckCircle, Phone, Mail, MapPin, 
+  Shield, Users, Award, ArrowRight, Star, Clock
+} from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Dakbedekking = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Klassieke dakpannen en leien vakkundig gelegd",
+    "Moderne dakbedekkingsmaterialen EPDM en zink",
+    "Dakrenovatie en herstel bestaande daken",
+    "Isolatie en energie-efficiënte dakoplossingen",
+    "Dakgoten en regenwaterafvoer systemen"
+  ];
+
+  const recentProjects = [
+    "Dakbedekking nieuwbouw woning Hasselt-Centrum",
+    "Dakrenovatie historisch pand Genk",
+    "EPDM dakbedekking plat dak Sint-Truiden",
+    "Dakpannen vervangen villa Tongeren"
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Dakbedekking Hasselt - Professionele Dakwerken door MMT Projects</title>
-        <meta name="description" content="✓ Professionele dakbedekking in Hasselt en omgeving door MMT Projects. Ervaren dakdekkers, kwaliteitsgarantie. Gratis offerte! ☎ 0484117727" />
-        <meta name="keywords" content="dakbedekking Hasselt, dakwerken Limburg, dakdekkers Hasselt, dakrenovatie, dakpannen, leien, MMT Projects" />
+        <title>Dakbedekking Hasselt | MMT Projects - Professionele Dakwerken Limburg</title>
+        <meta name="description" content="Dakbedekking specialist in Hasselt en omgeving. MMT Projects levert vakkundige dakwerken met 15+ jaar ervaring. Gratis offerte voor dakbedekking in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="dakbedekking hasselt, dakwerken limburg, dakpannen, leien, EPDM" />
+        <link rel="canonical" href="https://www.mmtprojects.be/dakbedekking-hasselt-limburg" />
+        
+        <meta property="og:title" content="Dakbedekking Hasselt | MMT Projects - Professionele Dakwerken Limburg" />
+        <meta property="og:description" content="Dakbedekking specialist in Hasselt en omgeving. MMT Projects levert vakkundige dakwerken met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/dakbedekking-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dakbedekking Hasselt | MMT Projects - Professionele Dakwerken Limburg" />
+        <meta name="twitter:description" content="Dakbedekking specialist in Hasselt en omgeving. MMT Projects levert vakkundige dakwerken met 15+ jaar ervaring." />
       </Helmet>
-
+      
       <Navigation />
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" 
+              alt="Dakbedekking Hasselt" 
+              className="object-cover w-full h-full opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/80"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-6">
+                  <Home className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Dakbedekking Specialist Hasselt</span>
+                </div>
+                
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+                  <span className="text-blue-600">Dakbedekking</span> Hasselt - Professionele Dakwerken in Limburg
+                </h1>
+                
+                <p className="mt-6 text-xl text-gray-700 max-w-lg">
+                  Bent u op zoek naar vakkundige dakbedekking in Hasselt? MMT Projects is dé specialist in dakwerken in Hasselt en heel Limburg. Van klassieke dakpannen tot moderne EPDM systemen.
+                </p>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis offerte aanvragen
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-gray-300">
+                    Onze referenties
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="hidden md:block relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
+                    alt="Dakbedekking project Hasselt" 
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <h2 className="text-3xl font-bold mb-2">15+ Jaar</h2>
+                    <p className="text-white/90">Ervaring in dakwerken</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-20 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Building2 className="h-16 w-16 mx-auto mb-6" />
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Dakbedekking Hasselt - Professionele Dakwerken door MMT Projects
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              Bij MMT Projects bent u aan het juiste adres voor alle soorten dakbedekking in Hasselt, Limburg en de wijde omgeving. Met jarenlange ervaring in de bouwsector leveren wij kwalitatieve dakwerken voor particulieren en bedrijven in een straal van 50 kilometer rond Hasselt.
+        {/* Why Choose MMT Projects */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Dakbedekking?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Als ervaren dakbedekkingsspecialist in Hasselt begrijpen wij dat een goed dak meer is dan alleen bescherming. Het gaat om duurzaamheid, isolatie en een perfecte afwerking die decennia meegaat.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((specialization, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <p className="text-gray-700">{specialization}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Area */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Dakbedekking Service Gebied - 50km Rondom Hasselt</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt dakbedekkingswerken in Hasselt en een uitgebreide regio van 50 kilometer rondom onze thuisbasis.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden en grote gemeenten:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Dakbedekking Hasselt</span>
+                    <span className="text-gray-600 ml-2">(centrum en alle deelgemeenten)</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Dakbedekking Genk</span>
+                    <span className="text-gray-600 ml-2">- moderne technieken</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Dakbedekking Sint-Truiden</span>
+                    <span className="text-gray-600 ml-2">- traditioneel en modern</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Omliggende gemeenten voor dakbedekking:</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {serviceAreas.slice(5).map((area, index) => (
+                    <div key={index} className="text-sm text-gray-600 py-1">
+                      {area}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Specializations */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Dakbedekking Specialisaties in Hasselt</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-red-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Home className="h-8 w-8 text-red-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Klassieke Dakpannen</h3>
+                  <p className="text-gray-700">
+                    Traditionele dakpannen en leien vakkundig gelegd voor een tijdloze uitstraling en optimale bescherming.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-gray-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Shield className="h-8 w-8 text-gray-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Moderne EPDM</h3>
+                  <p className="text-gray-700">
+                    Hoogwaardige EPDM rubber dakbedekking voor platte daken met uitstekende duurzaamheid en waterdichtheid.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Building2 className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Dakrenovatie</h3>
+                  <p className="text-gray-700">
+                    Complete dakrenovatie en herstel voor het behoud van uw woning met moderne isolatie en technieken.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* References */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Dakbedekking Referenties in Hasselt en Omgeving</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects heeft een indrukwekkend portfolio van dakbedekkingsprojecten in Hasselt en heel Limburg.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center">
+                      <Star className="h-5 w-5 text-yellow-500 mr-3" />
+                      <span className="text-gray-900 font-medium">{project}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900 text-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Dakbedekkingsproject in Hasselt</h2>
+                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                  Klaar voor een nieuw dak? MMT Projects staat klaar om uw dakbedekkingsproject in Hasselt of omgeving te realiseren.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                    <Phone className="mr-2 h-5 w-5" />
+                    0484 11 77 27
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                    <Mail className="mr-2 h-5 w-5" />
+                    info@mmtprojects.be
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Info */}
+        <section className="py-12 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Dakbedekking Specialist Hasselt</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-center justify-center">
+                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">info@mmtprojects.be</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Phone className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">0484117727</span>
+              </div>
+            </div>
+            <p className="mt-6 text-gray-600">
+              MMT Projects - Uw betrouwbare partner voor dakbedekking in Hasselt, Genk, Sint-Truiden en heel Limburg.
             </p>
-            <div className="mt-8">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 mr-4">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel Direct: 0484117727
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                <Mail className="mr-2 h-5 w-5" />
-                Gratis Offerte
-              </Button>
-            </div>
           </div>
-        </div>
-      </header>
-
-      {/* Services Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Onze Dakbedekkingsdiensten in Hasselt</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <CheckCircle className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Complete Dakbedekking</h3>
-                <p className="text-gray-600">
-                  Wij verzorgen de volledige dakbedekking van uw woning of bedrijfspand met hoogwaardige materialen. Of u nu kiest voor dakpannen, leien, of moderne dakbedekkingsmaterialen, onze ervaren dakdekkers zorgen voor een perfect afgewerkt dak dat jarenlang meegaat.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <CheckCircle className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Dakrenovatie en Herstel</h3>
-                <p className="text-gray-600">
-                  Is uw dak toe aan vernieuwing? Onze specialisten in Hasselt adviseren u graag over de beste oplossing voor uw dakrenovatie. Van kleine herstellingen tot complete dakreconstructies, wij pakken elk project professioneel aan.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <CheckCircle className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-lg font-semibold mb-2">Verschillende Dakbedekkingsmaterialen</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-600">
-                  <li>Klassieke dakpannen</li>
-                  <li>Natuurleien en kunstleien</li>
-                  <li>Bitumineuze dakbedekking</li>
-                  <li>EPDM rubber dakbedekking</li>
-                  <li>Zinken dakbedekking</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Waarom Kiezen voor MMT Projects?</h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Lokale Expertise in Hasselt</h3>
-              <p className="text-gray-700">
-                Als gevestigd bedrijf in Hasselt kennen wij de lokale bouwvoorschriften en klimatologische omstandigheden perfect. Deze kennis zorgt ervoor dat uw dakbedekking optimaal aansluit bij de lokale omstandigheden in Limburg.
-              </p>
-            </div>
-            <div className="text-center">
-              <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Jarenlange Ervaring</h3>
-              <p className="text-gray-700">
-                Met jaren ervaring in dakbedekking hebben wij al talloze projecten succesvol afgerond in Hasselt en omliggende gemeenten. Onze referenties spreken voor zich.
-              </p>
-            </div>
-            <div className="text-center">
-              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Kwaliteitsgarantie</h3>
-              <p className="text-gray-700">
-                Wij werken uitsluitend met A-merken en bieden uitgebreide garantie op al onze dakbedekkingswerken. Uw investering is bij ons in veilige handen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Service Area */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Ons Werkgebied: Hasselt en 50km Omgeving</h2>
-          <p className="text-lg text-gray-700 text-center mb-8">
-            MMT Projects voert dakbedekkingswerken uit in Hasselt en de volledige regio Limburg. Onze ervaren ploeg is actief in:
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Grote steden in de omgeving:</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Beringen, Houthalen-Helchteren, Lommel, Maaseik, Peer, Bree, Borgloon, Riemst, Lanaken
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Kleinere gemeenten:</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Ham, Tessenderlo, Halen, Lummen, Zonhoven, Heusden-Zolder, As, Opglabbeek, Dilsen-Stokkem, Maasmechelen, Kinrooi, Hamont-Achel, Neerpelt, Overpelt, Hechtel-Eksel, Leopoldsburg, Herk-de-Stad, Nieuwerkerken, Gingelom, Wellen, Alken, Kortessem
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Het Dakbedekkingsproces</h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mb-4 font-bold">1</div>
-                <h3 className="text-xl font-semibold mb-4">Gratis Offerte</h3>
-                <p className="text-gray-700">
-                  Neem contact op voor een vrijblijvende offerte. Onze specialisten komen ter plaatse in Hasselt of omgeving voor een grondige inspectie van uw dak.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mb-4 font-bold">2</div>
-                <h3 className="text-xl font-semibold mb-4">Deskundig Advies</h3>
-                <p className="text-gray-700">
-                  Op basis van de inspectie adviseren wij u over de beste dakbedekkingsoplossing voor uw specifieke situatie en budget.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mb-4 font-bold">3</div>
-                <h3 className="text-xl font-semibold mb-4">Professionele Uitvoering</h3>
-                <p className="text-gray-700">
-                  Onze ervaren dakdekkers voeren de werken uit volgens de hoogste kwaliteitsnormen en binnen de afgesproken termijn.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mb-4 font-bold">4</div>
-                <h3 className="text-xl font-semibold mb-4">Oplevering en Garantie</h3>
-                <p className="text-gray-700">
-                  Na oplevering krijgt u uitgebreide garantie op materiaal en uitvoering van uw nieuwe dakbedekking.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Sustainability */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <Card className="bg-white shadow-sm">
-            <CardContent className="p-8">
-              <Users className="h-12 w-12 text-blue-600 mx-auto mb-6" />
-              <h2 className="text-2xl font-bold text-center mb-6">Duurzame Dakbedekking in Limburg</h2>
-              <p className="text-lg text-gray-700 text-center max-w-4xl mx-auto">
-                Bij MMT Projects hechten wij groot belang aan duurzaamheid. Wij adviseren u graag over energiezuinige dakmaterialen die bijdragen aan de isolatie van uw woning. Denk aan dakbedekking gecombineerd met hoogwaardige dakisolatie voor optimaal wooncomfort in Hasselt en omgeving.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Neem Contact Op voor Uw Dakbedekking</h2>
-          <p className="text-xl mb-8">
-            Bent u op zoek naar betrouwbare dakbedekking in Hasselt of omgeving? MMT Projects staat voor u klaar. Onze ervaren specialisten adviseren u graag over de mogelijkheden voor uw project.
-          </p>
-          
-          <div className="bg-white/10 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-bold mb-4">Contactgegevens MMT Projects:</h3>
-            <div className="grid md:grid-cols-3 gap-4 text-lg">
-              <div className="flex items-center justify-center">
-                <MapPin className="mr-2 h-5 w-5" />
-                <span>Daaleindestraat 100, 3720 Hasselt</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                <span>info@mmtprojects.be</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                <span>0484117727</span>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              Bel Nu voor Gratis Offerte
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Mail className="mr-2 h-5 w-5" />
-              Email voor informatie
-            </Button>
-          </div>
-          
-          <p className="mt-6 text-lg font-semibold">
-            MMT Projects - Uw betrouwbare partner voor dakbedekking in Hasselt, Limburg en omgeving. Kwaliteit en service sinds jaar en dag!
-          </p>
-        </div>
-      </section>
-
+        </section>
+      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 

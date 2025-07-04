@@ -1,215 +1,310 @@
+
 import { Helmet } from 'react-helmet-async';
-import { Building2, CheckCircle, Phone, Mail, MapPin, Clock, Shield, Users, Award } from 'lucide-react';
+import { 
+  Building2, Home, CheckCircle, MapPin, Phone, Mail, 
+  Award, Shield, Users, ArrowRight, Star, Clock
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
 const Tegelwerk = () => {
+  const serviceAreas = [
+    "Hasselt", "Genk", "Sint-Truiden", "Tongeren", "Bilzen",
+    "Diepenbeek", "Lummen", "Halen", "Alken", "Wellen", "Hoeselt",
+    "Riemst", "Maasmechelen", "Lanaken", "Dilsen-Stokkem", "Maaseik",
+    "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
+    "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren"
+  ];
+
+  const specializations = [
+    "Badkamertegels met waterdichte afwerking",
+    "Keukentegels en spatwanden volgens laatste trends",
+    "Vloertegels voor binnen en buiten duurzaam gelegd",
+    "Wandtegels met perfecte voegafwerking",
+    "Natuursteen en keramische tegels vakkundig geplaatst"
+  ];
+
+  const recentProjects = [
+    "Badkamer tegelwerk moderne woning Hasselt-Centrum",
+    "Keukentegels en spatwand nieuwbouw Genk",
+    "Vloertegels terras villa Sint-Truiden",
+    "Wandtegels renovatie appartement Tongeren"
+  ];
+
   return (
-    <div className="min-h-screen bg-white">
+    <>
       <Helmet>
-        <title>Tegelwerk Hasselt - Professionele Tegelzetters in Limburg | MMT Projects</title>
-        <meta name="description" content="Tegelwerk Hasselt ✓ Professionele tegelzetters in Limburg ✓ Badkamer- & vloertegels ✓ Natuursteen ✓ Gratis offerte ✓ Service in heel Limburg ✓ Bel 0484117727" />
-        <meta name="keywords" content="tegelwerk Hasselt, tegelzetter Limburg, badkamertegels, vloertegels, natuursteen" />
+        <title>Tegelwerk Hasselt | MMT Projects - Professioneel Tegelwerk Limburg</title>
+        <meta name="description" content="Tegelwerk specialist in Hasselt en omgeving. MMT Projects levert badkamer-, keuken- en vloertegels met 15+ jaar ervaring. Gratis offerte voor tegelwerk in Hasselt, Genk, Sint-Truiden en heel Limburg." />
+        <meta name="keywords" content="tegelwerk hasselt, tegelzetter limburg, badkamertegels hasselt, keukentegels" />
+        <link rel="canonical" href="https://www.mmtprojects.be/tegelwerk-hasselt-limburg" />
+        
+        <meta property="og:title" content="Tegelwerk Hasselt | MMT Projects - Professioneel Tegelwerk Limburg" />
+        <meta property="og:description" content="Tegelwerk specialist in Hasselt en omgeving. MMT Projects levert badkamer-, keuken- en vloertegels met 15+ jaar ervaring." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.mmtprojects.be/tegelwerk-hasselt-limburg" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tegelwerk Hasselt | MMT Projects - Professioneel Tegelwerk Limburg" />
+        <meta name="twitter:description" content="Tegelwerk specialist in Hasselt en omgeving. MMT Projects levert badkamer-, keuken- en vloertegels met 15+ jaar ervaring." />
       </Helmet>
-
+      
       <Navigation />
-
-      {/* Header */}
-      <header className="bg-blue-600 text-white py-20 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <Building2 className="h-16 w-16 mx-auto mb-6" />
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-              Tegelwerk Hasselt - Professionele Tegelzetters in Limburg
-            </h1>
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              MMT Projects is uw betrouwbare partner voor kwalitatief tegelwerk in Hasselt en omgeving. Met jarenlange ervaring in de tegelsector verzorgen wij professioneel tegelwerk voor particulieren en bedrijven in heel Limburg. Van badkamertegels tot vloertegels, wij leveren vakmanschap van de hoogste kwaliteit binnen een straal van 50 kilometer rond Hasselt.
-            </p>
-            <div className="mt-8">
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 mr-4">
-                <Phone className="mr-2 h-5 w-5" />
-                Bel Direct: 0484117727
-              </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                <Mail className="mr-2 h-5 w-5" />
-                Gratis Offerte
-              </Button>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="pt-24 pb-16 px-4 sm:pt-32 sm:pb-24 relative">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a" 
+              alt="Tegelwerk Hasselt" 
+              className="object-cover w-full h-full opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/80"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-600 mb-6">
+                  <Building2 className="h-4 w-4 mr-2" />
+                  <span className="text-sm font-medium">Tegelwerk Specialist Hasselt</span>
+                </div>
+                
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-gray-900">
+                  <span className="text-blue-600">Tegelwerk</span> Hasselt - Professioneel Tegelwerk in Limburg
+                </h1>
+                
+                <p className="mt-6 text-xl text-gray-700 max-w-lg">
+                  Bent u op zoek naar vakkundig tegelwerk in Hasselt? MMT Projects is dé specialist in badkamer-, keuken- en vloertegels in Hasselt en heel Limburg. Perfectie in elke tegel.
+                </p>
+                
+                <div className="mt-8 flex flex-col sm:flex-row gap-4">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Gratis offerte aanvragen
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-gray-300">
+                    Onze referenties
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+              
+              <div className="hidden md:block relative">
+                <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src="https://images.unsplash.com/photo-1620626011761-996317b8d101" 
+                    alt="Tegelwerk project Hasselt" 
+                    className="w-full h-[400px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 p-8 text-white">
+                    <h2 className="text-3xl font-bold mb-2">15+ Jaar</h2>
+                    <p className="text-white/90">Ervaring in tegelwerk</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </section>
 
-      {/* Services Section */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Onze Tegelwerk Diensten</h2>
-          <p className="text-lg text-gray-700 text-center mb-12 max-w-4xl mx-auto">
-            Als specialist in tegelwerk bieden wij een compleet pakket aan tegeldiensten. Onze ervaren tegelzetters werken met de nieuwste technieken en hoogwaardige materialen voor duurzame resultaten. Wij verzorgen zowel binnen- als buitentegelwerk, inclusief wandtegels, vloertegels, mozaïektegels en natuursteen.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              'Badkamertegels en sanitair tegelwerk',
-              'Keukentegels en spatwanden',
-              'Vloertegels voor binnen en buiten',
-              'Wandtegels en decoratieve tegels',
-              'Natuursteen en keramische tegels',
-              'Mozaïektegels en designtegels',
-              'Tegelreparaties en herstellingen'
-            ].map((service, index) => (
-              <Card key={index} className="bg-white shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="p-6">
-                  <CheckCircle className="h-8 w-8 text-blue-600 mb-4" />
-                  <h3 className="text-lg font-semibold mb-2">{service}</h3>
+        {/* Why Choose MMT Projects */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Waarom Kiezen voor MMT Projects Tegelwerk?</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Als ervaren tegelwerkspecialist in Hasselt begrijpen wij dat tegelwerk meer is dan alleen tegels plaatsen. Het gaat om precisie, duurzaamheid en een perfecte afwerking die jarenlang meegaat.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {specializations.map((specialization, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-start">
+                      <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
+                      <p className="text-gray-700">{specialization}</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Service Area */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Tegelwerk Service Gebied - 50km Rondom Hasselt</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects verzorgt tegelwerk in Hasselt en een uitgebreide regio van 50 kilometer rondom onze thuisbasis.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Hoofdsteden en grote gemeenten:</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Tegelwerk Hasselt</span>
+                    <span className="text-gray-600 ml-2">(centrum en alle deelgemeenten)</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Tegelwerk Genk</span>
+                    <span className="text-gray-600 ml-2">- moderne tegeltechnieken</span>
+                  </div>
+                  <div className="flex items-center">
+                    <MapPin className="h-5 w-5 text-blue-600 mr-3" />
+                    <span className="font-semibold">Tegelwerk Sint-Truiden</span>
+                    <span className="text-gray-600 ml-2">- traditioneel en hedendaags</span>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-2xl font-bold mb-6 text-gray-900">Omliggende gemeenten voor tegelwerk:</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                  {serviceAreas.slice(5).map((area, index) => (
+                    <div key={index} className="text-sm text-gray-600 py-1">
+                      {area}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Specializations */}
+        <section className="py-20 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Tegelwerk Specialisaties in Hasselt</h2>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-8">
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Shield className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Badkamertegels</h3>
+                  <p className="text-gray-700">
+                    Waterdichte badkamertegels met perfecte voegafwerking voor een duurzame en hygiënische badkamer.
+                  </p>
                 </CardContent>
               </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Why Choose Us */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Waarom Kiezen voor MMT Projects Tegelwerk</h2>
-          <p className="text-lg text-gray-700 text-center mb-12 max-w-4xl mx-auto">
-            Ons team van gecertificeerde tegelzetters combineert traditioneel vakmanschap met moderne technieken. Wij werken uitsluitend met A-kwaliteit tegels en voegmaterialen voor een langdurig mooi resultaat. Elke tegelklus wordt uitgevoerd volgens de hoogste kwaliteitsnormen, met oog voor detail en perfecte afwerking.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <Award className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Gecertificeerde tegelzetters</h3>
-              <p className="text-gray-700">Ervaren vakmannen met jarenlange expertise in tegelwerk</p>
-            </div>
-            <div className="text-center">
-              <Shield className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">A-kwaliteit materialen</h3>
-              <p className="text-gray-700">Uitsluitend hoogwaardige tegels en voegmaterialen</p>
-            </div>
-            <div className="text-center">
-              <Users className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Lokale expertise</h3>
-              <p className="text-gray-700">Kennis van Limburgse bouwstijlen en architectuur</p>
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Building2 className="h-8 w-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Keukentegels</h3>
+                  <p className="text-gray-700">
+                    Stijlvolle keukentegels en spatwanden die functioneel en decoratief zijn voor uw droomkeuken.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                    <Users className="h-8 w-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-gray-900">Vloertegels</h3>
+                  <p className="text-gray-700">
+                    Duurzame vloertegels voor binnen en buiten, gelegd met precisie voor een langdurig mooi resultaat.
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Service Area */}
-      <section className="py-16 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Tegelwerk in Hasselt en Omgeving - 50km Service Gebied</h2>
-          <p className="text-lg text-gray-700 text-center mb-8">
-            MMT Projects bedient actief de volledige regio Limburg. Onze tegelzetters zijn werkzaam in:
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Grote steden:</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Hasselt, Genk, Sint-Truiden, Tongeren, Bilzen, Diepenbeek, Beringen, Houthalen-Helchteren, Leopoldsburg, Peer, Bree, Maaseik, Maasmechelen
+        {/* References */}
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900">Tegelwerk Referenties in Hasselt en Omgeving</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                MMT Projects heeft een indrukwekkend portfolio van tegelwerkprojecten in Hasselt en heel Limburg.
               </p>
             </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4">Kleinere gemeenten:</h3>
-              <p className="text-gray-700 leading-relaxed">
-                Lanaken, Riemst, Hoeselt, Wellen, Kortessem, Nieuwerkerken, Herk-de-Stad, Lummen, Ham, Tessenderlo, Halen en alle andere gemeenten binnen 50 kilometer van Hasselt
-              </p>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {recentProjects.map((project, index) => (
+                <Card key={index} className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center">
+                      <Star className="h-5 w-5 text-yellow-500 mr-3" />
+                      <span className="text-gray-900 font-medium">{project}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Local Expertise */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Lokale Expertise in Limburg</h2>
-          <p className="text-lg text-gray-700 text-center mb-8 max-w-4xl mx-auto">
-            Als lokaal tegelbedrijf kennen wij de specifieke wensen en stijlvoorkeuren van onze klanten in Limburg. Onze tegelzetters hebben uitgebreide ervaring met projecten in de regio en begrijpen de lokale bouwstijlen en architectuur. Deze lokale kennis stelt ons in staat om tegelwerk te leveren dat perfect aansluit bij uw woning of bedrijfspand.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <Clock className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Snelle service</h3>
-                <p className="text-gray-700">
-                  Korte wachttijden en flexibele planning voor al uw tegelprojecten
+        {/* CTA Section */}
+        <section className="py-20 px-4 bg-gray-900 text-white">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
+              <div className="text-center">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Start Uw Tegelwerkproject in Hasselt</h2>
+                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                  Klaar voor professioneel tegelwerk? MMT Projects staat klaar om uw tegelwerkproject in Hasselt of omgeving te realiseren.
                 </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <Shield className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Garantie op werk</h3>
-                <p className="text-gray-700">
-                  Volledige garantie op vakmanschap en materialen voor uw gemoedsrust
-                </p>
-              </CardContent>
-            </Card>
-            
-            <Card className="bg-white shadow-sm hover:shadow-md transition-shadow">
-              <CardContent className="p-6">
-                <MapPin className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold mb-4">Lokale aanwezigheid</h3>
-                <p className="text-gray-700">
-                  Gevestigd in Hasselt met kennis van lokale bouwvoorschriften
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 px-4 bg-blue-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Gratis Offerte voor Tegelwerk</h2>
-          <p className="text-xl mb-8">
-            Wilt u een vrijblijvende offerte voor uw tegelproject in Hasselt of omgeving? Neem vandaag nog contact op met MMT Projects. Onze tegelspecialisten komen gratis ter plaatse voor een persoonlijk advies en een scherpe prijsopgave. Wij staan garant voor transparante prijzen zonder verborgen kosten.
-          </p>
-          
-          <div className="bg-white/10 p-8 rounded-lg mb-8">
-            <h3 className="text-2xl font-bold mb-4">Contact & Bereikbaarheid:</h3>
-            <div className="grid md:grid-cols-3 gap-4 text-lg">
-              <div className="flex items-center justify-center">
-                <MapPin className="mr-2 h-5 w-5" />
-                <span>Daaleindestraat 100, 3720 Hasselt</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                <span>info@mmtprojects.be</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                <span>0484117727</span>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                    <Phone className="mr-2 h-5 w-5" />
+                    0484 11 77 27
+                  </Button>
+                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                    <Mail className="mr-2 h-5 w-5" />
+                    info@mmtprojects.be
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-              <Phone className="mr-2 h-5 w-5" />
-              Klaar voor professioneel tegelwerk? Bel nu!
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-              <Mail className="mr-2 h-5 w-5" />
-              Email voor informatie
-            </Button>
-          </div>
-          
-          <p className="mt-6 text-lg font-semibold">
-            MMT Projects - Uw tegelspecialist in Limburg!
-          </p>
-        </div>
-      </section>
+        </section>
 
+        {/* Contact Info */}
+        <section className="py-12 px-4 bg-gray-100">
+          <div className="max-w-7xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Tegelwerk Specialist Hasselt</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="flex items-center justify-center">
+                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Mail className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">info@mmtprojects.be</span>
+              </div>
+              <div className="flex items-center justify-center">
+                <Phone className="h-5 w-5 text-blue-600 mr-2" />
+                <span className="text-gray-700">0484117727</span>
+              </div>
+            </div>
+            <p className="mt-6 text-gray-600">
+              MMT Projects - Uw betrouwbare partner voor tegelwerk in Hasselt, Genk, Sint-Truiden en heel Limburg.
+            </p>
+          </div>
+        </section>
+      </div>
+      
       <Footer />
-    </div>
+    </>
   );
 };
 

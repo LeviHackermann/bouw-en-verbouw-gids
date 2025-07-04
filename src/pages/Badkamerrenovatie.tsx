@@ -1,7 +1,7 @@
 
 import { Helmet } from 'react-helmet-async';
 import { 
-  Bath, Shower, CheckCircle, Phone, Mail, MapPin, 
+  Bath, ShowerHead, CheckCircle, Phone, Mail, MapPin, 
   Shield, Users, Award, ArrowRight, Star, Clock
 } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -127,7 +127,7 @@ const Badkamerrenovatie = () => {
                 
                 {/* Floating elements */}
                 <div className="absolute -top-6 -right-6 bg-blue-600 text-white p-4 rounded-2xl shadow-lg">
-                  <Shower className="h-8 w-8" />
+                  <ShowerHead className="h-8 w-8" />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border">
                   <Award className="h-8 w-8 text-blue-600" />

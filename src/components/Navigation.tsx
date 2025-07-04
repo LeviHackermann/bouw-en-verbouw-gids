@@ -94,8 +94,14 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile menu button and contact icons */}
+          <div className="md:hidden flex items-center space-x-3">
+            <a href="tel:0484117727" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Phone className="h-5 w-5" />
+            </a>
+            <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Mail className="h-5 w-5" />
+            </a>
             <button
               onClick={toggleMenu}
               className="text-gray-700 hover:text-blue-600 transition-colors"
@@ -127,15 +133,9 @@ const Navigation = () => {
                   {service.name}
                 </Link>
               ))}
-              <div className="px-3 py-4 flex items-center space-x-4">
-                <a href="tel:0484117727" className="text-gray-700 hover:text-blue-600">
-                  <Phone className="h-5 w-5" />
-                </a>
-                <a href="mailto:info@mmtprojects.be" className="text-gray-700 hover:text-blue-600">
-                  <Mail className="h-5 w-5" />
-                </a>
+              <div className="px-3 py-4">
                 <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
+                  <Button size="sm" className="bg-blue-600 hover:bg-blue-700 w-full">
                     Offerte aanvragen
                   </Button>
                 </Link>

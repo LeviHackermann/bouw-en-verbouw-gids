@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import { 
   Building2, Home, CheckCircle, MapPin, Phone, Mail, 
@@ -20,7 +19,7 @@ const Kozijnen = () => {
 
   const specializations = [
     "Kunststof kozijnen voor optimale isolatie",
-    "Houten kozijnen voor authentieke uitstraling",
+    "Houten kozijnen voor authentieke uitstraling", 
     "Aluminium kozijnen voor moderne woningen",
     "Kozijnrenovatie en -herstel vakkundig uitgevoerd",
     "Maatwerk kozijnen volgens uw specificaties"
@@ -275,30 +274,6 @@ const Kozijnen = () => {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Contact Info */}
-        <section className="py-12 px-4 bg-gray-100">
-          <div className="max-w-7xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-4 text-gray-900">Contact MMT Projects - Kozijnen Specialist Hasselt</h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="flex items-center justify-center">
-                <MapPin className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">Daaleindestraat 100, 3720 Hasselt</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Mail className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">info@mmtprojects.be</span>
-              </div>
-              <div className="flex items-center justify-center">
-                <Phone className="h-5 w-5 text-blue-600 mr-2" />
-                <span className="text-gray-700">0484117727</span>
-              </div>
-            </div>
-            <p className="mt-6 text-gray-600">
-              MMT Projects - Uw betrouwbare partner voor kozijnen in Hasselt, Genk, Sint-Truiden en heel Limburg.
-            </p>
           </div>
         </section>
       </div>

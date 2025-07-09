@@ -7,6 +7,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Nieuwbouw from "./pages/Nieuwbouw";
 import Verbouwing from "./pages/Verbouwing";
 import Renovatie from "./pages/Renovatie";
@@ -53,6 +54,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/nieuwbouw-hasselt-limburg" element={<Nieuwbouw />} />
             <Route path="/verbouwing-hasselt-limburg" element={<Verbouwing />} />
             <Route path="/renovatie-hasselt-limburg" element={<Renovatie />} />

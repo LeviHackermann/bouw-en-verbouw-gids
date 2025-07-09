@@ -3,8 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -153,6 +155,40 @@ const Contact = () => {
                             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                             placeholder="Beschrijf uw project zo gedetailleerd mogelijk..."
                           ></textarea>
+                        </div>
+
+                        {/* GDPR Compliance Section */}
+                        <div className="space-y-4 p-4 bg-blue-50 rounded-lg">
+                          <h3 className="text-lg font-semibold text-gray-900">Privacy & Gegevensbescherming</h3>
+                          
+                          <div className="space-y-3 text-sm text-gray-700">
+                            <p>
+                              Door dit formulier in te vullen gaat u akkoord met het verwerken van uw persoonsgegevens door MMT Projects. 
+                              Uw gegevens worden uitsluitend gebruikt om contact met u op te nemen betreffende uw aanvraag.
+                            </p>
+                            
+                            <div className="flex items-start space-x-3">
+                              <Checkbox id="consent-processing" name="consent_processing" required />
+                              <label htmlFor="consent-processing" className="text-sm leading-relaxed">
+                                Ik ga akkoord met de verwerking van mijn persoonsgegevens door MMT Projects voor het behandelen van mijn aanvraag. *
+                              </label>
+                            </div>
+                            
+                            <div className="flex items-start space-x-3">
+                              <Checkbox id="consent-marketing" name="consent_marketing" />
+                              <label htmlFor="consent-marketing" className="text-sm leading-relaxed">
+                                Ik ga akkoord met het ontvangen van nieuwsbrieven en marketingcommunicatie van MMT Projects (optioneel).
+                              </label>
+                            </div>
+                            
+                            <p className="text-xs text-gray-600">
+                              Voor meer informatie over hoe wij omgaan met uw gegevens, bekijk onze{' '}
+                              <Link to="/privacy-policy" className="text-blue-600 hover:text-blue-700 underline">
+                                privacyverklaring en algemene voorwaarden
+                              </Link>.
+                              U kunt uw toestemming op elk moment intrekken door contact met ons op te nemen.
+                            </p>
+                          </div>
                         </div>
 
                         <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700 text-white">

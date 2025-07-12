@@ -50,7 +50,7 @@ const Index = () => {
       link: "/nieuwbouw-hasselt-limburg"
     },
     {
-      name: "Verbouwing",
+      name: "Verbouwing", 
       description: "Vernieuw en verbeter uw woning met onze verbouwingsdiensten.",
       icon: Wrench,
       link: "/verbouwing-hasselt-limburg"
@@ -455,22 +455,20 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gray-900 text-white">
           <div className="max-w-5xl mx-auto">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-12 md:p-16 rounded-3xl shadow-xl">
-              <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-6">Klaar om uw project te starten?</h2>
-                <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                  Neem vandaag nog contact met ons op voor een vrijblijvende offerte.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                    <Phone className="mr-2 h-5 w-5" />
-                    0484 11 77 27
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                    <Mail className="mr-2 h-5 w-5" />
-                    info@mmtprojects.be
-                  </Button>
-                </div>
+            <div className="text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6">Klaar om uw project te starten?</h2>
+              <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
+                Neem vandaag nog contact met ons op voor een vrijblijvende offerte.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                  <Phone className="mr-2 h-5 w-5" />
+                  0484 11 77 27
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
+                  <Mail className="mr-2 h-5 w-5" />
+                  info@mmtprojects.be
+                </Button>
               </div>
             </div>
           </div>

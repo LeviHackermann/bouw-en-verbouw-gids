@@ -451,28 +451,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-900 text-white">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">Klaar om uw project te starten?</h2>
-              <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                Neem vandaag nog contact met ons op voor een vrijblijvende offerte.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-                  <Phone className="mr-2 h-5 w-5" />
-                  0484 11 77 27
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
-                  <Mail className="mr-2 h-5 w-5" />
-                  info@mmtprojects.be
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
 
       <Footer />

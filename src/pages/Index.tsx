@@ -446,6 +446,9 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Before/After Showcase */}
+        <BeforeAfterCarousel items={beforeAfterItems} />
+
         {/* Services Section */}
         <section className="py-20 px-4 bg-gray-50">
           <div className="max-w-7xl mx-auto">
@@ -551,9 +554,6 @@ const Index = () => {
             </div>
           </div>
         </section>
-
-        {/* Before/After Showcase */}
-        <BeforeAfterCarousel items={beforeAfterItems} />
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-white">

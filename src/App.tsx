@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import ServiceAreasIndex from "./pages/ServiceAreasIndex";
 import ServiceAreaPage from "./pages/ServiceAreaPage";
+import ServicesIndex from "./pages/ServicesIndex";
 import Nieuwbouw from "./pages/Nieuwbouw";
 import Verbouwing from "./pages/Verbouwing";
 import Renovatie from "./pages/Renovatie";
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/diensten" element={<ServicesIndex />} />
             <Route path="/servicegebieden" element={<ServiceAreasIndex />} />
             <Route path="/servicegebieden/:slug" element={<ServiceAreaPage />} />
             <Route path="/nieuwbouw-hasselt-limburg" element={<Nieuwbouw />} />

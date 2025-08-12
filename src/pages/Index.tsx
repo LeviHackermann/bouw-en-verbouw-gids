@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -22,6 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { Helmet } from 'react-helmet-async';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -40,6 +42,51 @@ const Index = () => {
     "Kinrooi", "Bree", "Peer", "Hechtel-Eksel", "Leopoldsburg",
     "Beringen", "Ham", "Tessenderlo", "Zonhoven", "Houthalen-Helchteren",
     "As", "Opglabbeek", "Oudsbergen", "Hamont-Achel"
+  ];
+
+  const featuredServices = [
+    {
+      name: "Nieuwbouw",
+      description: "Van fundering tot afwerking, wij bouwen uw droomhuis op maat. Complete begeleiding van A tot Z.",
+      icon: Building2,
+      link: "/nieuwbouw-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Renovatie",
+      description: "Geef uw huis een nieuwe look met onze volledige renovatiediensten. Van klein tot groot.",
+      icon: Home,
+      link: "/renovatie-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1558618666-fbd6c327cd4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Verbouwing", 
+      description: "Vernieuw en verbeter uw woning met onze professionele verbouwingsdiensten.",
+      icon: Wrench,
+      link: "/verbouwing-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Aanbouw",
+      description: "Creëer extra ruimte met een aanbouw op maat. Uitbreiding van uw wooncomfort.",
+      icon: Hammer,
+      link: "/aanbouw-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Dakwerken",
+      description: "Voor al uw dakwerken, van reparatie tot volledige vernieuwing. Waterdicht vakmanschap.",
+      icon: Home,
+      link: "/dakwerken-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      name: "Keukenrenovatie",
+      description: "Een nieuwe keuken die perfect aansluit bij uw wensen. Van ontwerp tot installatie.",
+      icon: Home,
+      link: "/keukenrenovatie-hasselt-limburg",
+      image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
   ];
 
   const services = [
@@ -362,22 +409,53 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <Link to={service.link} key={index}>
-                  <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex items-start">
-                        <service.icon className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-1" />
-                        <div>
-                          <h3 className="text-xl font-bold mb-2 text-gray-900">{service.name}</h3>
-                          <p className="text-gray-700">{service.description}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+            <div className="relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {featuredServices.map((service, index) => (
+                    <CarouselItem key={index} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                      <Link to={service.link}>
+                        <Card className="bg-white border-none rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
+                          <div className="relative h-48 overflow-hidden">
+                            <img
+                              src={service.image}
+                              alt={service.name}
+                              className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                            <div className="absolute top-4 left-4">
+                              <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
+                                <service.icon className="h-6 w-6 text-white" />
+                              </div>
+                            </div>
+                          </div>
+                          <CardContent className="p-6">
+                            <h3 className="text-xl font-bold mb-3 text-gray-900">{service.name}</h3>
+                            <p className="text-gray-700 leading-relaxed">{service.description}</p>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4" />
+                <CarouselNext className="right-4" />
+              </Carousel>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link to="/diensten">
+                <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
+                  Bekijk alle diensten
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

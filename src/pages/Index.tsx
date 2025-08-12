@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
@@ -27,6 +26,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { Helmet } from 'react-helmet-async';
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { BeforeAfterCarousel } from "@/components/BeforeAfterCarousel";
 
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -313,6 +313,53 @@ const Index = () => {
     }
   ];
 
+  const beforeAfterItems = [
+    {
+      title: "Dakrenovatie te Hasselt",
+      before: {
+        src: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Oud dak voor renovatie in Hasselt",
+      },
+      after: {
+        src: "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80",
+        alt: "Vernieuwd dak na dakwerken in Hasselt",
+      },
+    },
+    {
+      title: "Badkamerrenovatie te Genk",
+      before: {
+        src: "https://images.unsplash.com/photo-1484154218962-a197022b5858?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Badkamer voor renovatie in Genk",
+      },
+      after: {
+        src: "https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Volledig gerenoveerde moderne badkamer in Genk",
+      },
+    },
+    {
+      title: "Keukenrenovatie te Sint-Truiden",
+      before: {
+        src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Keuken tijdens verbouwwerkzaamheden in Sint-Truiden",
+      },
+      after: {
+        src: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Nieuwe moderne keuken na renovatie in Sint-Truiden",
+      },
+    },
+    {
+      title: "Volledige woonhuisrenovatie te Tongeren",
+      before: {
+        src: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+        alt: "Woning voor renovatie in Tongeren",
+      },
+      after: {
+        src: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        alt: "Volledig gerenoveerde woning in Tongeren",
+      },
+    },
+  ];
+
   const testimonials = [
     {
       name: "Familie Peeters",
@@ -504,6 +551,9 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        {/* Before/After Showcase */}
+        <BeforeAfterCarousel items={beforeAfterItems} />
 
         {/* Testimonials Section */}
         <section className="py-20 px-4 bg-white">

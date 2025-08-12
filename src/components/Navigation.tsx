@@ -1,7 +1,9 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { getPopularServiceAreas } from "@/data/serviceAreas";
 
 // Extend Window interface to include dataLayer
 declare global {
@@ -12,6 +14,7 @@ declare global {
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const popularServiceAreas = getPopularServiceAreas();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -115,6 +118,37 @@ const Navigation = () => {
                 </div>
               </div>
             </div>
+            <div className="relative group">
+              <button className="text-gray-700 hover:text-blue-600 transition-colors">
+                Servicegebieden
+              </button>
+              <div className="absolute left-0 mt-2 w-80 bg-white rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="py-2">
+                  <div className="px-4 py-2 text-sm font-medium text-gray-900 border-b border-gray-200">
+                    Populaire gebieden
+                  </div>
+                  <div className="max-h-64 overflow-y-auto">
+                    {popularServiceAreas.map((area) => (
+                      <Link
+                        key={area.slug}
+                        to={`/servicegebieden/${area.slug}`}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-blue-600"
+                      >
+                        {area.naam}
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="border-t border-gray-200 mt-2">
+                    <Link
+                      to="/servicegebieden"
+                      className="block px-4 py-3 text-sm font-medium text-blue-600 hover:bg-gray-50"
+                    >
+                      Bekijk alle servicegebieden →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="flex items-center space-x-4">
               <a 
                 href="tel:0484117727" 
@@ -185,6 +219,24 @@ const Navigation = () => {
                   {service.name}
                 </Link>
               ))}
+              <div className="px-3 py-2 text-gray-900 font-medium">Servicegebieden</div>
+              {popularServiceAreas.map((area) => (
+                <Link
+                  key={area.slug}
+                  to={`/servicegebieden/${area.slug}`}
+                  className="block px-6 py-2 text-sm text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {area.naam}
+                </Link>
+              ))}
+              <Link
+                to="/servicegebieden"
+                className="block px-6 py-2 text-sm text-blue-600 hover:bg-gray-50 font-medium"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Bekijk alle servicegebieden →
+              </Link>
               <div className="px-3 py-4">
                 <Link to="/contact" onClick={() => { setIsMenuOpen(false); trackQuoteClick(); }}>
                   <Button size="sm" className="bg-blue-600 hover:bg-blue-700 w-full">

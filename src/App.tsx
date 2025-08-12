@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,6 +9,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ServiceAreasIndex from "./pages/ServiceAreasIndex";
+import ServiceAreaPage from "./pages/ServiceAreaPage";
 import Nieuwbouw from "./pages/Nieuwbouw";
 import Verbouwing from "./pages/Verbouwing";
 import Renovatie from "./pages/Renovatie";
@@ -55,6 +58,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/servicegebieden" element={<ServiceAreasIndex />} />
+            <Route path="/servicegebieden/:slug" element={<ServiceAreaPage />} />
             <Route path="/nieuwbouw-hasselt-limburg" element={<Nieuwbouw />} />
             <Route path="/verbouwing-hasselt-limburg" element={<Verbouwing />} />
             <Route path="/renovatie-hasselt-limburg" element={<Renovatie />} />

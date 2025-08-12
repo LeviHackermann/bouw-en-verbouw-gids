@@ -57,7 +57,7 @@ const Index = () => {
       description: "Geef uw huis een nieuwe look met onze volledige renovatiediensten. Van klein tot groot.",
       icon: Home,
       link: "/renovatie-hasselt-limburg",
-      image: "https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Verbouwing", 
@@ -78,7 +78,7 @@ const Index = () => {
       description: "Voor al uw dakwerken, van reparatie tot volledige vernieuwing. Waterdicht vakmanschap.",
       icon: Home,
       link: "/dakwerken-hasselt-limburg",
-      image: "https://images.unsplash.com/photo-1558618666-fbd6c327cd4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1590736969955-71cc94901144?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Keukenrenovatie",

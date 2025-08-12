@@ -78,7 +78,7 @@ const Index = () => {
       description: "Voor al uw dakwerken, van reparatie tot volledige vernieuwing. Waterdicht vakmanschap.",
       icon: Home,
       link: "/dakwerken-hasselt-limburg",
-      image: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1558618666-fbd6c327cd4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
       name: "Keukenrenovatie",
